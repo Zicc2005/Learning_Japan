@@ -1,0 +1,234 @@
+[
+  {
+    "word": "わたし",
+    "kanji": "私",
+    "hanviet": "Tư",
+    "romaji": "watashi",
+    "meaning": "Tôi (ngôi thứ nhất)",
+    "topic": "Xưng hô"
+  },
+  {
+    "word": "あなた",
+    "kanji": "貴方",
+    "hanviet": "Quý phương",
+    "romaji": "anata",
+    "meaning": "Bạn / Anh / Chị",
+    "topic": "Xưng hô"
+  },
+  {
+    "word": "せんせい",
+    "kanji": "先生",
+    "hanviet": "Tiên sinh",
+    "romaji": "sensei",
+    "meaning": "Thầy/cô giáo",
+    "topic": "Nghề nghiệp"
+  },
+  {
+    "word": "がくせい",
+    "kanji": "学生",
+    "hanviet": "Học sinh",
+    "romaji": "gakusei",
+    "meaning": "Học sinh, sinh viên",
+    "topic": "Nghề nghiệp"
+  },
+  {
+    "word": "かいしゃいん",
+    "kanji": "会社員",
+    "hanviet": "Hội xã viên",
+    "romaji": "kaishain",
+    "meaning": "Nhân viên công ty",
+    "topic": "Nghề nghiệp"
+  },
+  {
+    "word": "いしゃ",
+    "kanji": "医者",
+    "hanviet": "Y giả",
+    "romaji": "isha",
+    "meaning": "Bác sĩ",
+    "topic": "Nghề nghiệp"
+  },
+  {
+    "word": "ほん",
+    "kanji": "本",
+    "hanviet": "Bản",
+    "romaji": "hon",
+    "meaning": "Quyển sách",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "じしょ",
+    "kanji": "辞書",
+    "hanviet": "Từ thư",
+    "romaji": "jisho",
+    "meaning": "Từ điển",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "ざっし",
+    "kanji": "雑誌",
+    "hanviet": "Tạp chí",
+    "romaji": "zasshi",
+    "meaning": "Tạp chí",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "しんぶん",
+    "kanji": "新聞",
+    "hanviet": "Tân văn",
+    "romaji": "shinbun",
+    "meaning": "Báo chí",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "ノート",
+    "kanji": "",
+    "hanviet": "",
+    "romaji": "nooto",
+    "meaning": "Vở ghi chép",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "えんぴつ",
+    "kanji": "鉛筆",
+    "hanviet": "Duyên bút",
+    "romaji": "enpitsu",
+    "meaning": "Bút chì",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "とけい",
+    "kanji": "時計",
+    "hanviet": "Thời kế",
+    "romaji": "tokei",
+    "meaning": "Đồng hồ",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "かさ",
+    "kanji": "傘",
+    "hanviet": "Tản",
+    "romaji": "kasa",
+    "meaning": "Cái ô/dù",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "かばん",
+    "kanji": "鞄",
+    "hanviet": "Bao",
+    "romaji": "kaban",
+    "meaning": "Cặp sách, túi xách",
+    "topic": "Đồ vật"
+  },
+  {
+    "word": "くるま",
+    "kanji": "車",
+    "hanviet": "Xa",
+    "romaji": "kuruma",
+    "meaning": "Xe hơi",
+    "topic": "Giao thông"
+  },
+  {
+    "word": "じてんしゃ",
+    "kanji": "自転車",
+    "hanviet": "Tự chuyển xa",
+    "romaji": "jitensha",
+    "meaning": "Xe đạp",
+    "topic": "Giao thông"
+  },
+  {
+    "word": "ちかてつ",
+    "kanji": "地下鉄",
+    "hanviet": "Địa hạ thiết",
+    "romaji": "chikatetsu",
+    "meaning": "Tàu điện ngầm",
+    "topic": "Giao thông"
+  },
+  {
+    "word": "ひこうき",
+    "kanji": "飛行機",
+    "hanviet": "Phi hành cơ",
+    "romaji": "hikouki",
+    "meaning": "Máy bay",
+    "topic": "Giao thông"
+  },
+  {
+    "word": "たべる",
+    "kanji": "食べる",
+    "hanviet": "Thực",
+    "romaji": "taberu",
+    "meaning": "Ăn",
+    "topic": "Động từ"
+  },
+  {
+    "word": "のむ",
+    "kanji": "飲む",
+    "hanviet": "Ẩm",
+    "romaji": "nomu",
+    "meaning": "Uống",
+    "topic": "Động từ"
+  },
+  {
+    "word": "みる",
+    "kanji": "見る",
+    "hanviet": "Kiến",
+    "romaji": "miru",
+    "meaning": "Xem, nhìn",
+    "topic": "Động từ"
+  },
+  {
+    "word": "きく",
+    "kanji": "聞く",
+    "hanviet": "Văn",
+    "romaji": "kiku",
+    "meaning": "Nghe / Hỏi",
+    "topic": "Động từ"
+  },
+  {
+    "word": "よむ",
+    "kanji": "読む",
+    "hanviet": "Độc",
+    "romaji": "yomu",
+    "meaning": "Đọc sách",
+    "topic": "Động từ"
+  },
+  {
+    "word": "かく",
+    "kanji": "書く",
+    "hanviet": "Thư",
+    "romaji": "kaku",
+    "meaning": "Viết",
+    "topic": "Động từ"
+  },
+  {
+    "word": "かう",
+    "kanji": "買う",
+    "hanviet": "Mãi",
+    "romaji": "kau",
+    "meaning": "Mua",
+    "topic": "Động từ"
+  },
+  {
+    "word": "いく",
+    "kanji": "行く",
+    "hanviet": "Hành",
+    "romaji": "iku",
+    "meaning": "Đi",
+    "topic": "Động từ"
+  },
+  {
+    "word": "くる",
+    "kanji": "来る",
+    "hanviet": "Lai",
+    "romaji": "kuru",
+    "meaning": "Đến",
+    "topic": "Động từ"
+  },
+  {
+    "word": "かえる",
+    "kanji": "帰る",
+    "hanviet": "Quy",
+    "romaji": "kaeru",
+    "meaning": "Về nhà",
+    "topic": "Động từ"
+  }
+]

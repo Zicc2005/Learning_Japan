@@ -1,0 +1,132 @@
+{
+  "testId": "test_n5_set3",
+  "title": "Đề Thi Thử JLPT N5 - Đề Chuẩn Số 03 (Format CBT Quốc Tế)",
+  "durationMinutes": 40,
+  "passingScore": 120,
+  "totalScore": 180,
+  "totalQuestions": 30,
+  "sections": [
+    {
+      "name": "Phần 1: Kiến thức ngôn ngữ (Chữ Hán & Từ Vựng)",
+      "questions": [
+        {
+          "id": "s3_q1",
+          "question": "きょう は 【金曜日】 です。",
+          "highlight": "金曜日",
+          "options": ["きんようび", "かようび", "すいようび", "もくようび"],
+          "answerIndex": 0,
+          "explanation": "【金曜日】 là thứ Sáu, đọc là きんようび."
+        },
+        {
+          "id": "s3_q2",
+          "question": "この かわ で 【魚】 を とりました。",
+          "highlight": "魚",
+          "options": ["さかな", "にく", "たまご", "とり"],
+          "answerIndex": 0,
+          "explanation": "【魚】 âm Hán-Việt là NGƯ, cách đọc là さかな (Cá)."
+        },
+        {
+          "id": "s3_q3",
+          "question": "まいあさ コーヒー を 【飲みます】。",
+          "highlight": "飲みます",
+          "options": ["のみます", "たべます", "よみます", "かきます"],
+          "answerIndex": 0,
+          "explanation": "【飲みます】 âm Hán-Việt là ẨM, đọc là のみます (Uống)."
+        },
+        {
+          "id": "s3_q4",
+          "question": "ともだち と 【えいが】 を みました。",
+          "highlight": "えいが",
+          "options": ["映画", "英語", "計画", "音楽"],
+          "answerIndex": 0,
+          "explanation": "えいが là phim ảnh, chữ Hán là 【映画】(ÁNH HỌA)."
+        },
+        {
+          "id": "s3_q5",
+          "question": "この もんだい は とても 【やさしい】 です。",
+          "highlight": "やさしい",
+          "options": ["易しい", "難しい", "新しい", "楽しい"],
+          "answerIndex": 0,
+          "explanation": "やさしい là dễ dàng, chữ Hán là 【易しい】(DỊ)."
+        },
+        {
+          "id": "s3_q6",
+          "question": "あした は 【てんき】 が いい です。",
+          "highlight": "てんき",
+          "options": ["天気", "電気", "元気", "空気"],
+          "answerIndex": 0,
+          "explanation": "てんき là thời tiết, chữ Hán là 【天気】(THIÊN KHÍ)."
+        },
+        {
+          "id": "s3_q7",
+          "question": "パン を 【ナイフ】 で きります。",
+          "options": ["ナイフ", "フォーク", "スプーン", "ハサミ"],
+          "answerIndex": 0,
+          "explanation": "Cắt bánh mì bằng dao: ナイフ (Knife)."
+        },
+        {
+          "id": "s3_q8",
+          "question": "さとう を いれますから、この おかし は ( ? ) です。",
+          "options": ["あまい", "からい", "すっぱい", "にがい"],
+          "answerIndex": 0,
+          "explanation": "Cho đường (さとう) nên bánh 'ngọt': あまい (甘い)."
+        },
+        {
+          "id": "s3_q9",
+          "question": "ともだち に メール を ( ? )。",
+          "options": ["おくりました", "とりました", "かりました", "ならいました"],
+          "answerIndex": 0,
+          "explanation": "Gửi email cho bạn: メール を おくりました (送りました)."
+        },
+        {
+          "id": "s3_q10",
+          "question": "きのう、デパート で くつ を ( ? ) そく かいました。",
+          "options": ["いっ", "ひと", "いち", "ひとつ"],
+          "answerIndex": 0,
+          "explanation": "Đếm đôi giày dùng lượng từ [そく] (足): いっそく (1 đôi)."
+        }
+      ]
+    },
+    {
+      "name": "Phần 2: Ngữ Pháp & Đọc Hiểu",
+      "questions": [
+        {
+          "id": "s3_q11",
+          "question": "わたし は ぎんこう ( ? ) つとめて います。",
+          "options": ["に", "で", "を", "へ"],
+          "answerIndex": 0,
+          "explanation": "Đi với động từ つとめて います (làm việc tại) dùng trợ từ 【に】."
+        },
+        {
+          "id": "s3_q12",
+          "question": "あした とうきょう ( ? ) きょうと まで しんかんせん で いきます。",
+          "options": ["から", "まで", "に", "で"],
+          "answerIndex": 0,
+          "explanation": "Mẫu câu [〜から 〜まで]: Từ Tokyo đến Kyoto."
+        },
+        {
+          "id": "s3_q13",
+          "question": "きょう は あまり ( ? ) です。",
+          "options": ["さむくない", "さむい", "さむかった", "さむくなかった"],
+          "answerIndex": 0,
+          "explanation": "Phó từ あまり đi với đuôi phủ định: あまり さむくない (Không lạnh lắm)."
+        },
+        {
+          "id": "s3_q14",
+          "question": "すみません、この かんじ の よみかた を ( ? ) ください。",
+          "options": ["おしえて", "おしえりて", "おしえた", "おしえる"],
+          "answerIndex": 0,
+          "explanation": "Xin hãy chỉ giúp [V-て ください]: おしえます ➔ おしえて."
+        },
+        {
+          "id": "s3_q15",
+          "question": "おとうと は __ __ ★ __ なりました。",
+          "sentenceHint": "Thứ tự: せが(1) たかく(2) とても(4) (なりました)",
+          "options": ["1. せが", "2. たかく", "3. に", "4. とても"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: おとうと は [せが] [とても] [★ たかく] なりました。 Ngôi sao ★ là số 2 (たかく)!"
+        }
+      ]
+    }
+  ]
+}

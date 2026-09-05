@@ -1,0 +1,57 @@
+{
+  "title": "Nhiệm Vụ Hàng Ngày",
+  "subtitle": "Hoàn thành nhiệm vụ để duy trì chuỗi Streak và nhận rương kho báu XP!",
+  "streakReward": {
+    "targetDays": 3,
+    "xp": 100,
+    "title": "Rương Kho Báu Tinh Hoa N5",
+    "description": "Thưởng lớn cho chiến binh chăm chỉ duy trì ngọn lửa học tập 3 ngày liên tiếp!"
+  },
+  "quests": [
+    {
+      "id": "quest_write",
+      "title": "Bậc Thầy Bút Thuận",
+      "description": "Luyện viết thành công 5 chữ cái Hiragana/Katakana hoặc chữ Hán trên Canvas",
+      "icon": "pen",
+      "target": 5,
+      "xp": 50,
+      "actionRoute": "/practice"
+    },
+    {
+      "id": "quest_quiz",
+      "title": "Khai Phá Dạng Bài",
+      "description": "Trả lời đúng 5 câu hỏi ôn luyện dạng bài JLPT N5",
+      "icon": "book",
+      "target": 5,
+      "xp": 50,
+      "actionRoute": "/exam"
+    },
+    {
+      "id": "quest_ai",
+      "title": "Hội Thoại Sensei AI",
+      "description": "Trò chuyện hoặc nhờ AI Sensei giải thích 1 thắc mắc tiếng Nhật",
+      "icon": "bot",
+      "target": 1,
+      "xp": 40,
+      "actionRoute": "/sensei"
+    },
+    {
+      "id": "quest_exam",
+      "title": "Chiến Binh Thi Thử",
+      "description": "Hoàn thành 1 bài kiểm tra ngẫu nhiên hoặc đề thi thử tính giờ",
+      "icon": "trophy",
+      "target": 1,
+      "xp": 60,
+      "actionRoute": "/exam"
+    },
+    {
+      "id": "quest_kana",
+      "title": "Ôn Tập Bảng Chữ Cái",
+      "description": "Lật mở và nghe phát âm 10 thẻ chữ cái hoặc từ vựng trong Bảng Chữ Cái & 3D",
+      "icon": "sparkles",
+      "target": 10,
+      "xp": 40,
+      "actionRoute": "/kana"
+    }
+  ]
+}

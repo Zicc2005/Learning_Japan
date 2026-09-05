@@ -1,0 +1,1574 @@
+[
+  {
+    "char": "あ",
+    "romaji": "a",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang ngắn từ trái sang phải",
+      "2. Nét sổ cong từ trên xuống cắt qua giữa nét 1",
+      "3. Nét cong xoắn tròn lớn từ giữa sang phải rồi uốn xuống"
+    ],
+    "mnemonic": {
+      "title": "Quả Táo (Apple)",
+      "story": "Chữ あ nhìn như một quả táo đỏ mọng có cuống lá ở trên và thân tròn trịa. Cắn một miếng kêu 'A!'."
+    },
+    "examples": [
+      {
+        "word": "あい (ai)",
+        "hanviet": "Ái",
+        "meaning": "Tình yêu"
+      },
+      {
+        "word": "あさ (asa)",
+        "hanviet": "Triêu",
+        "meaning": "Buổi sáng"
+      },
+      {
+        "word": "あめ (ame)",
+        "hanviet": "Vũ",
+        "meaning": "Cơn mưa"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 30 110 Q 100 100 170 95",
+      "M 105 40 Q 110 130 95 210",
+      "M 80 120 Q 170 80 175 160 Q 175 220 110 215 Q 50 200 70 140 Q 80 115 110 120"
+    ]
+  },
+  {
+    "char": "い",
+    "romaji": "i",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét cong bên trái kéo từ trên xuống rồi hất nhẹ lên",
+      "2. Nét ngắn hơn ở bên phải hơi uốn cong hướng vào nét 1"
+    ],
+    "mnemonic": {
+      "title": "Hai con lươn (Eels)",
+      "story": "Chữ い giống như 2 con lươn bơi song song hoặc hai thanh kiếm katana đứng cạnh nhau."
+    },
+    "examples": [
+      {
+        "word": "いぬ (inu)",
+        "hanviet": "Khuyển",
+        "meaning": "Con chó"
+      },
+      {
+        "word": "いえ (ie)",
+        "hanviet": "Gia",
+        "meaning": "Ngôi nhà"
+      },
+      {
+        "word": "いち (ichi)",
+        "hanviet": "Nhất",
+        "meaning": "Số 1"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 60 Q 40 140 70 190 Q 75 180 85 165",
+      "M 140 85 Q 160 130 145 170"
+    ]
+  },
+  {
+    "char": "う",
+    "romaji": "u",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy ngắn xiên chéo ở trên",
+      "2. Nét cong lớn uốn lượn hình chữ C ngược từ trái sang phải"
+    ],
+    "mnemonic": {
+      "title": "Người đau lưng kêu 'U'",
+      "story": "Chữ う giống một người gù lưng đang mang vác nặng cúi gập người xuống rên 'U... mệt quá!'."
+    },
+    "examples": [
+      {
+        "word": "うみ (umi)",
+        "hanviet": "Hải",
+        "meaning": "Biển"
+      },
+      {
+        "word": "うた (uta)",
+        "hanviet": "Ca",
+        "meaning": "Bài hát"
+      },
+      {
+        "word": "うえ (ue)",
+        "hanviet": "Thượng",
+        "meaning": "Phía trên"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 50 Q 115 65 125 75",
+      "M 70 105 Q 150 90 150 145 Q 150 200 80 205"
+    ]
+  },
+  {
+    "char": "え",
+    "romaji": "e",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét chấm phẩy nhỏ ở trên đỉnh",
+      "2. Nét zíc zắc: ngang ngắn, chéo xuống trái, rồi lượn sóng sang phải giống số 5"
+    ],
+    "mnemonic": {
+      "title": "Chú chim bồ câu bay",
+      "story": "Chữ え nhìn giống chú chim bồ câu hoặc một vận động viên thể dục (Energetic) đang chạy."
+    },
+    "examples": [
+      {
+        "word": "えき (eki)",
+        "hanviet": "Dịch",
+        "meaning": "Nhà ga"
+      },
+      {
+        "word": "えん (en)",
+        "hanviet": "Yên",
+        "meaning": "Tiền Yên Nhật"
+      },
+      {
+        "word": "えんぴつ (enpitsu)",
+        "hanviet": "Duyên bút",
+        "meaning": "Bút chì"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 90 50 Q 110 65 120 75",
+      "M 60 110 L 140 105 L 75 180 Q 115 160 150 175 Q 170 185 180 175"
+    ]
+  },
+  {
+    "char": "お",
+    "romaji": "o",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang ngắn từ trái sang phải",
+      "2. Nét sổ thẳng xuống cắt nét 1 rồi uốn vòng xoắn lớn sang phải",
+      "3. Nét chấm ngắn bên trên góc phải"
+    ],
+    "mnemonic": {
+      "title": "Cú đánh Golf 'Oh!'",
+      "story": "Chữ お giống người đàn ông đang vung gậy đánh bóng golf vào lỗ và reo lên 'Oh!'."
+    },
+    "examples": [
+      {
+        "word": "おんがく (ongaku)",
+        "hanviet": "Âm nhạc",
+        "meaning": "Âm nhạc"
+      },
+      {
+        "word": "おんな (onna)",
+        "hanviet": "Nữ",
+        "meaning": "Phụ nữ"
+      },
+      {
+        "word": "おちゃ (ocha)",
+        "hanviet": "Trà",
+        "meaning": "Trà xanh"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 50 100 L 120 95",
+      "M 90 55 L 90 150 Q 90 210 140 200 Q 175 190 160 140 Q 145 110 115 120",
+      "M 145 75 Q 165 95 170 105"
+    ]
+  },
+  {
+    "char": "か",
+    "romaji": "ka",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang gập móc sang phải và uốn xuống",
+      "2. Nét cong dài sổ xuống cắt nét 1",
+      "3. Nét chấm ngắn bên trên góc phải"
+    ],
+    "mnemonic": {
+      "title": "Người vác đòn gánh",
+      "story": "Chữ か giống người đang gồng lưng vác vật nặng, giọt mồ hôi bắn ra (nét chấm), thở dài 'Ka!'."
+    },
+    "examples": [
+      {
+        "word": "かわ (kawa)",
+        "hanviet": "Xuyên",
+        "meaning": "Con sông"
+      },
+      {
+        "word": "かさ (kasa)",
+        "hanviet": "Tản",
+        "meaning": "Cái ô/dù"
+      },
+      {
+        "word": "かみ (kami)",
+        "hanviet": "Chỉ/Thần",
+        "meaning": "Giấy / Thần linh"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 90 Q 115 75 130 90 Q 130 140 100 175 Q 95 165 90 150",
+      "M 85 55 Q 80 130 55 200",
+      "M 145 65 Q 160 85 165 95"
+    ]
+  },
+  {
+    "char": "き",
+    "romaji": "ki",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét ngang ngắn thứ nhất",
+      "2. Nét ngang ngắn thứ hai song song hơi dài hơn",
+      "3. Nét sổ chéo từ trên xuống cắt qua 2 nét ngang rồi hất nhẹ sang trái",
+      "4. Nét vòng cung ở dưới đỡ lấy thân chữ"
+    ],
+    "mnemonic": {
+      "title": "Chiếc Chìa Khóa (Key)",
+      "story": "Chữ き trông giống như một chiếc chìa khóa cổ bằng đồng (Key - đọc là Ki)."
+    },
+    "examples": [
+      {
+        "word": "き (ki)",
+        "hanviet": "Mộc",
+        "meaning": "Cái cây"
+      },
+      {
+        "word": "きって (kitte)",
+        "hanviet": "Thiết thủ",
+        "meaning": "Con tem"
+      },
+      {
+        "word": "きっぷ (kippu)",
+        "hanviet": "Thiết phiếu",
+        "meaning": "Vé tàu"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 85 L 135 80",
+      "M 55 115 L 145 110",
+      "M 115 50 L 85 155 Q 75 170 65 170",
+      "M 65 170 Q 105 200 135 180"
+    ]
+  },
+  {
+    "char": "く",
+    "romaji": "ku",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Một nét duy nhất: gập góc nhọn từ trên sang trái rồi chéo xuống sang phải giống mỏ chim"
+    ],
+    "mnemonic": {
+      "title": "Mỏ chim Cuckoo kêu 'Cúc cu'",
+      "story": "Chữ く như cái mỏ chim đang mở rộng kêu 'Cúc cu' đòi ăn."
+    },
+    "examples": [
+      {
+        "word": "くるま (kuruma)",
+        "hanviet": "Xa",
+        "meaning": "Xe hơi"
+      },
+      {
+        "word": "くに (kuni)",
+        "hanviet": "Quốc",
+        "meaning": "Đất nước"
+      },
+      {
+        "word": "くち (kuchi)",
+        "hanviet": "Khẩu",
+        "meaning": "Cái miệng"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 140 60 L 60 125 L 145 195"
+    ]
+  },
+  {
+    "char": "け",
+    "romaji": "ke",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét sổ hơi uốn lượn bên trái và hất nhẹ",
+      "2. Nét ngang ngắn ở bên phải",
+      "3. Nét sổ cong dọc từ trên xuống cắt qua nét ngang"
+    ],
+    "mnemonic": {
+      "title": "Thùng Rượu Vang (Keg)",
+      "story": "Chữ け giống một chiếc thùng gỗ ủ rượu (Keg) có nắp mở."
+    },
+    "examples": [
+      {
+        "word": "けさ (kesa)",
+        "hanviet": "Kim triêu",
+        "meaning": "Sáng nay"
+      },
+      {
+        "word": "けいかく (keikaku)",
+        "hanviet": "Kế hoạch",
+        "meaning": "Kế hoạch"
+      },
+      {
+        "word": "けっこん (kekkon)",
+        "hanviet": "Kết hôn",
+        "meaning": "Kết hôn"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 60 Q 60 130 65 190 Q 70 175 80 165",
+      "M 105 95 L 165 90",
+      "M 135 60 Q 140 130 120 200"
+    ]
+  },
+  {
+    "char": "こ",
+    "romaji": "ko",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang trên hơi võng và hất nhẹ",
+      "2. Nét ngang dưới hơi cong lên tạo thành hai bờ song song"
+    ],
+    "mnemonic": {
+      "title": "Hai con cá chép (Koi)",
+      "story": "Chữ こ như 2 con cá Koi đang bơi lượn trên dưới đón nhau."
+    },
+    "examples": [
+      {
+        "word": "こども (kodomo)",
+        "hanviet": "Tử",
+        "meaning": "Trẻ con"
+      },
+      {
+        "word": "ここ (koko)",
+        "meaning": "Ở đây"
+      },
+      {
+        "word": "こえ (koe)",
+        "hanviet": "Thanh",
+        "meaning": "Giọng nói"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 80 Q 115 75 145 85 Q 135 95 125 105",
+      "M 60 170 Q 110 185 155 170"
+    ]
+  },
+  {
+    "char": "さ",
+    "romaji": "sa",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang hơi dốc lên",
+      "2. Nét sổ chéo cắt qua nét ngang và hất sang trái",
+      "3. Vòng cung mở phía dưới"
+    ],
+    "mnemonic": {
+      "title": "Vũ công Samurai múa kiếm",
+      "story": "Chữ さ giống tư thế một samurai vung thanh kiếm sắc lẹm."
+    },
+    "examples": [
+      {
+        "word": "さかな (sakana)",
+        "hanviet": "Ngư",
+        "meaning": "Con cá"
+      },
+      {
+        "word": "さくら (sakura)",
+        "hanviet": "Anh",
+        "meaning": "Hoa anh đào"
+      },
+      {
+        "word": "さとう (satou)",
+        "hanviet": "Sa đường",
+        "meaning": "Đường ăn"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 85 L 145 75",
+      "M 120 50 L 95 145 Q 85 160 75 160",
+      "M 75 165 Q 115 205 145 175"
+    ]
+  },
+  {
+    "char": "し",
+    "romaji": "shi",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét sổ dọc thẳng từ trên xuống rồi uốn cong hất lên sang phải như lưỡi câu"
+    ],
+    "mnemonic": {
+      "title": "Lưỡi câu cá (Fishing Hook)",
+      "story": "Chữ し như một chiếc lưỡi câu câu được chú cá xiêm (Shi)."
+    },
+    "examples": [
+      {
+        "word": "しお (shio)",
+        "hanviet": "Diêm",
+        "meaning": "Muối ăn"
+      },
+      {
+        "word": "しんぶん (shinbun)",
+        "hanviet": "Tân văn",
+        "meaning": "Báo chí"
+      },
+      {
+        "word": "しろい (shiroi)",
+        "hanviet": "Bạch",
+        "meaning": "Màu trắng"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 55 L 85 160 Q 90 205 145 200 Q 165 195 175 175"
+    ]
+  },
+  {
+    "char": "す",
+    "romaji": "su",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang dài từ trái qua phải",
+      "2. Nét sổ dọc cắt nét ngang, tạo một vòng tròn thòng lọng ở giữa rồi kéo cong xuống"
+    ],
+    "mnemonic": {
+      "title": "Dây đu đu đủ (Swing)",
+      "story": "Chữ す giống cái xích đu có vòng dây cuốn lại, em bé trèo lên xoay 'Su...u'."
+    },
+    "examples": [
+      {
+        "word": "すし (sushi)",
+        "hanviet": "Tứ",
+        "meaning": "Món Sushi"
+      },
+      {
+        "word": "すき (suki)",
+        "hanviet": "Hảo",
+        "meaning": "Thích"
+      },
+      {
+        "word": "すこし (sukoshi)",
+        "hanviet": "Thiểu",
+        "meaning": "Một chút"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 50 85 L 165 75",
+      "M 115 45 L 115 125 Q 140 120 135 155 Q 120 180 95 155 Q 85 140 115 135 L 110 205"
+    ]
+  },
+  {
+    "char": "せ",
+    "romaji": "se",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang dài hơi cong",
+      "2. Nét sổ dọc bên phải gập góc sang trái",
+      "3. Nét sổ dọc bên trái cắt nét 1 và uốn cong sang phải"
+    ],
+    "mnemonic": {
+      "title": "Bậc thang thế hệ (Generation)",
+      "story": "Chữ せ giống chữ Thế (世) trong thế hệ, người đi trước chỉ đường cho người đi sau."
+    },
+    "examples": [
+      {
+        "word": "せんせい (sensei)",
+        "hanviet": "Tiên sinh",
+        "meaning": "Thầy/Cô giáo"
+      },
+      {
+        "word": "せかい (sekai)",
+        "hanviet": "Thế giới",
+        "meaning": "Thế giới"
+      },
+      {
+        "word": "せなか (senaka)",
+        "hanviet": "Bối trung",
+        "meaning": "Tấm lưng"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 45 95 L 160 85",
+      "M 140 60 L 140 135 L 105 145",
+      "M 85 50 L 85 170 Q 90 190 145 185"
+    ]
+  },
+  {
+    "char": "そ",
+    "romaji": "so",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Vẽ hình chữ Z ở nửa trên, sau đó lượn vòng cung chữ C ở nửa dưới"
+    ],
+    "mnemonic": {
+      "title": "Đường kim mũi chỉ may vá (Sewing)",
+      "story": "Chữ そ như đường kim zíc zắc khâu chiếc áo rách khéo léo."
+    },
+    "examples": [
+      {
+        "word": "そら (sora)",
+        "hanviet": "Không",
+        "meaning": "Bầu trời"
+      },
+      {
+        "word": "そこ (soko)",
+        "meaning": "Chỗ đó"
+      },
+      {
+        "word": "そして (soshite)",
+        "meaning": "Và rồi"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 65 L 135 65 L 65 125 L 135 125 Q 155 170 110 195 Q 65 200 65 170"
+    ]
+  },
+  {
+    "char": "た",
+    "romaji": "ta",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét ngang ngắn",
+      "2. Nét sổ chéo cắt qua nét ngang",
+      "3. Nét ngang ngắn ở góc dưới phải",
+      "4. Nét cong ngắn dưới nét 3 (như chữ こ)"
+    ],
+    "mnemonic": {
+      "title": "Chữ T và A ghép lại",
+      "story": "Bên trái là chữ t, bên phải như chữ a cách điệu -> Đọc luôn là 'Ta'!"
+    },
+    "examples": [
+      {
+        "word": "たべる (taberu)",
+        "hanviet": "Thực",
+        "meaning": "Ăn"
+      },
+      {
+        "word": "たまご (tamago)",
+        "hanviet": "Noãn",
+        "meaning": "Quả trứng"
+      },
+      {
+        "word": "たかい (takai)",
+        "hanviet": "Cao",
+        "meaning": "Cao / Đắt"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 90 L 115 85",
+      "M 85 60 L 65 180",
+      "M 115 110 L 155 105",
+      "M 110 155 Q 140 165 160 150"
+    ]
+  },
+  {
+    "char": "ち",
+    "romaji": "chi",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang ngắn",
+      "2. Nét sổ dọc cắt qua nét 1 rồi uốn thành bụng tròn số 5"
+    ],
+    "mnemonic": {
+      "title": "Vận động viên cổ vũ (Cheerleader)",
+      "story": "Chữ ち giống cô gái cổ vũ đang tung váy tròn nhảy Cheer!"
+    },
+    "examples": [
+      {
+        "word": "ちち (chichi)",
+        "hanviet": "Phụ",
+        "meaning": "Bố (mình)"
+      },
+      {
+        "word": "ちず (chizu)",
+        "hanviet": "Địa đồ",
+        "meaning": "Bản đồ"
+      },
+      {
+        "word": "ちかい (chikai)",
+        "hanviet": "Cận",
+        "meaning": "Gần"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 85 L 140 75",
+      "M 105 50 L 95 120 Q 155 105 160 160 Q 155 205 95 195"
+    ]
+  },
+  {
+    "char": "つ",
+    "romaji": "tsu",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét ngang hơi cong rồi uốn lượn thành một ngọn sóng thần lớn từ phải sang trái"
+    ],
+    "mnemonic": {
+      "title": "Sóng thần thần tốc (Tsunami)",
+      "story": "Chữ つ mang hình dáng một ngọn sóng thần Tsunami cao vút cuộn trào."
+    },
+    "examples": [
+      {
+        "word": "つくえ (tsukue)",
+        "hanviet": "Cơ",
+        "meaning": "Cái bàn"
+      },
+      {
+        "word": "つき (tsuki)",
+        "hanviet": "Nguyệt",
+        "meaning": "Mặt trăng"
+      },
+      {
+        "word": "つかう (tsukau)",
+        "hanviet": "Sử",
+        "meaning": "Sử dụng"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 90 Q 130 65 155 95 Q 170 145 100 195 Q 70 210 60 200"
+    ]
+  },
+  {
+    "char": "て",
+    "romaji": "te",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét ngang dốc nhẹ sang phải rồi uốn cong ngược lại thành chiếc mui thuyền"
+    ],
+    "mnemonic": {
+      "title": "Bàn tay mở rộng (Te = Tay)",
+      "story": "Chữ て tiếng Nhật nghĩa là 'Bàn tay', nét vẽ như cánh tay vươn ra đón nhận."
+    },
+    "examples": [
+      {
+        "word": "て (te)",
+        "hanviet": "Thủ",
+        "meaning": "Bàn tay"
+      },
+      {
+        "word": "てがみ (tegami)",
+        "hanviet": "Thủ chỉ",
+        "meaning": "Lá thư"
+      },
+      {
+        "word": "てんき (tenki)",
+        "hanviet": "Thời khí",
+        "meaning": "Thời tiết"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 85 L 145 80 Q 100 135 95 180 Q 100 205 145 190"
+    ]
+  },
+  {
+    "char": "と",
+    "romaji": "to",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ chéo ngắn từ trên xuống phải",
+      "2. Nét cung tròn lớn ôm lấy nét 1"
+    ],
+    "mnemonic": {
+      "title": "Ngón chân cái bị gai cắm (Toe)",
+      "story": "Chữ と giống ngón chân cái (Toe) bị que nhọn cắm vào, kêu 'To!'."
+    },
+    "examples": [
+      {
+        "word": "ともだち (tomodachi)",
+        "hanviet": "Hữu đạt",
+        "meaning": "Bạn bè"
+      },
+      {
+        "word": "とり (tori)",
+        "hanviet": "Điểu",
+        "meaning": "Con chim"
+      },
+      {
+        "word": "とけい (tokei)",
+        "hanviet": "Thời kế",
+        "meaning": "Đồng hồ"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 60 L 105 110",
+      "M 135 90 Q 60 140 100 200 Q 135 210 155 185"
+    ]
+  },
+  {
+    "char": "な",
+    "romaji": "na",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét ngang ngắn",
+      "2. Nét sổ chéo cắt qua nét 1",
+      "3. Nét phẩy ngắn phía trên bên phải",
+      "4. Nét sổ thòng lọng có vòng xoắn ở đuôi"
+    ],
+    "mnemonic": {
+      "title": "Nữ tu quỳ cầu nguyện (Nun)",
+      "story": "Chữ な giống nữ tu quỳ trước cây thánh giá cầu nguyện trang nghiêm."
+    },
+    "examples": [
+      {
+        "word": "なまえ (namae)",
+        "hanviet": "Danh tiền",
+        "meaning": "Họ tên"
+      },
+      {
+        "word": "なつ (natsu)",
+        "hanviet": "Hạ",
+        "meaning": "Mùa hè"
+      },
+      {
+        "word": "なん (nan)",
+        "hanviet": "Hà",
+        "meaning": "Cái gì"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 90 L 105 85",
+      "M 85 65 L 75 160",
+      "M 130 75 Q 145 90 150 95",
+      "M 135 115 L 135 160 Q 145 195 125 195 Q 105 195 115 165"
+    ]
+  },
+  {
+    "char": "に",
+    "romaji": "ni",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét sổ dọc hơi uốn lượn bên trái",
+      "2. Nét ngang ngắn trên ở bên phải",
+      "3. Nét ngang dưới song song"
+    ],
+    "mnemonic": {
+      "title": "Cái kim và 2 sợi chỉ (Needle)",
+      "story": "Nét bên trái là cây kim, 2 nét bên phải là 2 sợi chỉ xâu qua kim (Ni = số 2)."
+    },
+    "examples": [
+      {
+        "word": "にほん (nihon)",
+        "hanviet": "Nhật Bản",
+        "meaning": "Nước Nhật"
+      },
+      {
+        "word": "にく (niku)",
+        "hanviet": "Nhục",
+        "meaning": "Thịt"
+      },
+      {
+        "word": "にちようび (nichiyoubi)",
+        "hanviet": "Nhật diệu nhật",
+        "meaning": "Chủ nhật"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 60 Q 60 130 65 195",
+      "M 110 95 L 160 90",
+      "M 105 165 Q 135 175 165 160"
+    ]
+  },
+  {
+    "char": "ぬ",
+    "romaji": "nu",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ chéo từ trái sang phải",
+      "2. Nét uốn lượn từ trên cuốn qua nét 1, vòng một bụng tròn lớn và thắt nút xoắn ở đuôi"
+    ],
+    "mnemonic": {
+      "title": "Bát mì sợi Udon (Noodles)",
+      "story": "Chữ ぬ giống đôi đũa gắp một sợi mì bún xoắn thắt nút ở đuôi (Noodle -> Nu)."
+    },
+    "examples": [
+      {
+        "word": "いぬ (inu)",
+        "hanviet": "Khuyển",
+        "meaning": "Con chó"
+      },
+      {
+        "word": "ぬの (nuno)",
+        "hanviet": "Bố",
+        "meaning": "Vải vóc"
+      },
+      {
+        "word": "ぬる (nuru)",
+        "hanviet": "Đồ",
+        "meaning": "Sơn, thoa"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 L 135 195",
+      "M 115 65 Q 60 120 60 160 Q 65 200 120 185 Q 155 170 155 140 Q 145 125 125 150 Q 120 185 145 180"
+    ]
+  },
+  {
+    "char": "ね",
+    "romaji": "ne",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ thẳng đứng bên trái",
+      "2. Nét zíc zắc giống chữ Z rồi kéo sang phải uốn vòng tròn thắt đuôi cá"
+    ],
+    "mnemonic": {
+      "title": "Chú mèo con (Neko)",
+      "story": "Chữ ね giống một chú mèo con có cái đuôi uốn cong thắt nút ngộ nghĩnh."
+    },
+    "examples": [
+      {
+        "word": "ねこ (neko)",
+        "hanviet": "Miêu",
+        "meaning": "Con mèo"
+      },
+      {
+        "word": "ねる (neru)",
+        "hanviet": "Tẩm",
+        "meaning": "Đi ngủ"
+      },
+      {
+        "word": "ねつ (netsu)",
+        "hanviet": "Nhiệt",
+        "meaning": "Cơn sốt"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 55 L 70 200",
+      "M 45 100 L 115 85 L 60 170 L 130 135 Q 160 160 140 190 Q 120 205 110 180 Q 115 165 130 170"
+    ]
+  },
+  {
+    "char": "の",
+    "romaji": "no",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét xiên chéo từ giữa lên rồi uốn lượn thành một vòng tròn khép kín như biển cấm"
+    ],
+    "mnemonic": {
+      "title": "Biển cấm tròn (No Entry)",
+      "story": "Chữ の giống biển báo giao thông hình tròn: 'NO - Cấm vào!'."
+    },
+    "examples": [
+      {
+        "word": "のみもの (nomimono)",
+        "hanviet": "Ẩm vật",
+        "meaning": "Đồ uống"
+      },
+      {
+        "word": "ノート (nooto)",
+        "meaning": "Vở ghi chép"
+      },
+      {
+        "word": "のる (noru)",
+        "hanviet": "Thừa",
+        "meaning": "Lên xe"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 115 75 L 85 145 Q 65 180 100 195 Q 155 205 170 145 Q 170 85 110 90 Q 80 95 65 130"
+    ]
+  },
+  {
+    "char": "は",
+    "romaji": "ha",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét sổ thẳng hơi cong bên trái",
+      "2. Nét ngang ngắn bên phải",
+      "3. Nét sổ dọc cắt nét ngang, thắt một vòng xoắn tròn ở đáy"
+    ],
+    "mnemonic": {
+      "title": "Chữ H và cây thánh giá",
+      "story": "Bên trái là cột cờ, bên phải là chữ 'ha' vui vẻ reo mừng Ha Ha Ha!"
+    },
+    "examples": [
+      {
+        "word": "はな (hana)",
+        "hanviet": "Hoa/Tị",
+        "meaning": "Bông hoa / Cái mũi"
+      },
+      {
+        "word": "はい (hai)",
+        "meaning": "Vâng, dạ"
+      },
+      {
+        "word": "はる (haru)",
+        "hanviet": "Xuân",
+        "meaning": "Mùa xuân"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 60 Q 60 130 65 195",
+      "M 105 95 L 160 90",
+      "M 135 60 L 135 155 Q 145 195 125 195 Q 105 195 115 165"
+    ]
+  },
+  {
+    "char": "ひ",
+    "romaji": "hi",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét ngang ngắn, võng sâu xuống thành nụ cười rồi hất lên bên phải"
+    ],
+    "mnemonic": {
+      "title": "Nụ cười toe toét 'Hi hi'",
+      "story": "Chữ ひ giống chiếc miệng cười toe toét phát ra tiếng cười 'Hi hi'."
+    },
+    "examples": [
+      {
+        "word": "ひと (hito)",
+        "hanviet": "Nhân",
+        "meaning": "Con người"
+      },
+      {
+        "word": "ひ (hi)",
+        "hanviet": "Nhật/Hỏa",
+        "meaning": "Mặt trời / Ngọn lửa"
+      },
+      {
+        "word": "ひこうき (hikouki)",
+        "hanviet": "Phi hành cơ",
+        "meaning": "Máy bay"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 90 L 85 85 L 60 135 Q 90 195 125 190 Q 155 185 150 120 L 170 85"
+    ]
+  },
+  {
+    "char": "ふ",
+    "romaji": "fu",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét chấm phẩy nhỏ ở đỉnh",
+      "2. Nét sổ cong ở giữa như cái mũi",
+      "3. Nét phẩy bên trái",
+      "4. Nét chấm bên phải"
+    ],
+    "mnemonic": {
+      "title": "Núi Phú Sĩ lửa phun (Fuji)",
+      "story": "Chữ ふ giống ngọn núi Phú Sĩ tuyết phủ đang phun trào nham thạch sang hai bên."
+    },
+    "examples": [
+      {
+        "word": "ふゆ (fuyu)",
+        "hanviet": "Đông",
+        "meaning": "Mùa đông"
+      },
+      {
+        "word": "ふね (fune)",
+        "hanviet": "Chu",
+        "meaning": "Tàu thuyền"
+      },
+      {
+        "word": "ふじさん (fujisan)",
+        "hanviet": "Phú Sĩ sơn",
+        "meaning": "Núi Phú Sĩ"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 105 50 Q 115 65 120 70",
+      "M 115 95 Q 95 135 110 185 Q 95 170 85 155",
+      "M 65 115 Q 55 135 60 150",
+      "M 155 120 Q 165 140 160 155"
+    ]
+  },
+  {
+    "char": "へ",
+    "romaji": "he",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét chéo lên ngắn sang phải, rồi uốn góc nhọn đổ dốc dài sang phải"
+    ],
+    "mnemonic": {
+      "title": "Ngọn đồi thoai thoải (Hill)",
+      "story": "Chữ へ như sườn ngọn đồi thoai thoải người ta bước lên thở phào 'He... he'."
+    },
+    "examples": [
+      {
+        "word": "へや (heya)",
+        "hanviet": "Bộ ốc",
+        "meaning": "Căn phòng"
+      },
+      {
+        "word": "へた (heta)",
+        "hanviet": "Hạ thủ",
+        "meaning": "Kém, vụng"
+      },
+      {
+        "word": "へいわ (heiwa)",
+        "hanviet": "Bình hòa",
+        "meaning": "Hòa bình"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 145 L 95 90 L 175 160"
+    ]
+  },
+  {
+    "char": "ほ",
+    "romaji": "ho",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét sổ thẳng bên trái",
+      "2. Nét ngang trên",
+      "3. Nét ngang dưới ngắn hơn",
+      "4. Nét sổ dọc cắt qua nét ngang dưới (không nhô lên nét trên) và thắt vòng tròn ở đáy"
+    ],
+    "mnemonic": {
+      "title": "Chú lính gác đội mũ (Hot)",
+      "story": "Chữ ほ giống chữ は nhưng có thêm chiếc nón che nắng vì trời quá 'Ho... hot'!"
+    },
+    "examples": [
+      {
+        "word": "ほん (hon)",
+        "hanviet": "Bản",
+        "meaning": "Quyển sách"
+      },
+      {
+        "word": "ほし (hoshi)",
+        "hanviet": "Tinh",
+        "meaning": "Ngôi sao"
+      },
+      {
+        "word": "ほね (hone)",
+        "hanviet": "Cốt",
+        "meaning": "Khung xương"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 60 Q 60 130 65 195",
+      "M 100 80 L 160 75",
+      "M 105 115 L 155 110",
+      "M 130 85 L 130 160 Q 140 195 120 195 Q 100 195 110 165"
+    ]
+  },
+  {
+    "char": "ま",
+    "romaji": "ma",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên dài",
+      "2. Nét ngang dưới ngắn hơn",
+      "3. Nét sổ thẳng cắt qua 2 nét ngang rồi xoắn tròn ở đáy"
+    ],
+    "mnemonic": {
+      "title": "Cột buồm tàu biển (Mast)",
+      "story": "Chữ ま giống cột buồm tàu thuyền căng gió vượt đại dương ma thuật."
+    },
+    "examples": [
+      {
+        "word": "まち (machi)",
+        "hanviet": "Đinh",
+        "meaning": "Thị trấn / Phố xá"
+      },
+      {
+        "word": "まいにち (mainichi)",
+        "hanviet": "Mỗi nhật",
+        "meaning": "Mỗi ngày"
+      },
+      {
+        "word": "まえ (mae)",
+        "hanviet": "Tiền",
+        "meaning": "Phía trước"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 80 L 160 75",
+      "M 65 115 L 150 110",
+      "M 110 50 L 110 160 Q 120 195 100 195 Q 85 195 95 165"
+    ]
+  },
+  {
+    "char": "み",
+    "romaji": "mi",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang ngắn uốn chéo xuống, thắt một vòng xoắn tròn rồi vạch ngang dài sang phải",
+      "2. Nét phẩy cong chéo từ trên xuống cắt đuôi nét 1"
+    ],
+    "mnemonic": {
+      "title": "Nốt nhạc Mi xinh đẹp",
+      "story": "Chữ み giống số 21 cách điệu hoặc một nốt nhạc Mi lượn sóng du dương."
+    },
+    "examples": [
+      {
+        "word": "みず (mizu)",
+        "hanviet": "Thủy",
+        "meaning": "Nước"
+      },
+      {
+        "word": "みち (michi)",
+        "hanviet": "Đạo",
+        "meaning": "Con đường"
+      },
+      {
+        "word": "みみ (mimi)",
+        "hanviet": "Nhĩ",
+        "meaning": "Cái tai"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 85 L 105 80 L 70 155 Q 95 180 120 155 L 165 145",
+      "M 140 95 Q 135 150 110 195"
+    ]
+  },
+  {
+    "char": "む",
+    "romaji": "mu",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang ngắn",
+      "2. Nét sổ thẳng cắt qua nét 1, xoắn vòng tròn ở giữa rồi hất cong sang phải",
+      "3. Nét chấm phẩy nhỏ ở trên bên phải"
+    ],
+    "mnemonic": {
+      "title": "Con bò kêu 'Mooo'",
+      "story": "Chữ む nhìn như khuôn mặt con bò sữa có sừng và mũi kêu 'Moo... Mư'."
+    },
+    "examples": [
+      {
+        "word": "むし (mushi)",
+        "hanviet": "Trùng",
+        "meaning": "Côn trùng"
+      },
+      {
+        "word": "むら (mura)",
+        "hanviet": "Thôn",
+        "meaning": "Làng mạc"
+      },
+      {
+        "word": "むずかしい (muzukashii)",
+        "hanviet": "Nan",
+        "meaning": "Khó khăn"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 90 L 120 85",
+      "M 90 60 L 90 150 Q 75 190 60 170 Q 55 145 95 150 Q 140 155 160 135",
+      "M 145 75 Q 160 95 165 105"
+    ]
+  },
+  {
+    "char": "め",
+    "romaji": "me",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy chéo từ trên phải xuống dưới trái",
+      "2. Nét vòng cung lớn uốn cong từ trên trái bao trọn nét 1"
+    ],
+    "mnemonic": {
+      "title": "Mắt kính tròn (Me = Mắt)",
+      "story": "Chữ め trong tiếng Nhật có nghĩa là 'Mắt' (Me), giống hình tròng mắt to tròn."
+    },
+    "examples": [
+      {
+        "word": "め (me)",
+        "hanviet": "Mục",
+        "meaning": "Con mắt"
+      },
+      {
+        "word": "めがね (megane)",
+        "hanviet": "Nhãn kính",
+        "meaning": "Kính mắt"
+      },
+      {
+        "word": "めいし (meishi)",
+        "hanviet": "Danh thích",
+        "meaning": "Danh thiếp"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 70 L 125 185",
+      "M 115 65 Q 60 120 60 160 Q 65 200 120 185 Q 165 165 155 115 Q 145 75 100 85"
+    ]
+  },
+  {
+    "char": "も",
+    "romaji": "mo",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét móc câu chính giữa: sổ dọc xuống rồi uốn cong móc sang phải",
+      "2. Nét ngang trên",
+      "3. Nét ngang dưới"
+    ],
+    "mnemonic": {
+      "title": "Lưỡi câu giun móc mồi (More fish)",
+      "story": "Chữ も giống lưỡi câu móc thêm mồi (More) để câu thật nhiều cá."
+    },
+    "examples": [
+      {
+        "word": "もり (mori)",
+        "hanviet": "Sâm",
+        "meaning": "Khu rừng"
+      },
+      {
+        "word": "もの (mono)",
+        "hanviet": "Vật",
+        "meaning": "Đồ vật"
+      },
+      {
+        "word": "もちろん (mochiron)",
+        "meaning": "Tất nhiên"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 110 50 L 110 165 Q 115 205 165 185",
+      "M 65 95 L 155 90",
+      "M 60 135 L 160 130"
+    ]
+  },
+  {
+    "char": "や",
+    "romaji": "ya",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét cong lượn móc sang phải rồi hất nhẹ",
+      "2. Nét phẩy nhỏ ở trên nét 1",
+      "3. Nét sổ chéo dài cắt qua thân"
+    ],
+    "mnemonic": {
+      "title": "Con thuyền buồm (Yacht)",
+      "story": "Chữ や như cánh buồm chiếc thuyền Yacht lướt sóng ra khơi."
+    },
+    "examples": [
+      {
+        "word": "やま (yama)",
+        "hanviet": "Sơn",
+        "meaning": "Ngọn núi"
+      },
+      {
+        "word": "やすみ (yasumi)",
+        "hanviet": "Hưu",
+        "meaning": "Nghỉ ngơi"
+      },
+      {
+        "word": "やさい (yasai)",
+        "hanviet": "Dã thái",
+        "meaning": "Rau củ"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 105 Q 115 75 140 105 Q 140 130 115 145",
+      "M 130 65 Q 140 85 140 95",
+      "M 85 60 L 65 195"
+    ]
+  },
+  {
+    "char": "ゆ",
+    "romaji": "yu",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ hơi lượn, vòng một bụng tròn rồi vạch ngang cắt qua",
+      "2. Nét sổ cong từ trên xuống cắt thân nét 1"
+    ],
+    "mnemonic": {
+      "title": "Con cá bơi lội (Fish)",
+      "story": "Chữ ゆ nhìn như một chú cá đang uốn mình bơi trong bồn tắm nước nóng Onsen (Yu = Nước nóng)."
+    },
+    "examples": [
+      {
+        "word": "ゆき (yuki)",
+        "hanviet": "Tuyết",
+        "meaning": "Tuyết rơi"
+      },
+      {
+        "word": "ゆめ (yume)",
+        "hanviet": "Mộng",
+        "meaning": "Giấc mơ"
+      },
+      {
+        "word": "ゆうべ (yuube)",
+        "hanviet": "Tịch",
+        "meaning": "Tối hôm qua"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 L 75 145 Q 75 195 125 180 Q 155 165 145 125 L 45 125",
+      "M 125 55 Q 125 130 120 195"
+    ]
+  },
+  {
+    "char": "よ",
+    "romaji": "yo",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang ngắn ở trên bên trái",
+      "2. Nét sổ dọc cắt qua nét ngang, thắt một vòng xoắn nhỏ ở đáy rồi hất sang phải"
+    ],
+    "mnemonic": {
+      "title": "Đồ chơi Yo-Yo",
+      "story": "Chữ よ giống cái dây treo quả bóng Yo-Yo đang xoay tít."
+    },
+    "examples": [
+      {
+        "word": "よる (yoru)",
+        "hanviet": "Dạ",
+        "meaning": "Ban đêm"
+      },
+      {
+        "word": "よい (yoi)",
+        "hanviet": "Lương",
+        "meaning": "Tốt"
+      },
+      {
+        "word": "よむ (yomu)",
+        "hanviet": "Độc",
+        "meaning": "Đọc sách"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 95 L 115 90",
+      "M 120 55 L 120 155 Q 130 195 105 195 Q 85 195 95 165 L 165 165"
+    ]
+  },
+  {
+    "char": "ら",
+    "romaji": "ra",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét chấm phẩy nhỏ ở đỉnh",
+      "2. Nét sổ ngắn rồi uốn cong thành bụng tròn số 5"
+    ],
+    "mnemonic": {
+      "title": "Chú lạc đà (Camel)",
+      "story": "Chữ ら giống cái bướu tròn của chú lạc đà (Ra-cà-đà)."
+    },
+    "examples": [
+      {
+        "word": "らいしゅう (raishuu)",
+        "hanviet": "Lai chu",
+        "meaning": "Tuần sau"
+      },
+      {
+        "word": "ラジオ (rajio)",
+        "meaning": "Đài radio"
+      },
+      {
+        "word": "らくだ (rakuda)",
+        "hanviet": "Lạc đà",
+        "meaning": "Con lạc đà"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 95 55 Q 115 65 120 75",
+      "M 85 95 L 85 135 Q 155 115 155 165 Q 155 205 95 195"
+    ]
+  },
+  {
+    "char": "り",
+    "romaji": "ri",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ ngắn bên trái hất nhẹ",
+      "2. Nét sổ dài bên phải uốn cong thanh thoát"
+    ],
+    "mnemonic": {
+      "title": "Dòng sông chảy (River)",
+      "story": "Chữ り như hai bờ của một dòng sông (River) êm đềm."
+    },
+    "examples": [
+      {
+        "word": "りんご (ringo)",
+        "meaning": "Quả táo"
+      },
+      {
+        "word": "りょうり (ryouri)",
+        "hanviet": "Liệu lý",
+        "meaning": "Nấu ăn / Món ăn"
+      },
+      {
+        "word": "りょこう (ryokou)",
+        "hanviet": "Lữ hành",
+        "meaning": "Du lịch"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 Q 70 120 75 145 Q 80 140 85 130",
+      "M 135 60 Q 140 145 110 195"
+    ]
+  },
+  {
+    "char": "る",
+    "romaji": "ru",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét ngang ngắn, chéo xuống như số 3, uốn cong vòng tròn rồi thắt một nút nhỏ ở đuôi"
+    ],
+    "mnemonic": {
+      "title": "Đường xoắn ốc Roulette",
+      "story": "Chữ る như vòng quay Roulette có viên bi lăn ở đuôi tròn."
+    },
+    "examples": [
+      {
+        "word": "くるま (kuruma)",
+        "hanviet": "Xa",
+        "meaning": "Xe hơi"
+      },
+      {
+        "word": "はる (haru)",
+        "hanviet": "Xuân",
+        "meaning": "Mùa xuân"
+      },
+      {
+        "word": "よる (yoru)",
+        "hanviet": "Dạ",
+        "meaning": "Ban đêm"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 135 75 L 75 135 Q 150 115 150 165 Q 145 205 115 195 Q 95 190 105 165 Q 120 165 120 180"
+    ]
+  },
+  {
+    "char": "れ",
+    "romaji": "re",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ thẳng đứng bên trái",
+      "2. Nét zíc zắc giống chữ Z rồi lượn cong hất chân sang phải"
+    ],
+    "mnemonic": {
+      "title": "Người đang trượt tuyết (Relax)",
+      "story": "Chữ れ giống người đang uốn người trượt băng hất mũi giày lên sảng khoái."
+    },
+    "examples": [
+      {
+        "word": "れいぞうこ (reizouko)",
+        "hanviet": "Lãnh tàng khố",
+        "meaning": "Tủ lạnh"
+      },
+      {
+        "word": "れきし (rekishi)",
+        "hanviet": "Lịch sử",
+        "meaning": "Lịch sử"
+      },
+      {
+        "word": "れんしゅう (renshuu)",
+        "hanviet": "Luyện tập",
+        "meaning": "Luyện tập"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 55 L 70 200",
+      "M 45 100 L 115 85 L 60 170 L 125 135 Q 155 150 165 185"
+    ]
+  },
+  {
+    "char": "ろ",
+    "romaji": "ro",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét vẽ giống hệt chữ る nhưng không có vòng xoắn thắt nút ở đuôi (giống số 3)"
+    ],
+    "mnemonic": {
+      "title": "Tên cướp biển chôm mất viên ngọc (Robber)",
+      "story": "Chữ ろ giống chữ る nhưng viên ngọc ở đuôi đã bị tên cướp (Robber) lấy mất rồi!"
+    },
+    "examples": [
+      {
+        "word": "ろく (roku)",
+        "hanviet": "Lục",
+        "meaning": "Số 6"
+      },
+      {
+        "word": "しろ (shiro)",
+        "hanviet": "Bạch/Thành",
+        "meaning": "Màu trắng / Lâu đài"
+      },
+      {
+        "word": "くろ (kuro)",
+        "hanviet": "Hắc",
+        "meaning": "Màu đen"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 135 75 L 75 135 Q 155 115 150 170 Q 140 205 85 195"
+    ]
+  },
+  {
+    "char": "わ",
+    "romaji": "wa",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ thẳng đứng bên trái",
+      "2. Nét zíc zắc lượn sang phải uốn thành vòng tròn lớn không thắt nút"
+    ],
+    "mnemonic": {
+      "title": "Chú thiên nga bơi (Swan)",
+      "story": "Chữ わ giống một chú thiên nga trắng duyên dáng đang xòe cánh."
+    },
+    "examples": [
+      {
+        "word": "わたし (watashi)",
+        "hanviet": "Tư",
+        "meaning": "Tôi"
+      },
+      {
+        "word": "わかる (wakaru)",
+        "hanviet": "Phân",
+        "meaning": "Hiểu biết"
+      },
+      {
+        "word": "わに (wani)",
+        "meaning": "Con cá sấu"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 55 L 70 200",
+      "M 45 100 L 115 85 L 70 160 Q 165 125 155 175 Q 140 205 95 195"
+    ]
+  },
+  {
+    "char": "を",
+    "romaji": "wo",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang ngắn",
+      "2. Nét sổ chéo rồi gập ngang",
+      "3. Nét vòng cung chữ C uốn ở dưới"
+    ],
+    "mnemonic": {
+      "title": "Vận động viên nhảy cao 'Woah!'",
+      "story": "Chữ を (trợ từ chỉ tân ngữ) giống người bật nhảy qua xà cao kêu 'Woah!'."
+    },
+    "examples": [
+      {
+        "word": "ほん を よむ (hon wo yomu)",
+        "meaning": "Đọc sách"
+      },
+      {
+        "word": "みず を のむ (mizu wo nomu)",
+        "meaning": "Uống nước"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 85 L 135 80",
+      "M 95 55 L 75 135 L 140 120",
+      "M 95 130 Q 155 150 135 195 Q 110 210 80 190"
+    ]
+  },
+  {
+    "char": "ん",
+    "romaji": "n",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét sổ chéo xuống rồi uốn lượn hất lên sang phải như chữ 'n' viết thường"
+    ],
+    "mnemonic": {
+      "title": "Chữ n viết hoa mỹ",
+      "story": "Chữ ん nhìn hệt như chữ 'n' trong bảng chữ cái Latinh viết nghiêng uốn lượn."
+    },
+    "examples": [
+      {
+        "word": "ほん (hon)",
+        "hanviet": "Bản",
+        "meaning": "Quyển sách"
+      },
+      {
+        "word": "にほん (nihon)",
+        "hanviet": "Nhật Bản",
+        "meaning": "Nước Nhật"
+      },
+      {
+        "word": "せんせい (sensei)",
+        "hanviet": "Tiên sinh",
+        "meaning": "Thầy cô giáo"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 80 70 L 65 185 Q 105 120 130 145 Q 145 175 165 160"
+    ]
+  }
+]

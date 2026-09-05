@@ -1,0 +1,182 @@
+{
+  "testId": "test_n5_set1",
+  "title": "Đề Thi Thử JLPT N5 - Đề Chuẩn Số 01 (CBT Quốc Tế)",
+  "examName": "Đề Thi Thử JLPT N5 - Đề Số 01",
+  "durationMinutes": 40,
+  "passingScore": 120,
+  "totalScore": 180,
+  "totalQuestions": 20,
+  "sections": [
+    {
+      "section": "Phần 1: Moji - Goi (Chữ Hán & Từ Vựng N5)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "きのう、あたらしい 【車】 を かいました。",
+          "highlight": "車",
+          "options": ["くるま", "でんしゃ", "じてんしゃ", "ひこうき"],
+          "answerIndex": 0,
+          "explanation": "Chữ 【車】 âm Hán-Việt là XA, cách đọc Kunyomi là くるま (Xe hơi)."
+        },
+        {
+          "id": 2,
+          "question": "まいあさ、しちじ に 【おきます】。",
+          "highlight": "おきます",
+          "options": ["起きます", "行きます", "来ます", "寝ます"],
+          "answerIndex": 0,
+          "explanation": "おきます là thức dậy, chữ Hán là 【起きます】(KHỞI)."
+        },
+        {
+          "id": 3,
+          "question": "あさ ごはん を たべて、は を ( ? )。",
+          "options": ["みがきます", "あらいます", "きります", "とります"],
+          "answerIndex": 0,
+          "explanation": "Cụm từ cố định đánh răng: は を みがきます (歯を磨きます)."
+        },
+        {
+          "id": 4,
+          "question": "わたし の 【父】 は ぎんこういん です。",
+          "highlight": "父",
+          "options": ["ちち", "はは", "あに", "あね"],
+          "answerIndex": 0,
+          "explanation": "【父】 âm Hán-Việt là PHỤ, cách đọc là ちち (Bố của tôi)."
+        },
+        {
+          "id": 5,
+          "question": "きょう は 【あめ】 が ふっています。",
+          "highlight": "あめ",
+          "options": ["雨", "雪", "雲", "電"],
+          "answerIndex": 0,
+          "explanation": "あめ là mưa, chữ Hán là 【雨】(VŨ)."
+        },
+        {
+          "id": 6,
+          "question": "つくえ の うえ に ほん が 【さんさつ】 あります。",
+          "highlight": "さんさつ",
+          "options": ["三冊", "三本", "三枚", "三匹"],
+          "answerIndex": 0,
+          "explanation": "Đếm sách dùng lượng từ [さつ] (冊) ➔ 三冊 (3 cuốn sách)."
+        },
+        {
+          "id": 7,
+          "question": "この りんご は 【あかい】 です。",
+          "highlight": "あかい",
+          "options": ["赤い", "青い", "白い", "黒い"],
+          "answerIndex": 0,
+          "explanation": "あかい là màu đỏ, chữ Hán là 【赤い】(XÍCH)."
+        },
+        {
+          "id": 8,
+          "question": "のど が かわきました から、おみず を ( ? )。",
+          "options": ["のみたい です", "たべたい です", "かいたい です", "みたい です"],
+          "answerIndex": 0,
+          "explanation": "Khát nước (のど が かわきました) nên muốn 'uống nước' (のみたい です)."
+        },
+        {
+          "id": 9,
+          "question": "えき から うち まで 【あるいて】 １０ぷん です。",
+          "highlight": "あるいて",
+          "options": ["歩いて", "走って", "行って", "来て"],
+          "answerIndex": 0,
+          "explanation": "あるいて nghĩa là đi bộ, chữ Hán là 【歩いて】(BỘ)."
+        },
+        {
+          "id": 10,
+          "question": "らいねん 日本 へ 【りょこう】 します。",
+          "highlight": "りょこう",
+          "options": ["旅行", "留学", "仕事", "散歩"],
+          "answerIndex": 0,
+          "explanation": "りょこう là du lịch, chữ Hán là 【旅行】(LỮ HÀNH)."
+        }
+      ]
+    },
+    {
+      "section": "Phần 2: Bunpou & Dokkai (Ngữ Pháp & Đọc Hiểu N5)",
+      "questions": [
+        {
+          "id": 11,
+          "question": "わたし は まいあさ パン ( ? ) たべます。",
+          "options": ["を", "に", "で", "へ"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【を】 chỉ đối tượng trực tiếp chịu tác động của hành động."
+        },
+        {
+          "id": 12,
+          "question": "きのう、ともだち ( ? ) レストラン で ごはん を たべました。",
+          "options": ["と", "を", "に", "で"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【と】 mang nghĩa 'cùng với' (ともだち と: cùng với bạn)."
+        },
+        {
+          "id": 13,
+          "question": "しんかんせん ( ? ) きょうと へ いきます。",
+          "options": ["で", "に", "を", "から"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【で】 chỉ phương tiện di chuyển (bằng tàu Shinkansen)."
+        },
+        {
+          "id": 14,
+          "question": "つくえ の うえ ( ? ) ほん が あります。",
+          "options": ["に", "で", "を", "へ"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【に】 chỉ vị trí tồn tại của đồ vật."
+        },
+        {
+          "id": 15,
+          "question": "すみません、しゃしん を ( ? ) ください。",
+          "options": ["とって", "とりて", "とった", "とる"],
+          "answerIndex": 0,
+          "explanation": "Mẫu câu yêu cầu lịch sự [V-て + ください]. とります ➔ とって."
+        },
+        {
+          "id": 16,
+          "question": "わたし は __ __ ★ __ です。",
+          "sentenceHint": "Thứ tự: にほんご(1) を(2) べんきょうして(3) いる(4)",
+          "options": ["1. にほんご", "2. を", "3. べんきょうして", "4. いる"],
+          "answerIndex": 2,
+          "explanation": "Câu hoàn chỉnh: わたし は [にほんご] [を] [★ べんきょうして] [いる] です. Ngôi sao ★ rơi vào từ số 3!"
+        },
+        {
+          "id": 17,
+          "question": "きのう __ __ ★ __ 買いました。",
+          "sentenceHint": "Thứ tự: デパートで(1) とても(4) きれいな(2) 靴を(3)",
+          "options": ["1. デパートで", "2. きれいな", "3. 靴を", "4. とても"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: きのう [デパートで] [とても] [★ きれいな] [靴を] 買いました. Ngôi sao ★ là số 2!"
+        },
+        {
+          "id": 18,
+          "question": "あした は __ __ ★ __ 行きません。",
+          "sentenceHint": "Thứ tự: あめが(1) ふったら(3) どこへも(2)",
+          "options": ["1. あめが", "2. どこへも", "3. ふったら", "4. つめたい"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: あした は [あめが] [ふったら] [★ どこへも] 行きません. Ngôi sao ★ là số 2!"
+        },
+        {
+          "id": 19,
+          "question": "【マイさんの メモ】\nきのう わたし は ともだち の リンさん と えいが を みました。そのあと、きっさてん で コーヒー を のみながら、２じかん はなしました。\n\n[Hỏi] マイさん は きのう リンさん と なに を しましたか。",
+          "options": [
+            "えいが を みて、おちゃ を のみました。",
+            "ハノイ へ いきました。",
+            "２じかん えいが を みました。",
+            "あした ハノイ へ かえります。"
+          ],
+          "answerIndex": 0,
+          "explanation": "Trong bài: マイさん cùng bạn đi xem phim rồi uống cà phê trò chuyện."
+        },
+        {
+          "id": 20,
+          "question": "【としょかん の おしらせ】\n・月よう日 から 金よう日：ごぜん 9じ から ごご 8じ まで\n・土よう日 と 日よう日：ごぜん 9じ から ごご 5じ まで\n・休館日（休み）：まいしゅう 水よう日\n\n[Hỏi] としょかん が 休みの 日 は いつ ですか。",
+          "options": [
+            "水よう日",
+            "月よう日",
+            "土よう日",
+            "日よう日"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo ghi rõ: 休館日（休み）：まいしゅう 水よう日 (Thứ tư hàng tuần)."
+        }
+      ]
+    }
+  ]
+}

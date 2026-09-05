@@ -1,0 +1,469 @@
+{
+  "title": "Ngân Hàng Ôn Luyện Theo Từng Dạng Bài Thi JLPT N5",
+  "categories": [
+    {
+      "id": "kanji_reading",
+      "name": "Dạng 1: Kanji ➔ Hiragana",
+      "subtitle": "Tìm cách đọc của từ gạch chân (Mondai 1)",
+      "badge": "Chữ Hán",
+      "questions": [
+        {
+          "id": "kr_1",
+          "question": "きのう、あたらしい 【車】 を かいました。",
+          "highlight": "車",
+          "options": ["くるま", "でんしゃ", "じてんしゃ", "ひこうき"],
+          "answerIndex": 0,
+          "explanation": "【車】 âm Hán-Việt là XA, cách đọc Kunyomi là くるま (Xe hơi)."
+        },
+        {
+          "id": "kr_2",
+          "question": "としょかん で ほん を 【読みます】。",
+          "highlight": "読みます",
+          "options": ["よみます", "のみます", "たべます", "かきます"],
+          "answerIndex": 0,
+          "explanation": "【読みます】 âm Hán-Việt là ĐỘC, cách đọc là よみます (Đọc sách)."
+        },
+        {
+          "id": "kr_3",
+          "question": "まいあさ つめたい 【水】 を のみます。",
+          "highlight": "水",
+          "options": ["みず", "おちゃ", "さけ", "ゆ"],
+          "answerIndex": 0,
+          "explanation": "【水】 âm Hán-Việt là THỦY, cách đọc là みず (Nước lạnh)."
+        },
+        {
+          "id": "kr_4",
+          "question": "えき の 【前】 で あいましょう。",
+          "highlight": "前",
+          "options": ["まえ", "うしろ", "なか", "となり"],
+          "answerIndex": 0,
+          "explanation": "【前】 âm Hán-Việt là TIỀN, nghĩa là phía trước (まえ)."
+        },
+        {
+          "id": "kr_5",
+          "question": "きょう は 【雨】 が ふっています。",
+          "highlight": "雨",
+          "options": ["あめ", "ゆき", "くも", "かぜ"],
+          "answerIndex": 0,
+          "explanation": "【雨】 âm Hán-Việt là VŨ, cách đọc là あめ (Mưa)."
+        },
+        {
+          "id": "kr_6",
+          "question": "にちようび に 【山】 に のぼりました。",
+          "highlight": "山",
+          "options": ["やま", "かわ", "うみ", "もり"],
+          "answerIndex": 0,
+          "explanation": "【山】 âm Hán-Việt là SƠN, cách đọc là やま (Núi)."
+        },
+        {
+          "id": "kr_7",
+          "question": "あした は 【日曜日】 です。",
+          "highlight": "日曜日",
+          "options": ["にちようび", "げつようび", "かようび", "すいようび"],
+          "answerIndex": 0,
+          "explanation": "【日曜日】 là Chủ nhật, đọc là にちようび."
+        },
+        {
+          "id": "kr_8",
+          "question": "あそこ に 【男】 の ひと が います。",
+          "highlight": "男",
+          "options": ["おとこ", "おんな", "こども", "ひと"],
+          "answerIndex": 0,
+          "explanation": "【男】 âm Hán-Việt là NAM, đọc là おとこ (Người đàn ông)."
+        },
+        {
+          "id": "kr_9",
+          "question": "へや の 【中】 に ねこ が います。",
+          "highlight": "中",
+          "options": ["なか", "そと", "した", "うえ"],
+          "answerIndex": 0,
+          "explanation": "【中】 âm Hán-Việt là TRUNG, đọc là なか (Bên trong)."
+        },
+        {
+          "id": "kr_10",
+          "question": "まいしゅう 【何曜日】 に 日本語 を ならいますか。",
+          "highlight": "何曜日",
+          "options": ["なんようび", "なにようび", "なんにち", "なんがつ"],
+          "answerIndex": 0,
+          "explanation": "【何曜日】 nghĩa là thứ mấy, phát âm chuẩn là なんようび."
+        },
+        {
+          "id": "kr_11",
+          "question": "この りんご は 【大きい】 です ね。",
+          "highlight": "大きい",
+          "options": ["おおきい", "ちいさい", "たかい", "やすい"],
+          "answerIndex": 0,
+          "explanation": "【大きい】 âm Hán-Việt là ĐẠI, đọc là おおきい (To lớn)."
+        },
+        {
+          "id": "kr_12",
+          "question": "らいげつ 【日本】 へ 行きます。",
+          "highlight": "日本",
+          "options": ["にほん", "にっぽん", "ほんじつ", "にちほん"],
+          "answerIndex": 0,
+          "explanation": "【日本】 âm Hán-Việt là NHẬT BẢN, đọc là にほん."
+        }
+      ]
+    },
+    {
+      "id": "hiragana_to_kanji",
+      "name": "Dạng 2: Hiragana ➔ Kanji",
+      "subtitle": "Tìm chữ Hán của từ gạch chân (Mondai 2)",
+      "badge": "Nhận Diện Kanji",
+      "questions": [
+        {
+          "id": "hk_1",
+          "question": "まいあさ、しちじ に 【おきます】。",
+          "highlight": "おきます",
+          "options": ["起きます", "行きます", "来ます", "寝ます"],
+          "answerIndex": 0,
+          "explanation": "おきます là thức dậy, chữ Hán là 【起きます】(KHỞI)."
+        },
+        {
+          "id": "hk_2",
+          "question": "にほんご の 【ほん】 を かいました。",
+          "highlight": "ほん",
+          "options": ["本", "木", "休", "体"],
+          "answerIndex": 0,
+          "explanation": "ほん là sách, chữ Hán là 【本】(BẢN)."
+        },
+        {
+          "id": "hk_3",
+          "question": "きのう、いい 【ともだち】 と あいました。",
+          "highlight": "ともだち",
+          "options": ["友だち", "反だち", "右だち", "左だち"],
+          "answerIndex": 0,
+          "explanation": "ともだち là bạn bè, chữ Hán là 【友だち】(HỮU)."
+        },
+        {
+          "id": "hk_4",
+          "question": "【いま】 なんじ ですか。",
+          "highlight": "いま",
+          "options": ["今", "令", "会", "合"],
+          "answerIndex": 0,
+          "explanation": "いま là bây giờ, chữ Hán là 【今】(KIM)."
+        },
+        {
+          "id": "hk_5",
+          "question": "この 【しろい】 シャツ は たかい です。",
+          "highlight": "しろい",
+          "options": ["白い", "百い", "自い", "日い"],
+          "answerIndex": 0,
+          "explanation": "しろい là màu trắng, chữ Hán là 【白い】(BẠCH)."
+        },
+        {
+          "id": "hk_6",
+          "question": "きょう は 【あめ】 が ふっています。",
+          "highlight": "あめ",
+          "options": ["雨", "雪", "雲", "電"],
+          "answerIndex": 0,
+          "explanation": "あめ là mưa, chữ Hán là 【雨】(VŨ)."
+        },
+        {
+          "id": "hk_7",
+          "question": "こうえん を 【あるきます】。",
+          "highlight": "あるきます",
+          "options": ["歩きます", "走ります", "泳ぎます", "飛びます"],
+          "answerIndex": 0,
+          "explanation": "あるきます là đi bộ, chữ Hán là 【歩きます】(BỘ)."
+        },
+        {
+          "id": "hk_8",
+          "question": "あした とうきょう へ 【いきます】。",
+          "highlight": "いきます",
+          "options": ["行きます", "来ます", "帰ります", "出ます"],
+          "answerIndex": 0,
+          "explanation": "いきます là đi, chữ Hán là 【行きます】(HÀNH)."
+        },
+        {
+          "id": "hk_9",
+          "question": "まいばん、パン を 【たべます】。",
+          "highlight": "たべます",
+          "options": ["食べます", "飲みます", "買います", "見ます"],
+          "answerIndex": 0,
+          "explanation": "たべます là ăn, chữ Hán là 【食べます】(THỰC)."
+        },
+        {
+          "id": "hk_10",
+          "question": "この みち を 【みぎ】 へ まがってください。",
+          "highlight": "みぎ",
+          "options": ["右", "左", "上", "下"],
+          "answerIndex": 0,
+          "explanation": "みぎ là bên phải, chữ Hán là 【右】(HỮU)."
+        }
+      ]
+    },
+    {
+      "id": "context_vocab",
+      "name": "Dạng 3: Từ Vựng Theo Ngữ Cảnh",
+      "subtitle": "Chọn từ thích hợp điền vào câu (Mondai 3)",
+      "badge": "Từ Vựng",
+      "questions": [
+        {
+          "id": "cv_1",
+          "question": "あさ ごはん を たべて、は を ( ? )。",
+          "options": ["みがきます", "あらいます", "きります", "とります"],
+          "answerIndex": 0,
+          "explanation": "Đánh răng dùng cụm từ cố định: は を みがきます (歯を磨きます)."
+        },
+        {
+          "id": "cv_2",
+          "question": "へや が くらい ですから、でんき を ( ? ) ください。",
+          "options": ["つけて", "けして", "あけて", "しめて"],
+          "answerIndex": 0,
+          "explanation": "Phòng tối thì 'bật đèn': でんき を つけます (つけて)."
+        },
+        {
+          "id": "cv_3",
+          "question": "つかれました ね。すこし ( ? )。",
+          "options": ["やすみましょう", "あるきましょう", "はしりましょう", "おどりましょう"],
+          "answerIndex": 0,
+          "explanation": "Vì mệt rồi nên rủ 'nghỉ ngơi một chút': やすみましょう (休みましょう)."
+        },
+        {
+          "id": "cv_4",
+          "question": "ぎゅうにゅう を ( ? ) で のみます。",
+          "options": ["コップ", "スプーン", "フォーク", "ナイフ"],
+          "answerIndex": 0,
+          "explanation": "Uống sữa bằng 'cốc / ly': コップ (Cup)."
+        },
+        {
+          "id": "cv_5",
+          "question": "あつい ですから、まど を ( ? ) ください。",
+          "options": ["あけて", "しめて", "つけて", "けして"],
+          "answerIndex": 0,
+          "explanation": "Trời nóng nên 'mở cửa sổ': まど を あけます (あけて)."
+        },
+        {
+          "id": "cv_6",
+          "question": "ともだち の たんじょうび に プレゼント を ( ? )。",
+          "options": ["あげました", "もらいました", "かりました", "かしました"],
+          "answerIndex": 0,
+          "explanation": "Tặng quà cho bạn bè: プレゼント を あげました."
+        },
+        {
+          "id": "cv_7",
+          "question": "きのう デパート で シャツ を ( ? ) まい かいました。",
+          "options": ["に", "ふたつ", "にほん", "にさつ"],
+          "answerIndex": 0,
+          "explanation": "Đếm áo sơ mi mỏng dùng lượng từ [まい] (枚) ➔ にまい (2 chiếc)."
+        },
+        {
+          "id": "cv_8",
+          "question": "じかん が ありませんから、( ? ) いきましょう。",
+          "options": ["いそいで", "ゆっくり", "だんだん", "そろそろ"],
+          "answerIndex": 0,
+          "explanation": "Vì không có thời gian nên hãy 'khẩn trương/vội vàng': いそいで (急いで)."
+        },
+        {
+          "id": "cv_9",
+          "question": "スーパー で やさい と にく を ( ? )。",
+          "options": ["かいました", "うりました", "ならいました", "よびました"],
+          "answerIndex": 0,
+          "explanation": "Ở siêu thị thì 'mua' rau và thịt: かいました (買いました)."
+        },
+        {
+          "id": "cv_10",
+          "question": "わたし の しゅみ は おんがく を ( ? ) こと です。",
+          "options": ["きく", "みる", "よむ", "かく"],
+          "answerIndex": 0,
+          "explanation": "Sở thích là 'nghe nhạc': おんがく を きく (聞く)."
+        }
+      ]
+    },
+    {
+      "id": "grammar_particles",
+      "name": "Dạng 4: Trợ Từ & Ngữ Pháp",
+      "subtitle": "Điền trợ từ và chia thể động từ (Mondai 1 Bunpou)",
+      "badge": "Ngữ Pháp",
+      "questions": [
+        {
+          "id": "gp_1",
+          "question": "わたし は まいあさ パン ( ? ) たべます。",
+          "options": ["を", "に", "で", "へ"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【を】 chỉ đối tượng chịu tác động của hành động ăn bánh mì."
+        },
+        {
+          "id": "gp_2",
+          "question": "きのう、ともだち ( ? ) レストラン で ごはん を たべました。",
+          "options": ["と", "を", "に", "で"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【と】 mang nghĩa 'cùng với' (ともだち と: cùng với bạn)."
+        },
+        {
+          "id": "gp_3",
+          "question": "しんかんせん ( ? ) きょうと へ いきます。",
+          "options": ["で", "に", "を", "から"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【で】 chỉ phương tiện di chuyển (đi BẰNG tàu Shinkansen)."
+        },
+        {
+          "id": "gp_4",
+          "question": "つくえ の うえ ( ? ) ほん が あります。",
+          "options": ["に", "で", "を", "へ"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【に】 chỉ vị trí tồn tại của đồ vật (có sách Ở TRÊN bàn)."
+        },
+        {
+          "id": "gp_5",
+          "question": "すみません、しゃしん を ( ? ) ください。",
+          "options": ["とって", "とりて", "とった", "とる"],
+          "answerIndex": 0,
+          "explanation": "Cấu trúc xin hãy làm gì [V-て + ください]. とります nhóm 1 chuyển thành とって."
+        },
+        {
+          "id": "gp_6",
+          "question": "わたし は 日本 ( ? ) 行きたい です。",
+          "options": ["へ", "で", "を", "から"],
+          "answerIndex": 0,
+          "explanation": "Trợ từ 【へ】 hoặc 【に】 chỉ phương hướng đích đến của hành động đi."
+        },
+        {
+          "id": "gp_7",
+          "question": "いま、あめ が ( ? ) います。",
+          "options": ["ふって", "ふりて", "ふった", "ふります"],
+          "answerIndex": 0,
+          "explanation": "Hành động đang diễn ra [V-て + います]. ふります nhóm 1 thành ふって."
+        },
+        {
+          "id": "gp_8",
+          "question": "きょうしつ で たばこ を ( ? ) は いけません。",
+          "options": ["すって", "すいて", "すった", "すう"],
+          "answerIndex": 0,
+          "explanation": "Mẫu câu cấm đoán: [V-て + は いけません]. すいます biến thành すって."
+        },
+        {
+          "id": "gp_9",
+          "question": "きのう、どこ ( ? ) いきませんでした。",
+          "options": ["へも", "にも", "をも", "でも"],
+          "answerIndex": 0,
+          "explanation": "Phủ định hoàn toàn: どこへも + Phủ định (Không đi đâu cả)."
+        },
+        {
+          "id": "gp_10",
+          "question": "わたし は えいご を はなす こと ( ? ) できます。",
+          "options": ["が", "を", "に", "で"],
+          "answerIndex": 0,
+          "explanation": "Cấu trúc chỉ khả năng: [V-る + ことが できます]."
+        }
+      ]
+    },
+    {
+      "id": "star_sentence",
+      "name": "Dạng 5: Sắp Xếp Câu Ngôi Sao ★",
+      "subtitle": "Sắp xếp 4 vị trí và tìm từ ở ngôi sao ★ (Mondai 2 Bunpou)",
+      "badge": "Câu Ngôi Sao ★",
+      "questions": [
+        {
+          "id": "star_1",
+          "question": "わたし は __ __ ★ __ です。",
+          "sentenceHint": "Thứ tự sắp xếp đúng: にほんご(1) を(2) べんきょうして(3) いる(4)",
+          "options": ["1. にほんご", "2. を", "3. べんきょうして", "4. いる"],
+          "answerIndex": 2,
+          "explanation": "Câu hoàn chỉnh: わたし は [にほんご] [を] [★ べんきょうして] [いる] です。 Vị trí ngôi sao ★ là từ số 3 (べんきょうして)!"
+        },
+        {
+          "id": "star_2",
+          "question": "きのう __ __ ★ __ 買いました。",
+          "sentenceHint": "Thứ tự sắp xếp đúng: デパートで(1) とても(4) きれいな(2) 靴を(3)",
+          "options": ["1. デパートで", "2. きれいな", "3. 靴を", "4. とても"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: きのう [デパートで] [とても] [★ きれいな] [靴を] 買いました。 Vị trí ngôi sao ★ là từ số 2 (きれいな)!"
+        },
+        {
+          "id": "star_3",
+          "question": "あした は __ __ ★ __ 行きません。",
+          "sentenceHint": "Thứ tự sắp xếp đúng: あめが(1) ふったら(3) どこへも(2) (行きません)",
+          "options": ["1. あめが", "2. どこへも", "3. ふったら", "4. つめたい"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: あした は [あめが] [ふったら] [★ どこへも] 行きません。 Vị trí ngôi sao ★ là từ số 2 (どこへも)!"
+        },
+        {
+          "id": "star_4",
+          "question": "この 部屋 __ __ ★ __ はいけません。",
+          "sentenceHint": "Thứ tự đúng: に(1) くつを(2) はいたまま(3) はいって(4)",
+          "options": ["1. に", "2. くつを", "3. はいたまま", "4. はいって"],
+          "answerIndex": 2,
+          "explanation": "Câu hoàn chỉnh: この 部屋 [に] [くつを] [★ はいたまま] [はいって] はいけません。 Ngôi sao ★ rơi vào số 3 (はいたまま)!"
+        },
+        {
+          "id": "star_5",
+          "question": "わたし は __ __ ★ __ 好きです。",
+          "sentenceHint": "Thứ tự đúng: にほんの(1) アニメを(3) みることが(2) (好きです)",
+          "options": ["1. にほんの", "2. みることが", "3. アニメを", "4. とても"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: わたし は [にほんの] [アニメを] [★ みることが] 好きです。 Ngôi sao ★ là từ số 2 (みることが)!"
+        },
+        {
+          "id": "star_6",
+          "question": "えき まで __ __ ★ __ 行きました。",
+          "sentenceHint": "Thứ tự đúng: バスに(2) のって(4) じてんしゃで(1) (行きました)",
+          "options": ["1. じてんしゃで", "2. バスに", "3. ではなく", "4. のって"],
+          "answerIndex": 3,
+          "explanation": "Câu hoàn chỉnh: えき まで [じてんしゃで] [ではなく] [★ バスに] [のって] 行きました。 Ngôi sao ★ là số 4 (バスに)!"
+        }
+      ]
+    },
+    {
+      "id": "reading_comprehension",
+      "name": "Dạng 6: Đọc Hiểu Đoạn Văn Ngắn",
+      "subtitle": "Đọc đoạn văn nhật ký / mẩu tin nhắn và trả lời (Dokkai)",
+      "badge": "Đọc Hiểu",
+      "questions": [
+        {
+          "id": "rc_1",
+          "passage": "【マイさんの メモ】\nきのう わたし は ともだち の リンさん と えいが を みました。そのあと、きっさてん で コーヒー を のみながら、２じかん はなしました。リンさん は あした ハノイ へ かえります。すこし さびしい です。",
+          "question": "マイさん は きのう リンさん と なに を しましたか。",
+          "options": [
+            "えいが を みて、おちゃ を のみました。",
+            "ハノイ へ いきました。",
+            "２じかん えいが を みました。",
+            "あした ハノイ へ かえります。"
+          ],
+          "answerIndex": 0,
+          "explanation": "Trong bài: マイさん cùng bạn đi xem phim (えいが を みました), sau đó uống cà phê nói chuyện 2 tiếng."
+        },
+        {
+          "id": "rc_2",
+          "passage": "【としょかん の おしらせ】\n・月よう日 から 金よう日：ごぜん 9じ から ごご 8じ まで\n・土よう日 と 日よう日：ごぜん 9じ から ごご 5じ まで\n・休館日（休み）：まいしゅう 水よう日",
+          "question": "としょかん が 休みの 日 は いつ ですか。",
+          "options": [
+            "水よう日",
+            "月よう日",
+            "土よう日",
+            "日よう日"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thông báo ghi rõ: 休館日（休み）：まいしゅう 水よう日 (Thứ tư hàng tuần đóng cửa)."
+        },
+        {
+          "id": "rc_3",
+          "passage": "【ケンさんの メール】\n田中さん、こんにちは。\nあした の バーベキュー ですが、あめ が ふったら、わたしの うち で パーティー を しましょう。時間は ごご 1じ から です。にく と やさい は わたし が かいますから、のみもの を もってきて ください。",
+          "question": "田中さん は あした なに を もっていきますか。",
+          "options": [
+            "のみもの",
+            "にく",
+            "やさい",
+            "バーベキュー の コンロ"
+          ],
+          "answerIndex": 0,
+          "explanation": "Trong thư ghi: 'にく と やさい は わたし が かいますから、のみもの を もってきて ください' ➔ Mang đồ uống (のみもの)."
+        },
+        {
+          "id": "rc_4",
+          "passage": "【アパート の ルール】\n・ゴミ は あさ 8じ まで に だしてください。\n・もえる ゴミ：火よう日 と 金よう日\n・ビン・カン：木よう日\n・よる 10じ のあとは、おおきい おと で おんがく を きかないで ください。",
+          "question": "カン や ビン の ゴミ は なんようび に だしますか。",
+          "options": [
+            "木よう日",
+            "火よう日",
+            "金よう日",
+            "月よう日"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bảng quy định ghi rõ: ビン・カン：木よう日 (Thứ Năm)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "id": "g1",
+    "title": "N1 は N2 です",
+    "meaning": "N1 là N2",
+    "formula": "N1 は N2 です / N1 は N2 じゃありません (phủ định)",
+    "particleFocus": "は (Trợ từ chủ đề, đọc là 'wa')",
+    "explanation": "Dùng để giới thiệu danh tính, nghề nghiệp, quốc tịch hoặc tính chất của chủ đề N1.",
+    "commonMistakes": "Người mới học hay phát âm là 'ha'. Nhớ: Khi làm trợ từ thì は bắt buộc đọc là 'wa'.",
+    "examples": [
+      {
+        "jp": "わたし は がくせい です。",
+        "romaji": "Watashi wa gakusei desu.",
+        "vi": "Tôi là học sinh."
+      },
+      {
+        "jp": "たなかさん は せんせい じゃありません。",
+        "vi": "Anh Tanaka không phải là giáo viên."
+      }
+    ]
+  },
+  {
+    "id": "g2",
+    "title": "N1 の N2",
+    "meaning": "N2 của N1 (Sở hữu hoặc bổ nghĩa)",
+    "formula": "N1 の N2",
+    "particleFocus": "の (Trợ từ sở hữu / liên kết)",
+    "explanation": "Trợ từ の tương đương chữ 'của'. Trong tiếng Nhật, danh từ sở hữu/chính nằm ở sau.",
+    "commonMistakes": "Nhầm thứ tự: 'Sách của tôi' phải nói là わたし の ほん (Tôi の Sách), không nói ngược.",
+    "examples": [
+      {
+        "jp": "これ は わたし の ほん です。",
+        "vi": "Đây là quyển sách của tôi."
+      },
+      {
+        "jp": "にほんご の せんせい",
+        "vi": "Giáo viên tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "id": "g3",
+    "title": "N を V (tha động từ)",
+    "meaning": "Làm hành động V tác động lên tân ngữ N",
+    "formula": "N (Tân ngữ) を V (Động từ)",
+    "particleFocus": "を (Trợ từ tân ngữ, đọc là 'o')",
+    "explanation": "Chỉ đối tượng trực tiếp chịu tác động của hành động ăn, uống, đọc, xem, mua...",
+    "commonMistakes": "Dùng nhầm は thay cho を. Nhớ: Muốn ăn cơm, uống nước, đọc sách phải dùng を.",
+    "examples": [
+      {
+        "jp": "ごはん を たべます。",
+        "vi": "Ăn cơm."
+      },
+      {
+        "jp": "みず を のみます。",
+        "vi": "Uống nước."
+      },
+      {
+        "jp": "ほん を よみます。",
+        "vi": "Đọc sách."
+      }
+    ]
+  },
+  {
+    "id": "g4",
+    "title": "Địa điểm で V",
+    "meaning": "Làm hành động V TẠI địa điểm nào đó",
+    "formula": "Địa điểm で V (Hành động)",
+    "particleFocus": "で (Trợ từ chỉ nơi chốn diễn ra hành động)",
+    "explanation": "Phân biệt với に: 'で' dùng khi có hành động cụ thể diễn ra (ăn, học, chơi, làm việc).",
+    "commonMistakes": "Lẫn lộn giữa で và に: Ăn ở nhà hàng -> レストラン で たべます (đúng), không dùng に.",
+    "examples": [
+      {
+        "jp": "としょかん で べんきょうします。",
+        "vi": "Học bài tại thư viện."
+      },
+      {
+        "jp": "うち で えいが を みます。",
+        "vi": "Xem phim ở nhà."
+      }
+    ]
+  },
+  {
+    "id": "g5",
+    "title": "Địa điểm へ / に 行きます / 来ます / 帰ります",
+    "meaning": "Đi / Đến / Về ĐÂU ĐÓ",
+    "formula": "Địa điểm へ (hoặc に) いきます / きます / かえります",
+    "particleFocus": "へ (đọc là 'e') / に (chỉ đích đến)",
+    "explanation": "Chỉ phương hướng di chuyển đến một địa điểm.",
+    "commonMistakes": "Trợ từ へ khi làm trợ từ chỉ phương hướng phát âm là 'e', không đọc là 'he'.",
+    "examples": [
+      {
+        "jp": "にほん へ いきます。",
+        "vi": "Tôi đi Nhật Bản."
+      },
+      {
+        "jp": "うち へ かえります。",
+        "vi": "Tôi đi về nhà."
+      }
+    ]
+  },
+  {
+    "id": "g6",
+    "title": "Phương tiện で 行きます",
+    "meaning": "Đi BẰNG phương tiện gì / Bằng cách nào",
+    "formula": "Phương tiện で V di chuyển",
+    "particleFocus": "で (Chỉ phương tiện, công cụ, cách thức)",
+    "explanation": "Dùng để chỉ phương tiện đi lại (xe bus, tàu điện, máy bay) hoặc công cụ (đũa, kéo, bút).",
+    "commonMistakes": "Đi bộ thì nói là あるいて いきます (không dùng trợ từ で).",
+    "examples": [
+      {
+        "jp": "でんしゃ で がっこう へ いきます。",
+        "vi": "Tôi đến trường bằng tàu điện."
+      },
+      {
+        "jp": "はし で たべます。",
+        "vi": "Ăn bằng đũa."
+      }
+    ]
+  },
+  {
+    "id": "g7",
+    "title": "Vてください (Thể て)",
+    "meaning": "Xin hãy làm V / Vui lòng làm V",
+    "formula": "V-て + ください",
+    "particleFocus": "Thể て (Te form)",
+    "explanation": "Cách nhờ vả lịch sự thông dụng nhất trong tiếng Nhật.",
+    "commonMistakes": "Chia sai thể て của động từ nhóm 1 (vd: いちり -> って, みびに -> んで).",
+    "examples": [
+      {
+        "jp": "ちょっと まって ください。",
+        "vi": "Xin vui lòng đợi một chút."
+      },
+      {
+        "jp": "日本語 を はなして ください。",
+        "vi": "Xin hãy nói bằng tiếng Nhật."
+      }
+    ]
+  }
+]

@@ -1,0 +1,309 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Design Tokens & Theme Variables */
+:root {
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-jp: 'Noto Sans JP', sans-serif;
+  --font-maru: 'Zen Maru Gothic', sans-serif;
+
+  /* Light Theme (Default - Clean, Warm Paper Aesthetic) */
+  --bg-app: #f8fafc;
+  --bg-header: rgba(255, 255, 255, 0.94);
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-subtle: #f8fafc;
+  --bg-input: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-app: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 10px 25px -3px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+
+  /* Brand Accents */
+  --sakura: #e11d48;
+  --sakura-soft: #ffe4e6;
+  --torii: #f43f5e;
+  --fuji-blue: #0284c7;
+  --fuji-soft: #e0f2fe;
+  --matcha: #059669;
+  --matcha-soft: #d1fae5;
+  --amber-sun: #d97706;
+  --amber-soft: #fef3c7;
+}
+
+/* Dark Theme (Deep Elegant Slate Navy - Never Muddy Pitch Black) */
+[data-theme='dark'] {
+  --bg-app: #090e17;
+  --bg-header: rgba(15, 23, 42, 0.94);
+  --bg-card: #131d2e;
+  --bg-card-hover: #1a273e;
+  --bg-subtle: #0f172a;
+  --bg-input: #0b1120;
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-app: #223249;
+  --border-strong: #334663;
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 25px -3px rgba(0, 0, 0, 0.6);
+
+  --sakura-soft: rgba(225, 29, 72, 0.18);
+  --fuji-soft: rgba(2, 132, 199, 0.18);
+  --matcha-soft: rgba(5, 150, 105, 0.18);
+  --amber-soft: rgba(217, 119, 6, 0.18);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.jp-font {
+  font-family: var(--font-jp);
+}
+
+.jp-maru {
+  font-family: var(--font-maru);
+}
+
+/* Hide scrollbar for clean tab pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 3D Card Flip Essentials */
+.perspective {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Authentic Japanese Calligraphy Grids (Ô Kẻ Thư Pháp Cao Cấp) */
+.grid-tian, .grid-cross {
+  background-color: #fffef9;
+  background-image: 
+    linear-gradient(to right, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
+    linear-gradient(to bottom, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px));
+  background-size: 100% 100%, 100% 100%;
+}
+
+.grid-mizi {
+  background-color: #fffef9;
+  background-image: 
+    linear-gradient(45deg, transparent calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(-45deg, transparent calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(to right, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
+    linear-gradient(to bottom, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px));
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+.grid-jing {
+  background-color: #fffef9;
+  background-image: 
+    linear-gradient(to right, transparent calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% + 0.5px), transparent calc(33.33% + 0.5px)),
+    linear-gradient(to right, transparent calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% + 0.5px), transparent calc(66.66% + 0.5px)),
+    linear-gradient(to bottom, transparent calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% + 0.5px), transparent calc(33.33% + 0.5px)),
+    linear-gradient(to bottom, transparent calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% + 0.5px), transparent calc(66.66% + 0.5px));
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+.grid-none {
+  background-color: #fffef9;
+}
+
+/* Shake Animation when drawing in wrong stroke order */
+@keyframes shakeCanvas {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.animate-shake {
+  animation: shakeCanvas 0.45s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* User Template Gamification & 3D Keyframes */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(244, 63, 94, 0.4), inset 0 0 10px rgba(244, 63, 94, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(244, 63, 94, 0.8), inset 0 0 18px rgba(244, 63, 94, 0.45);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes floatLight {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes floatMascot {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes stardustTwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes neonPulseCyan {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5), inset 0 0 10px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(52, 211, 153, 0.85), inset 0 0 16px rgba(52, 211, 153, 0.5);
+  }
+}
+
+.mascot-floating {
+  animation: floatMascot 3.2s ease-in-out infinite;
+}
+
+.stardust-star {
+  animation: stardustTwinkle 2.8s ease-in-out infinite;
+}
+
+.neon-completed-glow {
+  animation: neonPulseCyan 3s infinite ease-in-out;
+}
+
+.active-node-glow {
+  animation: pulseGlow 2.2s infinite ease-in-out;
+}
+
+.boss-fire {
+  animation: floatLight 3s infinite ease-in-out;
+  box-shadow: 0 0 28px rgba(239, 68, 68, 0.45);
+}
+
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
+/* 3D Flip Card */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Kanji Grid Paper Effect */
+.grid-kanji-tian {
+  background-color: #0b1120;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 50% 50%;
+  background-position: 50% 50%;
+}
+
+.s-curve-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.node-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Calligraphy Studio Styles */
+.font-kanji {
+  font-family: 'Noto Serif JP', serif, 'Noto Sans JP', sans-serif;
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 16px -2px rgba(255, 45, 85, 0.45);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 14px -2px rgba(0, 242, 254, 0.4);
+}
+
+/* Grid kẻ ô mễ & ô điền chuẩn thư pháp Nhật (Quadrant & Diagonal Grid) */
+.canvas-mizi-grid {
+  background-size: 100% 100%;
+  background-image: 
+    linear-gradient(to right, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(45deg, transparent calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(-45deg, transparent calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% + 0.5px), transparent calc(50% + 0.5px));
+}
+
+.canvas-tian-grid {
+  background-size: 100% 100%;
+  background-image: 
+    linear-gradient(to right, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px));
+}
+

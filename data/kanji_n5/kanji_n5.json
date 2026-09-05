@@ -1,0 +1,1000 @@
+[
+  {
+    "kanji": "日",
+    "hanviet": "NHẬT",
+    "strokes": 4,
+    "radical": "日 (Nhật)",
+    "onyomi": [
+      "ニチ",
+      "ジツ"
+    ],
+    "kunyomi": [
+      "ひ",
+      "-び",
+      "-か"
+    ],
+    "meaning": "Mặt trời, ngày, nước Nhật",
+    "strokeRules": [
+      "1. Sổ thẳng bên trái",
+      "2. Ngang gập sang phải và sổ xuống",
+      "3. Ngang giữa",
+      "4. Ngang đóng đáy"
+    ],
+    "mnemonicStory": "Chữ 日 mô phỏng mặt trời tròn trịa với vệt sáng rực rỡ ở chính giữa.",
+    "strokeSvgPaths": [
+      "M 30 25 L 30 85",
+      "M 30 25 L 75 25 L 75 85",
+      "M 30 55 L 75 55",
+      "M 30 85 L 75 85"
+    ],
+    "compounds": [
+      {
+        "word": "日本 (にほん)",
+        "hanviet": "Nhật Bản",
+        "meaning": "Nước Nhật"
+      },
+      {
+        "word": "日曜日 (にちようび)",
+        "hanviet": "Nhật Diệu Nhật",
+        "meaning": "Chủ nhật"
+      },
+      {
+        "word": "毎日 (まいにち)",
+        "hanviet": "Mỗi Nhật",
+        "meaning": "Mỗi ngày"
+      },
+      {
+        "word": "休日 (きゅうじつ)",
+        "hanviet": "Hưu Nhật",
+        "meaning": "Ngày nghỉ"
+      }
+    ]
+  },
+  {
+    "kanji": "月",
+    "hanviet": "NGUYỆT",
+    "strokes": 4,
+    "radical": "月 (Nguyệt)",
+    "onyomi": [
+      "ゲツ",
+      "ガツ"
+    ],
+    "kunyomi": [
+      "つき"
+    ],
+    "meaning": "Mặt trăng, tháng",
+    "strokeRules": [
+      "1. Phẩy cong bên trái",
+      "2. Ngang gập móc sang phải",
+      "3. Ngang giữa trên",
+      "4. Ngang giữa dưới"
+    ],
+    "mnemonicStory": "Chữ 月 vẽ vầng trăng khuyết dịu dàng với hai dải mây vắt ngang qua bầu trời đêm.",
+    "strokeSvgPaths": [
+      "M 35 20 Q 30 60 20 90",
+      "M 35 25 L 75 25 L 75 85 Q 75 90 70 85",
+      "M 35 45 L 75 45",
+      "M 35 65 L 75 65"
+    ],
+    "compounds": [
+      {
+        "word": "月曜日 (げつようび)",
+        "hanviet": "Nguyệt Diệu Nhật",
+        "meaning": "Thứ hai"
+      },
+      {
+        "word": "一月 (いちがつ)",
+        "hanviet": "Nhất Nguyệt",
+        "meaning": "Tháng một"
+      },
+      {
+        "word": "今月 (こんげつ)",
+        "hanviet": "Kim Nguyệt",
+        "meaning": "Tháng này"
+      },
+      {
+        "word": "月 (つき)",
+        "hanviet": "Nguyệt",
+        "meaning": "Mặt trăng"
+      }
+    ]
+  },
+  {
+    "kanji": "火",
+    "hanviet": "HỎA",
+    "strokes": 4,
+    "radical": "火 (Hỏa)",
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "ひ",
+      "-び"
+    ],
+    "meaning": "Lửa, ngọn lửa",
+    "strokeRules": [
+      "1. Chấm phẩy bên trái",
+      "2. Phẩy ngắn bên phải",
+      "3. Phẩy cong dài ở giữa",
+      "4. Mác dài sang phải"
+    ],
+    "mnemonicStory": "Chữ 火 như ngọn lửa bùng cháy từ đống củi, hai đốm lửa nhỏ tí tách bắn sang hai bên.",
+    "strokeSvgPaths": [
+      "M 25 45 Q 20 55 30 65",
+      "M 75 40 Q 65 50 70 60",
+      "M 50 20 Q 50 60 25 85",
+      "M 50 50 Q 65 70 85 85"
+    ],
+    "compounds": [
+      {
+        "word": "火曜日 (かようび)",
+        "hanviet": "Hỏa Diệu Nhật",
+        "meaning": "Thứ ba"
+      },
+      {
+        "word": "火山 (かざん)",
+        "hanviet": "Hỏa Sơn",
+        "meaning": "Núi lửa"
+      },
+      {
+        "word": "火 (ひ)",
+        "hanviet": "Hỏa",
+        "meaning": "Ngọn lửa"
+      },
+      {
+        "word": "火事 (かじ)",
+        "hanviet": "Hỏa Sự",
+        "meaning": "Vụ hỏa hoạn"
+      }
+    ]
+  },
+  {
+    "kanji": "水",
+    "hanviet": "THỦY",
+    "strokes": 4,
+    "radical": "水 (Thủy)",
+    "onyomi": [
+      "スイ"
+    ],
+    "kunyomi": [
+      "みず"
+    ],
+    "meaning": "Nước, chất lỏng",
+    "strokeRules": [
+      "1. Sổ móc ở chính giữa",
+      "2. Ngang gập phẩy bên trái",
+      "3. Phẩy chéo ngắn bên phải",
+      "4. Mác dài bên phải"
+    ],
+    "mnemonicStory": "Chữ 水 vẽ dòng nước chính giữa tuôn trào, bọt nước bắn sang hai bên bờ.",
+    "strokeSvgPaths": [
+      "M 50 15 L 50 80 Q 50 90 40 85",
+      "M 20 40 L 35 35 L 20 70",
+      "M 75 35 L 60 55",
+      "M 55 55 L 85 85"
+    ],
+    "compounds": [
+      {
+        "word": "水曜日 (すいようび)",
+        "hanviet": "Thủy Diệu Nhật",
+        "meaning": "Thứ tư"
+      },
+      {
+        "word": "水 (みず)",
+        "hanviet": "Thủy",
+        "meaning": "Nước uống"
+      },
+      {
+        "word": "水泳 (すいえい)",
+        "hanviet": "Thủy Vịnh",
+        "meaning": "Bơi lội"
+      },
+      {
+        "word": "水道 (すいどう)",
+        "hanviet": "Thủy Đạo",
+        "meaning": "Nước máy"
+      }
+    ]
+  },
+  {
+    "kanji": "木",
+    "hanviet": "MỘC",
+    "strokes": 4,
+    "radical": "木 (Mộc)",
+    "onyomi": [
+      "モク",
+      "ボク"
+    ],
+    "kunyomi": [
+      "き",
+      "こ-"
+    ],
+    "meaning": "Cái cây, gỗ",
+    "strokeRules": [
+      "1. Ngang dài",
+      "2. Sổ thẳng ở giữa",
+      "3. Phẩy chéo sang trái",
+      "4. Mác chéo sang phải"
+    ],
+    "mnemonicStory": "Chữ 木 vẽ cái cây có cành tỏa sang ngang, thân thẳng đứng và rễ bám sâu vào lòng đất.",
+    "strokeSvgPaths": [
+      "M 20 40 L 80 40",
+      "M 50 15 L 50 85",
+      "M 50 40 Q 35 65 15 85",
+      "M 50 40 Q 65 65 85 85"
+    ],
+    "compounds": [
+      {
+        "word": "木曜日 (もくようび)",
+        "hanviet": "Mộc Diệu Nhật",
+        "meaning": "Thứ năm"
+      },
+      {
+        "word": "木 (き)",
+        "hanviet": "Mộc",
+        "meaning": "Cái cây"
+      },
+      {
+        "word": "木材 (もくざい)",
+        "hanviet": "Mộc Tài",
+        "meaning": "Gỗ xây dựng"
+      }
+    ]
+  },
+  {
+    "kanji": "金",
+    "hanviet": "KIM",
+    "strokes": 8,
+    "radical": "金 (Kim)",
+    "onyomi": [
+      "キン",
+      "コン"
+    ],
+    "kunyomi": [
+      "かね",
+      "かな-"
+    ],
+    "meaning": "Vàng, tiền bạc, kim loại",
+    "strokeRules": [
+      "1. Phẩy trên",
+      "2. Mác trên",
+      "3. Ngang ngắn",
+      "4. Sổ thẳng",
+      "5. Chấm phẩy trái",
+      "6. Chấm phải",
+      "7. Ngang giữa",
+      "8. Ngang đáy dài"
+    ],
+    "mnemonicStory": "Dưới mái nhà (人) chôn giấu những quặng vàng quý giá (王 + 2 hạt vàng).",
+    "strokeSvgPaths": [
+      "M 50 15 L 20 40",
+      "M 50 15 L 80 40",
+      "M 35 45 L 65 45",
+      "M 50 45 L 50 75",
+      "M 35 60 L 42 63",
+      "M 65 60 L 58 63",
+      "M 30 65 L 70 65",
+      "M 20 85 L 80 85"
+    ],
+    "compounds": [
+      {
+        "word": "金曜日 (きんようび)",
+        "hanviet": "Kim Diệu Nhật",
+        "meaning": "Thứ sáu"
+      },
+      {
+        "word": "お金 (おかね)",
+        "hanviet": "Kim",
+        "meaning": "Tiền bạc"
+      },
+      {
+        "word": "金 (きん)",
+        "hanviet": "Kim",
+        "meaning": "Vàng ròng"
+      },
+      {
+        "word": "料金 (りょうきん)",
+        "hanviet": "Liệu Kim",
+        "meaning": "Tiền cước phí"
+      }
+    ]
+  },
+  {
+    "kanji": "土",
+    "hanviet": "THỔ",
+    "strokes": 3,
+    "radical": "土 (Thổ)",
+    "onyomi": [
+      "ド",
+      "ト"
+    ],
+    "kunyomi": [
+      "つち"
+    ],
+    "meaning": "Đất đai, mặt đất",
+    "strokeRules": [
+      "1. Ngang ngắn trên",
+      "2. Sổ thẳng ở giữa",
+      "3. Ngang dài ở đáy"
+    ],
+    "mnemonicStory": "Một mầm cây nhỏ nhô lên từ lớp đất màu mỡ (nét đáy dài đỡ lấy mặt đất).",
+    "strokeSvgPaths": [
+      "M 30 45 L 70 45",
+      "M 50 20 L 50 85",
+      "M 15 85 L 85 85"
+    ],
+    "compounds": [
+      {
+        "word": "土曜日 (どようび)",
+        "hanviet": "Thổ Diệu Nhật",
+        "meaning": "Thứ bảy"
+      },
+      {
+        "word": "土地 (とち)",
+        "hanviet": "Thổ Địa",
+        "meaning": "Đất đai"
+      },
+      {
+        "word": "お土産 (おみやげ)",
+        "hanviet": "Thổ Sản",
+        "meaning": "Quà lưu niệm"
+      }
+    ]
+  },
+  {
+    "kanji": "人",
+    "hanviet": "NHÂN",
+    "strokes": 2,
+    "radical": "人 (Nhân)",
+    "onyomi": [
+      "ジン",
+      "ニン"
+    ],
+    "kunyomi": [
+      "ひと"
+    ],
+    "meaning": "Người, con người",
+    "strokeRules": [
+      "1. Phẩy dài bên trái",
+      "2. Mác tựa vào nét 1 đứng thẳng"
+    ],
+    "mnemonicStory": "Chữ 人 vẽ dáng một người đang sải hai chân bước đi vững chãi về phía trước.",
+    "strokeSvgPaths": [
+      "M 50 15 Q 40 60 15 85",
+      "M 45 40 Q 60 65 85 85"
+    ],
+    "compounds": [
+      {
+        "word": "日本人 (にほんじん)",
+        "hanviet": "Nhật Bản Nhân",
+        "meaning": "Người Nhật"
+      },
+      {
+        "word": "ベトナム人 (べとなむじん)",
+        "hanviet": "Việt Nam Nhân",
+        "meaning": "Người Việt"
+      },
+      {
+        "word": "一人 (ひとり)",
+        "hanviet": "Nhất Nhân",
+        "meaning": "1 người / Một mình"
+      },
+      {
+        "word": "大人 (おとな)",
+        "hanviet": "Đại Nhân",
+        "meaning": "Người lớn"
+      }
+    ]
+  },
+  {
+    "kanji": "学",
+    "hanviet": "HỌC",
+    "strokes": 8,
+    "radical": "子 (Tử)",
+    "onyomi": [
+      "ガク"
+    ],
+    "kunyomi": [
+      "まな-ぶ"
+    ],
+    "meaning": "Học tập, kiến thức",
+    "strokeRules": [
+      "1. Chấm trái",
+      "2. Chấm giữa",
+      "3. Phẩy phải",
+      "4. Phẩy bao quanh",
+      "5. Ngang móc (mái nhà)",
+      "6. Ngang gập cong",
+      "7. Sổ cong móc",
+      "8. Ngang cắt"
+    ],
+    "mnemonicStory": "Dưới mái trường (宀), đứa trẻ (子) chăm chỉ học hành nâng cao tri thức.",
+    "strokeSvgPaths": [
+      "M 30 20 L 35 30",
+      "M 50 18 L 50 28",
+      "M 70 20 L 65 30",
+      "M 25 35 L 25 45",
+      "M 25 35 L 75 35 L 75 45 Q 75 48 70 45",
+      "M 40 50 L 60 50 L 35 70",
+      "M 50 55 Q 50 90 40 85",
+      "M 20 70 L 80 70"
+    ],
+    "compounds": [
+      {
+        "word": "学生 (がくせい)",
+        "hanviet": "Học Sinh",
+        "meaning": "Học sinh, sinh viên"
+      },
+      {
+        "word": "大学 (だいがく)",
+        "hanviet": "Đại Học",
+        "meaning": "Trường đại học"
+      },
+      {
+        "word": "学校 (がっこう)",
+        "hanviet": "Học Hiệu",
+        "meaning": "Trường học"
+      },
+      {
+        "word": "学ぶ (まなぶ)",
+        "hanviet": "Học",
+        "meaning": "Học tập"
+      }
+    ]
+  },
+  {
+    "kanji": "校",
+    "hanviet": "HIỆU",
+    "strokes": 10,
+    "radical": "木 (Mộc)",
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [],
+    "meaning": "Trường học, kiểm tra",
+    "strokeRules": [
+      "1. Ngang",
+      "2. Sổ",
+      "3. Phẩy",
+      "4. Mác (bộ Mộc)",
+      "5. Chấm đầu",
+      "6. Ngang",
+      "7. Phẩy",
+      "8. Mác (Giao)"
+    ],
+    "mnemonicStory": "Ngôi trường xây bằng gỗ (木) nơi mọi người giao lưu (交) kết bạn và học tập.",
+    "strokeSvgPaths": [
+      "M 15 40 L 45 40",
+      "M 30 15 L 30 85",
+      "M 30 40 L 15 75",
+      "M 30 45 L 45 75",
+      "M 65 15 L 65 25",
+      "M 50 30 L 85 30",
+      "M 65 35 L 50 65",
+      "M 65 35 L 85 65"
+    ],
+    "compounds": [
+      {
+        "word": "学校 (がっこう)",
+        "hanviet": "Học Hiệu",
+        "meaning": "Trường học"
+      },
+      {
+        "word": "高校 (こうこう)",
+        "hanviet": "Cao Hiệu",
+        "meaning": "Trường cấp ba"
+      },
+      {
+        "word": "中学校 (ちゅうがっこう)",
+        "hanviet": "Trung Học Hiệu",
+        "meaning": "Trường cấp hai"
+      }
+    ]
+  },
+  {
+    "kanji": "先",
+    "hanviet": "TIÊN",
+    "strokes": 6,
+    "radical": "儿 (Nhi)",
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "さき",
+      "ま-ず"
+    ],
+    "meaning": "Trước, đi trước, dẫn đầu",
+    "strokeRules": [
+      "1. Phẩy ngắn",
+      "2. Ngang ngắn",
+      "3. Sổ thẳng",
+      "4. Ngang dài",
+      "5. Phẩy cong trái",
+      "6. Sổ cong móc phải"
+    ],
+    "mnemonicStory": "Người đi trước dẫn đường (đôi chân đi trước) để hướng dẫn người đi sau.",
+    "strokeSvgPaths": [
+      "M 50 15 L 40 30",
+      "M 25 35 L 75 35",
+      "M 50 35 L 50 55",
+      "M 15 55 L 85 55",
+      "M 45 55 Q 35 75 20 85",
+      "M 55 55 Q 55 85 80 85"
+    ],
+    "compounds": [
+      {
+        "word": "先生 (せんせい)",
+        "hanviet": "Tiên Sinh",
+        "meaning": "Thầy cô giáo"
+      },
+      {
+        "word": "先週 (せんしゅう)",
+        "hanviet": "Tiên Chu",
+        "meaning": "Tuần trước"
+      },
+      {
+        "word": "先月 (せんげつ)",
+        "hanviet": "Tiên Nguyệt",
+        "meaning": "Tháng trước"
+      }
+    ]
+  },
+  {
+    "kanji": "生",
+    "hanviet": "SINH",
+    "strokes": 5,
+    "radical": "生 (Sinh)",
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "い-きる",
+      "う-まれる",
+      "なま"
+    ],
+    "meaning": "Sinh sống, sinh ra, tươi sống",
+    "strokeRules": [
+      "1. Phẩy chéo trái",
+      "2. Ngang trên",
+      "3. Sổ thẳng giữa",
+      "4. Ngang giữa",
+      "5. Ngang đáy dài"
+    ],
+    "mnemonicStory": "Cây cỏ đâm chồi nảy lộc từ lòng đất, tượng trưng cho sự sống sinh sôi.",
+    "strokeSvgPaths": [
+      "M 40 20 L 25 40",
+      "M 25 40 L 75 40",
+      "M 50 20 L 50 85",
+      "M 30 60 L 70 60",
+      "M 15 85 L 85 85"
+    ],
+    "compounds": [
+      {
+        "word": "先生 (せんせい)",
+        "hanviet": "Tiên Sinh",
+        "meaning": "Thầy giáo"
+      },
+      {
+        "word": "学生 (がくせい)",
+        "hanviet": "Học Sinh",
+        "meaning": "Học sinh"
+      },
+      {
+        "word": "生きる (いきる)",
+        "hanviet": "Sinh",
+        "meaning": "Sống"
+      },
+      {
+        "word": "誕生日 (たんじょうび)",
+        "hanviet": "Đản Sinh Nhật",
+        "meaning": "Sinh nhật"
+      }
+    ]
+  },
+  {
+    "kanji": "休",
+    "hanviet": "HƯU",
+    "strokes": 6,
+    "radical": "亻 (Nhân đứng)",
+    "onyomi": [
+      "キュウ"
+    ],
+    "kunyomi": [
+      "やす-む",
+      "やす-まる"
+    ],
+    "meaning": "Nghỉ ngơi, ngừng lại",
+    "strokeRules": [
+      "1. Phẩy (bộ Nhân)",
+      "2. Sổ đứng (bộ Nhân)",
+      "3. Ngang (bộ Mộc)",
+      "4. Sổ giữa (Mộc)",
+      "5. Phẩy trái (Mộc)",
+      "6. Mác phải (Mộc)"
+    ],
+    "mnemonicStory": "Một người (亻) mệt mỏi tựa lưng vào gốc cây (木) để nghỉ ngơi (Hưu = Nghỉ).",
+    "strokeSvgPaths": [
+      "M 30 20 L 15 50",
+      "M 25 40 L 25 85",
+      "M 45 40 L 85 40",
+      "M 65 15 L 65 85",
+      "M 65 40 Q 50 65 35 85",
+      "M 65 40 Q 75 65 88 85"
+    ],
+    "compounds": [
+      {
+        "word": "休み (やすみ)",
+        "hanviet": "Hưu",
+        "meaning": "Ngày nghỉ / Giờ giải lao"
+      },
+      {
+        "word": "休日 (きゅうじつ)",
+        "hanviet": "Hưu Nhật",
+        "meaning": "Ngày nghỉ"
+      },
+      {
+        "word": "休む (やすむ)",
+        "hanviet": "Hưu",
+        "meaning": "Nghỉ phép, nghỉ ngơi"
+      }
+    ]
+  },
+  {
+    "kanji": "本",
+    "hanviet": "BẢN",
+    "strokes": 5,
+    "radical": "木 (Mộc)",
+    "onyomi": [
+      "ホン"
+    ],
+    "kunyomi": [
+      "もと"
+    ],
+    "meaning": "Quyển sách, nguồn gốc, bản chất",
+    "strokeRules": [
+      "1. Ngang",
+      "2. Sổ thẳng",
+      "3. Phẩy trái",
+      "4. Mác phải",
+      "5. Vạch ngang đánh dấu ở gốc rễ"
+    ],
+    "mnemonicStory": "Cái cây (木) được đánh một vạch ngang ở phần gốc rễ (Gốc rễ -> Cội nguồn -> Quyển sách).",
+    "strokeSvgPaths": [
+      "M 20 35 L 80 35",
+      "M 50 15 L 50 85",
+      "M 50 35 Q 35 60 15 85",
+      "M 50 35 Q 65 60 85 85",
+      "M 35 65 L 65 65"
+    ],
+    "compounds": [
+      {
+        "word": "日本 (にほん)",
+        "hanviet": "Nhật Bản",
+        "meaning": "Nước Nhật"
+      },
+      {
+        "word": "本 (ほん)",
+        "hanviet": "Bản",
+        "meaning": "Quyển sách"
+      },
+      {
+        "word": "山本 (やまもと)",
+        "hanviet": "Sơn Bản",
+        "meaning": "Họ Yamamoto"
+      }
+    ]
+  },
+  {
+    "kanji": "語",
+    "hanviet": "NGỮ",
+    "strokes": 14,
+    "radical": "言 (Ngôn)",
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "かた-る",
+      "かた-らう"
+    ],
+    "meaning": "Ngôn ngữ, lời nói, kể chuyện",
+    "strokeRules": [
+      "1-7: Bộ Ngôn (言: Chấm, 4 ngang, miệng 口)",
+      "8-12: Bộ Ngũ (五)",
+      "13-14: Bộ Khẩu (口)"
+    ],
+    "mnemonicStory": "Dùng lời nói (言) để 5 (五) cái miệng (口) cùng trò chuyện trao đổi ngôn ngữ.",
+    "strokeSvgPaths": [
+      "M 25 15 L 30 25",
+      "M 15 30 L 40 30",
+      "M 18 38 L 37 38",
+      "M 18 46 L 37 46",
+      "M 18 55 L 18 70",
+      "M 18 55 L 37 55 L 37 70",
+      "M 18 70 L 37 70",
+      "M 50 25 L 85 25",
+      "M 65 25 L 55 45",
+      "M 55 45 L 80 45",
+      "M 48 55 L 87 55",
+      "M 52 65 L 52 85",
+      "M 52 65 L 83 65 L 83 85",
+      "M 52 85 L 83 85"
+    ],
+    "compounds": [
+      {
+        "word": "日本語 (にほんご)",
+        "hanviet": "Nhật Bản Ngữ",
+        "meaning": "Tiếng Nhật"
+      },
+      {
+        "word": "英語 (えいご)",
+        "hanviet": "Anh Ngữ",
+        "meaning": "Tiếng Anh"
+      },
+      {
+        "word": "外国語 (がいこくご)",
+        "hanviet": "Ngoại Quốc Ngữ",
+        "meaning": "Ngoại ngữ"
+      }
+    ]
+  },
+  {
+    "kanji": "名",
+    "hanviet": "DANH",
+    "strokes": 6,
+    "radical": "口 (Khẩu)",
+    "onyomi": [
+      "メイ",
+      "ミョウ"
+    ],
+    "kunyomi": [
+      "な"
+    ],
+    "meaning": "Tên, danh tiếng, danh xưng",
+    "strokeRules": [
+      "1. Phẩy (bộ Tịch 夕)",
+      "2. Ngang gập (Tịch)",
+      "3. Chấm (Tịch)",
+      "4. Sổ (bộ Khẩu 口)",
+      "5. Ngang gập (Khẩu)",
+      "6. Ngang đáy (Khẩu)"
+    ],
+    "mnemonicStory": "Vào buổi tối trời tối mịt (夕), phải dùng miệng (口) gọi tên (Danh) để nhận ra nhau.",
+    "strokeSvgPaths": [
+      "M 45 15 L 25 40",
+      "M 25 35 L 65 35 L 45 60",
+      "M 40 45 L 45 50",
+      "M 30 65 L 30 90",
+      "M 30 65 L 75 65 L 75 90",
+      "M 30 90 L 75 90"
+    ],
+    "compounds": [
+      {
+        "word": "名前 (なまえ)",
+        "hanviet": "Danh Tiền",
+        "meaning": "Họ và tên"
+      },
+      {
+        "word": "有名 (ゆうめい)",
+        "hanviet": "Hữu Danh",
+        "meaning": "Nổi tiếng"
+      },
+      {
+        "word": "名刺 (めいし)",
+        "hanviet": "Danh Thích",
+        "meaning": "Danh thiếp"
+      }
+    ]
+  },
+  {
+    "kanji": "車",
+    "hanviet": "XA",
+    "strokes": 7,
+    "radical": "車 (Xa)",
+    "onyomi": [
+      "シャ"
+    ],
+    "kunyomi": [
+      "くるま"
+    ],
+    "meaning": "Xe cộ, bánh xe",
+    "strokeRules": [
+      "1. Ngang trên",
+      "2. Sổ trái",
+      "3. Ngang gập phải",
+      "4. Ngang giữa",
+      "5. Ngang đáy dài",
+      "6. Ngang chốt",
+      "7. Sổ xuyên suốt tâm"
+    ],
+    "mnemonicStory": "Hình ảnh chiếc xe ngựa nhìn từ trên cao, có trục xe xuyên thẳng qua hai bánh xe xoay.",
+    "strokeSvgPaths": [
+      "M 25 25 L 75 25",
+      "M 25 38 L 25 60",
+      "M 25 38 L 75 38 L 75 60",
+      "M 25 50 L 75 50",
+      "M 25 60 L 75 60",
+      "M 15 75 L 85 75",
+      "M 50 15 L 50 90"
+    ],
+    "compounds": [
+      {
+        "word": "車 (くるま)",
+        "hanviet": "Xa",
+        "meaning": "Xe ô tô"
+      },
+      {
+        "word": "電車 (でんしゃ)",
+        "hanviet": "Điện Xa",
+        "meaning": "Tàu điện"
+      },
+      {
+        "word": "自転車 (じてんしゃ)",
+        "hanviet": "Tự Chuyển Xa",
+        "meaning": "Xe đạp"
+      },
+      {
+        "word": "自動車 (じどうしゃ)",
+        "hanviet": "Tự Động Xa",
+        "meaning": "Xe hơi tự động"
+      }
+    ]
+  },
+  {
+    "kanji": "電",
+    "hanviet": "ĐIỆN",
+    "strokes": 13,
+    "radical": "雨 (Vũ)",
+    "onyomi": [
+      "デン"
+    ],
+    "kunyomi": [],
+    "meaning": "Điện, luồng điện, tia chớp",
+    "strokeRules": [
+      "1-8: Bộ Vũ (雨: Ngang, sổ, ngang gập, sổ giữa, 4 hạt mưa)",
+      "9-13: Chữ Thân (sổ gập và đuôi cong tia sét)"
+    ],
+    "mnemonicStory": "Trong cơn mưa bão (雨), luồng sét điện giáng xuống phát ra dòng điện năng cực mạnh.",
+    "strokeSvgPaths": [
+      "M 25 15 L 75 15",
+      "M 25 25 L 25 45",
+      "M 25 25 L 75 25 L 75 45",
+      "M 50 15 L 50 45",
+      "M 32 32 L 35 37",
+      "M 32 40 L 35 45",
+      "M 65 32 L 68 37",
+      "M 65 40 L 68 45",
+      "M 35 55 L 35 80",
+      "M 35 55 L 70 55 L 70 80",
+      "M 35 68 L 70 68",
+      "M 35 80 L 70 80",
+      "M 52 50 L 52 85 Q 52 92 78 90"
+    ],
+    "compounds": [
+      {
+        "word": "電車 (でんしゃ)",
+        "hanviet": "Điện Xa",
+        "meaning": "Tàu điện"
+      },
+      {
+        "word": "電話 (でんわ)",
+        "hanviet": "Điện Thoại",
+        "meaning": "Điện thoại"
+      },
+      {
+        "word": "電気 (でんき)",
+        "hanviet": "Điện Khí",
+        "meaning": "Điện / Bóng đèn điện"
+      }
+    ]
+  },
+  {
+    "kanji": "食",
+    "hanviet": "THỰC",
+    "strokes": 9,
+    "radical": "食 (Thực)",
+    "onyomi": [
+      "ショク",
+      "ジキ"
+    ],
+    "kunyomi": [
+      "た-べる",
+      "く-らう"
+    ],
+    "meaning": "Ăn uống, thức ăn, món ăn",
+    "strokeRules": [
+      "1. Phẩy (nhà)",
+      "2. Mác",
+      "3. Ngang",
+      "4. Ngang gập",
+      "5. Ngang",
+      "6. Ngang",
+      "7. Sổ móc",
+      "8. Phẩy",
+      "9. Chấm"
+    ],
+    "mnemonicStory": "Dưới mái nhà (人), người ta cùng ngồi quanh bàn ăn những món ăn ngon lành (Lương thực).",
+    "strokeSvgPaths": [
+      "M 50 15 L 20 35",
+      "M 50 15 L 80 35",
+      "M 35 38 L 65 38",
+      "M 30 48 L 30 65",
+      "M 30 48 L 70 48 L 70 65",
+      "M 30 57 L 70 57",
+      "M 30 65 L 70 65",
+      "M 35 68 L 35 90 Q 35 93 30 90",
+      "M 65 72 L 75 85"
+    ],
+    "compounds": [
+      {
+        "word": "食べる (たべる)",
+        "hanviet": "Thực",
+        "meaning": "Ăn"
+      },
+      {
+        "word": "食べ物 (たべもの)",
+        "hanviet": "Thực Vật",
+        "meaning": "Đồ ăn"
+      },
+      {
+        "word": "食堂 (しょくどう)",
+        "hanviet": "Thực Đường",
+        "meaning": "Nhà ăn / Quán ăn"
+      },
+      {
+        "word": "朝食 (ちょうしょく)",
+        "hanviet": "Triêu Thực",
+        "meaning": "Bữa sáng"
+      }
+    ]
+  },
+  {
+    "kanji": "飲",
+    "hanviet": "ẨM",
+    "strokes": 12,
+    "radical": "食 (Thực)",
+    "onyomi": [
+      "イン"
+    ],
+    "kunyomi": [
+      "の-む"
+    ],
+    "meaning": "Uống, đồ uống",
+    "strokeRules": [
+      "1-8: Bộ Thực (飠) bên trái",
+      "9-12: Bộ Khiếm (欠: há miệng uống) bên phải"
+    ],
+    "mnemonicStory": "Thức ăn đồ uống (飠) được người há to miệng (欠) uống từng ngụm đã khát.",
+    "strokeSvgPaths": [
+      "M 30 15 L 15 35",
+      "M 30 15 L 45 35",
+      "M 20 40 L 40 40",
+      "M 18 50 L 38 50",
+      "M 18 60 L 38 60",
+      "M 18 70 L 38 70",
+      "M 28 40 L 28 85",
+      "M 15 85 L 40 85",
+      "M 65 20 L 52 40",
+      "M 60 35 L 85 35",
+      "M 65 40 Q 60 70 50 85",
+      "M 65 55 Q 75 75 88 85"
+    ],
+    "compounds": [
+      {
+        "word": "飲む (のむ)",
+        "hanviet": "Ẩm",
+        "meaning": "Uống"
+      },
+      {
+        "word": "飲み物 (のみもの)",
+        "hanviet": "Ẩm Vật",
+        "meaning": "Đồ uống"
+      },
+      {
+        "word": "飲食店 (いんしょくてん)",
+        "hanviet": "Ẩm Thực Điếm",
+        "meaning": "Quán ăn uống"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1272 @@
+[
+  {
+    "char": "ア",
+    "romaji": "a",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập móc sang trái",
+      "2. Nét phẩy cong dài từ trên xuống"
+    ],
+    "mnemonic": {
+      "title": "Đỉnh núi Alps (A)",
+      "story": "Chữ ア góc cạnh như sườn dốc cheo leo của dãy núi Alps."
+    },
+    "examples": [
+      {
+        "word": "アイス (aisu)",
+        "meaning": "Kem (Ice cream)"
+      },
+      {
+        "word": "アメリカ (amerika)",
+        "meaning": "Nước Mỹ"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 80 L 145 80 L 125 115",
+      "M 105 85 Q 95 145 60 195"
+    ]
+  },
+  {
+    "char": "イ",
+    "romaji": "i",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy chéo từ trên phải xuống dưới trái",
+      "2. Nét sổ thẳng từ giữa nét 1 xuống"
+    ],
+    "mnemonic": {
+      "title": "Bức tranh giá vẽ (Easel)",
+      "story": "Chữ イ giống giá vẽ tranh chữ I đứng thẳng đứng."
+    },
+    "examples": [
+      {
+        "word": "イギリス (igirisu)",
+        "meaning": "Nước Anh"
+      },
+      {
+        "word": "インク (inku)",
+        "meaning": "Mực in (Ink)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 125 60 L 75 125",
+      "M 95 110 L 95 200"
+    ]
+  },
+  {
+    "char": "ウ",
+    "romaji": "u",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét chấm thẳng ở đỉnh",
+      "2. Nét phẩy ngắn bên trái",
+      "3. Nét ngang gập cong sang phải"
+    ],
+    "mnemonic": {
+      "title": "Cái ô mở ra (Umbrella)",
+      "story": "Chữ ウ giống cái chóp nhọn của chiếc ô chống mưa bão."
+    },
+    "examples": [
+      {
+        "word": "ウール (uuru)",
+        "meaning": "Sợi len (Wool)"
+      },
+      {
+        "word": "ウェブ (webu)",
+        "meaning": "Trang web"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 105 50 L 105 75",
+      "M 65 95 L 65 125",
+      "M 65 95 L 145 95 L 120 185"
+    ]
+  },
+  {
+    "char": "エ",
+    "romaji": "e",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên",
+      "2. Nét sổ thẳng ở giữa",
+      "3. Nét ngang dưới dài hơn nét trên"
+    ],
+    "mnemonic": {
+      "title": "Cột dầm công trình (Elevator beam)",
+      "story": "Chữ エ giống thanh dầm thép chữ I hoặc thang máy công trình."
+    },
+    "examples": [
+      {
+        "word": "エレベーター (erebeetaa)",
+        "meaning": "Thang máy"
+      },
+      {
+        "word": "エアコン (eakon)",
+        "meaning": "Máy điều hòa"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 145 75",
+      "M 105 75 L 105 165",
+      "M 50 165 L 160 165"
+    ]
+  },
+  {
+    "char": "オ",
+    "romaji": "o",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang",
+      "2. Nét sổ dọc có móc hất sang trái",
+      "3. Nét phẩy chéo từ góc giao nhau sang phải"
+    ],
+    "mnemonic": {
+      "title": "Diễn viên Opera hát O",
+      "story": "Chữ オ giống nghệ sĩ opera giơ một tay biểu diễn say sưa."
+    },
+    "examples": [
+      {
+        "word": "オレンジ (orenji)",
+        "meaning": "Quả cam (Orange)"
+      },
+      {
+        "word": "オーストラリア (oosutoraria)",
+        "meaning": "Nước Úc"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 90 L 150 85",
+      "M 95 55 L 95 195 Q 90 180 80 170",
+      "M 95 95 L 155 185"
+    ]
+  },
+  {
+    "char": "カ",
+    "romaji": "ka",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập móc",
+      "2. Nét phẩy chéo cắt qua nét 1"
+    ],
+    "mnemonic": {
+      "title": "Chữ か bỏ giọt mồ hôi",
+      "story": "Chữ カ góc cạnh y hệt chữ か Hiragana nhưng bỏ nét phẩy giọt nước."
+    },
+    "examples": [
+      {
+        "word": "カメラ (kamera)",
+        "meaning": "Máy ảnh (Camera)"
+      },
+      {
+        "word": "カフェ (kafe)",
+        "meaning": "Quán cà phê"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 85 L 140 85 L 125 135 Q 115 150 100 145",
+      "M 100 55 Q 90 135 55 195"
+    ]
+  },
+  {
+    "char": "キ",
+    "romaji": "ki",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên",
+      "2. Nét ngang dưới song song",
+      "3. Nét sổ chéo cắt qua 2 nét ngang"
+    ],
+    "mnemonic": {
+      "title": "Chìa khóa kim loại (Key)",
+      "story": "Chữ キ như chữ き Hiragana nhưng phẳng và thẳng tắp dứt khoát."
+    },
+    "examples": [
+      {
+        "word": "キー (kii)",
+        "meaning": "Chìa khóa (Key)"
+      },
+      {
+        "word": "キッチン (kicchin)",
+        "meaning": "Nhà bếp (Kitchen)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 85 L 145 80",
+      "M 55 125 L 155 120",
+      "M 115 55 L 75 195"
+    ]
+  },
+  {
+    "char": "ク",
+    "romaji": "ku",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy ngắn bên trái",
+      "2. Nét ngang gập kéo cong dài sang trái"
+    ],
+    "mnemonic": {
+      "title": "Đầu bếp nấu ăn (Cook)",
+      "story": "Chữ ク giống cái nón của đầu bếp (Cook) đang chế biến món ngon."
+    },
+    "examples": [
+      {
+        "word": "クラス (kurasu)",
+        "meaning": "Lớp học (Class)"
+      },
+      {
+        "word": "タクシー (takushii)",
+        "meaning": "Xe taxi"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 105 60 L 65 125",
+      "M 75 95 L 145 95 Q 125 155 65 200"
+    ]
+  },
+  {
+    "char": "ケ",
+    "romaji": "ke",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét phẩy ngắn bên trái",
+      "2. Nét ngang ngắn bên phải",
+      "3. Nét cong dài cắt qua nét ngang"
+    ],
+    "mnemonic": {
+      "title": "Cái Kệ đựng đồ (K)",
+      "story": "Chữ ケ nhìn như chữ K cách điệu hoặc một cái kệ gỗ nhiều ngăn."
+    },
+    "examples": [
+      {
+        "word": "ケーキ (keeki)",
+        "meaning": "Bánh ngọt (Cake)"
+      },
+      {
+        "word": "ケース (keesu)",
+        "meaning": "Hộp đựng (Case)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 95 55 L 65 115",
+      "M 90 95 L 155 90",
+      "M 125 95 Q 115 155 65 195"
+    ]
+  },
+  {
+    "char": "コ",
+    "romaji": "ko",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập góc vuông",
+      "2. Nét ngang đáy nối vào chân"
+    ],
+    "mnemonic": {
+      "title": "Chiếc hộp mở góc (Corner)",
+      "story": "Chữ コ như góc vuông của chiếc hộp quà (Corner - Ko)."
+    },
+    "examples": [
+      {
+        "word": "コーヒー (koohii)",
+        "meaning": "Cà phê (Coffee)"
+      },
+      {
+        "word": "コンビニ (konbini)",
+        "meaning": "Cửa hàng tiện lợi"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 145 75 L 145 165",
+      "M 65 165 L 145 165"
+    ]
+  },
+  {
+    "char": "サ",
+    "romaji": "sa",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang dài",
+      "2. Nét sổ dọc ngắn bên trái",
+      "3. Nét sổ dọc hơi cong bên phải dài hơn"
+    ],
+    "mnemonic": {
+      "title": "Chiếc ván lướt sóng (Surfboard)",
+      "story": "Chữ サ giống 2 cột buồm trên tấm ván lướt sóng biển (Sa)."
+    },
+    "examples": [
+      {
+        "word": "サラダ (sarada)",
+        "meaning": "Món salad"
+      },
+      {
+        "word": "サッカー (sakkaa)",
+        "meaning": "Bóng đá (Soccer)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 95 L 155 90",
+      "M 85 65 L 85 145",
+      "M 125 60 Q 125 135 115 185"
+    ]
+  },
+  {
+    "char": "シ",
+    "romaji": "shi",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét chấm trên",
+      "2. Nét chấm dưới",
+      "3. Nét phẩy vuốt TỪ DƯỚI LÊN TRÊN sang phải"
+    ],
+    "mnemonic": {
+      "title": "Cô gái cười duyên (She)",
+      "story": "Chữ シ như khuôn mặt cô gái (She) nghiêng đầu mỉm cười, mắt vuốt cong."
+    },
+    "examples": [
+      {
+        "word": "シャツ (shatsu)",
+        "meaning": "Áo sơ mi (Shirt)"
+      },
+      {
+        "word": "シャワー (shawaa)",
+        "meaning": "Vòi sen (Shower)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 75 Q 85 85 95 90",
+      "M 65 120 Q 80 130 90 135",
+      "M 60 185 Q 115 155 145 70"
+    ]
+  },
+  {
+    "char": "ス",
+    "romaji": "su",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập chéo sang trái",
+      "2. Nét phẩy từ giữa nét chéo vút sang phải"
+    ],
+    "mnemonic": {
+      "title": "Vận động viên trượt tuyết (Ski)",
+      "story": "Chữ ス giống người đang co chân phóng trượt tuyết siêu tốc."
+    },
+    "examples": [
+      {
+        "word": "スポーツ (supootsu)",
+        "meaning": "Thể thao (Sports)"
+      },
+      {
+        "word": "スーパー (suupaa)",
+        "meaning": "Siêu thị (Supermarket)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 80 L 145 80 L 85 195",
+      "M 105 125 L 155 195"
+    ]
+  },
+  {
+    "char": "セ",
+    "romaji": "se",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập góc uốn vào trong",
+      "2. Nét sổ dọc gập ngang đáy sang phải"
+    ],
+    "mnemonic": {
+      "title": "Bối cảnh sân khấu (Set)",
+      "story": "Chữ セ giống góc dựng phim trường sân khấu (Set)."
+    },
+    "examples": [
+      {
+        "word": "セーター (seetaa)",
+        "meaning": "Áo len (Sweater)"
+      },
+      {
+        "word": "ゼロ (zero)",
+        "meaning": "Số 0 (Zero)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 80 L 145 80 L 135 135",
+      "M 85 65 L 85 165 L 155 165"
+    ]
+  },
+  {
+    "char": "ソ",
+    "romaji": "so",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét chấm phẩy bên trái",
+      "2. Nét vuốt TỪ TRÊN XUỐNG DƯỚI sang trái"
+    ],
+    "mnemonic": {
+      "title": "Cây kem ốc quế (Soft cream)",
+      "story": "Chữ ソ giống viên kem mềm rót từ trên xuống chiếc nón ốc quế."
+    },
+    "examples": [
+      {
+        "word": "ソフト (sofuto)",
+        "meaning": "Phần mềm (Software)"
+      },
+      {
+        "word": "ソックス (sokkusu)",
+        "meaning": "Đôi tất (Socks)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 Q 90 95 95 105",
+      "M 135 70 L 70 195"
+    ]
+  },
+  {
+    "char": "タ",
+    "romaji": "ta",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét phẩy ngắn",
+      "2. Nét ngang gập cong",
+      "3. Nét phẩy ngắn ở bụng"
+    ],
+    "mnemonic": {
+      "title": "Thủy thủ lái tàu (Titanic)",
+      "story": "Chữ タ như mũi chiếc tàu vượt sóng lớn dũng mãnh."
+    },
+    "examples": [
+      {
+        "word": "タオル (taoru)",
+        "meaning": "Khăn tắm (Towel)"
+      },
+      {
+        "word": "タクシー (takushii)",
+        "meaning": "Xe taxi"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 95 60 L 65 115",
+      "M 75 95 L 145 95 Q 125 155 65 200",
+      "M 90 135 L 135 165"
+    ]
+  },
+  {
+    "char": "チ",
+    "romaji": "chi",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét phẩy ngang từ phải sang trái",
+      "2. Nét ngang chính",
+      "3. Nét sổ cong từ trên xuống sang trái"
+    ],
+    "mnemonic": {
+      "title": "Hoạt náo viên cổ vũ (Cheer)",
+      "story": "Chữ チ giống chữ ち nhưng thẳng thớm như ngọn cờ cổ vũ."
+    },
+    "examples": [
+      {
+        "word": "チーズ (chiizu)",
+        "meaning": "Phô mai (Cheese)"
+      },
+      {
+        "word": "チケット (chiketto)",
+        "meaning": "Vé xem phim (Ticket)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 145 65 L 75 80",
+      "M 55 115 L 155 110",
+      "M 105 85 Q 105 150 70 195"
+    ]
+  },
+  {
+    "char": "ツ",
+    "romaji": "tsu",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét chấm thứ nhất trên đỉnh",
+      "2. Nét chấm thứ hai bên cạnh",
+      "3. Nét vuốt TỪ TRÊN XUỐNG DƯỚI sang trái"
+    ],
+    "mnemonic": {
+      "title": "Cặp song sinh mặt cười (Twins)",
+      "story": "Chữ ツ như hai mắt của cặp song sinh cười hí mắt (phân biệt với シ vuốt từ dưới lên)."
+    },
+    "examples": [
+      {
+        "word": "ツアー (tsuaa)",
+        "meaning": "Chuyến du lịch (Tour)"
+      },
+      {
+        "word": "シャツ (shatsu)",
+        "meaning": "Áo sơ mi"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 70 Q 80 85 85 95",
+      "M 105 80 Q 115 95 120 105",
+      "M 145 70 L 75 195"
+    ]
+  },
+  {
+    "char": "テ",
+    "romaji": "te",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên ngắn",
+      "2. Nét ngang dưới dài hơn",
+      "3. Nét sổ cong từ giữa nét 2 lượn sang trái"
+    ],
+    "mnemonic": {
+      "title": "Cột ăng-ten truyền hình (Antenna)",
+      "story": "Chữ テ giống cột ăng-ten đón sóng truyền hình rõ nét."
+    },
+    "examples": [
+      {
+        "word": "テスト (tesuto)",
+        "meaning": "Bài kiểm tra (Test)"
+      },
+      {
+        "word": "テレビ (terebi)",
+        "meaning": "Tivi (Television)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 L 135 75",
+      "M 55 115 L 155 110",
+      "M 105 115 Q 100 160 65 195"
+    ]
+  },
+  {
+    "char": "ト",
+    "romaji": "to",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ thẳng đứng",
+      "2. Nét chéo ngắn từ giữa sang phải"
+    ],
+    "mnemonic": {
+      "title": "Cái cọc gỗ cắm cờ (Totem)",
+      "story": "Chữ ト giống cây cọc gỗ Totem có nhánh chỉ đường."
+    },
+    "examples": [
+      {
+        "word": "トイレ (toire)",
+        "meaning": "Nhà vệ sinh (Toilet)"
+      },
+      {
+        "word": "トマト (tomato)",
+        "meaning": "Quả cà chua"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 55 L 85 200",
+      "M 85 115 L 145 155"
+    ]
+  },
+  {
+    "char": "ナ",
+    "romaji": "na",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang",
+      "2. Nét sổ chéo dài uốn cong nhẹ sang trái"
+    ],
+    "mnemonic": {
+      "title": "Thanh kiếm Ninja chém (Ninja)",
+      "story": "Chữ ナ như thanh kiếm báu của Ninja chém ngang một nhát."
+    },
+    "examples": [
+      {
+        "word": "ナイフ (naifu)",
+        "meaning": "Con dao (Knife)"
+      },
+      {
+        "word": "バナナ (banana)",
+        "meaning": "Quả chuối (Banana)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 90 L 155 85",
+      "M 110 60 Q 105 140 60 195"
+    ]
+  },
+  {
+    "char": "ニ",
+    "romaji": "ni",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang trên ngắn",
+      "2. Nét ngang dưới dài hơn song song"
+    ],
+    "mnemonic": {
+      "title": "Số 2 trong chữ Hán (Nhị)",
+      "story": "Chữ ニ chính là chữ Nhị (二) nghĩa là số 2."
+    },
+    "examples": [
+      {
+        "word": "ニュース (nyuusu)",
+        "meaning": "Tin tức (News)"
+      },
+      {
+        "word": "アニメ (anime)",
+        "meaning": "Phim hoạt hình"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 90 L 140 85",
+      "M 55 155 L 155 150"
+    ]
+  },
+  {
+    "char": "ヌ",
+    "romaji": "nu",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập chéo sang trái",
+      "2. Nét phẩy chéo cắt qua chân"
+    ],
+    "mnemonic": {
+      "title": "Đũa gắp sợi mì (Noodle)",
+      "story": "Chữ ヌ như đôi đũa gắp sợi mì nhanh gọn dứt khoát."
+    },
+    "examples": [
+      {
+        "word": "カヌー (kanuu)",
+        "meaning": "Thuyền ca-nô (Canoe)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 80 L 145 80 L 80 185",
+      "M 85 125 L 145 175"
+    ]
+  },
+  {
+    "char": "ネ",
+    "romaji": "ne",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét chấm trên",
+      "2. Nét ngang gập chéo",
+      "3. Nét sổ thẳng ở giữa",
+      "4. Nét chấm bên phải"
+    ],
+    "mnemonic": {
+      "title": "Bộ cà vạt lịch lãm (Necktie)",
+      "story": "Chữ ネ giống chiếc cà vạt (Necktie) thắt gọn gàng trên cổ áo sơ mi."
+    },
+    "examples": [
+      {
+        "word": "ネクタイ (nekutai)",
+        "meaning": "Cà vạt (Necktie)"
+      },
+      {
+        "word": "インターネット (intaanetto)",
+        "meaning": "Mạng Internet"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 105 50 L 105 70",
+      "M 65 85 L 125 85 L 75 145",
+      "M 105 110 L 105 195",
+      "M 115 135 L 145 165"
+    ]
+  },
+  {
+    "char": "ノ",
+    "romaji": "no",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Một nét phẩy cong duy nhất từ trên phải vuốt nhẹ sang trái"
+    ],
+    "mnemonic": {
+      "title": "Cái mũi cao thanh tú (Nose)",
+      "story": "Chữ ノ giống sống mũi cao thẳng tắp (Nose)."
+    },
+    "examples": [
+      {
+        "word": "ノート (nooto)",
+        "meaning": "Vở ghi chép (Notebook)"
+      },
+      {
+        "word": "ピアノ (piano)",
+        "meaning": "Đàn dương cầm"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 135 60 Q 115 130 65 195"
+    ]
+  },
+  {
+    "char": "ハ",
+    "romaji": "ha",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy bên trái",
+      "2. Nét mác bên phải mở rộng hình chữ Bát"
+    ],
+    "mnemonic": {
+      "title": "Cái lều dã ngoại (Hut)",
+      "story": "Chữ ハ giống chiếc lều hình tam giác dựng trong rừng (Hut)."
+    },
+    "examples": [
+      {
+        "word": "パン (pan)",
+        "meaning": "Bánh mì"
+      },
+      {
+        "word": "ハンバーガー (hanbaagaa)",
+        "meaning": "Bánh hăm-bơ-gơ"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 75 L 60 175",
+      "M 125 80 L 155 180"
+    ]
+  },
+  {
+    "char": "ヒ",
+    "romaji": "hi",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang ngắn",
+      "2. Nét sổ gập ngang đáy sang phải"
+    ],
+    "mnemonic": {
+      "title": "Gót giày cao gót (High heels)",
+      "story": "Chữ ヒ như đế đôi giày cao gót tôn dáng phụ nữ."
+    },
+    "examples": [
+      {
+        "word": "ヒーロー (hiiroo)",
+        "meaning": "Anh hùng (Hero)"
+      },
+      {
+        "word": "コーヒー (koohii)",
+        "meaning": "Cà phê"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 90 L 135 85",
+      "M 85 60 L 85 165 L 155 165"
+    ]
+  },
+  {
+    "char": "フ",
+    "romaji": "fu",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét ngang gập cong nhẹ sang trái"
+    ],
+    "mnemonic": {
+      "title": "Lá cờ bay trong gió (Flag)",
+      "story": "Chữ フ giống ngọn cờ bay phấp phới trong gió bão."
+    },
+    "examples": [
+      {
+        "word": "フランス (furansu)",
+        "meaning": "Nước Pháp"
+      },
+      {
+        "word": "フォーク (fooku)",
+        "meaning": "Cái nĩa ăn (Fork)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 85 L 145 85 Q 125 150 70 195"
+    ]
+  },
+  {
+    "char": "ヘ",
+    "romaji": "he",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét xiên chéo lên rồi đổ dốc xuống sang phải (giống hệt Hiragana へ)"
+    ],
+    "mnemonic": {
+      "title": "Đỉnh đồi dốc (Hill)",
+      "story": "Katakana ヘ và Hiragana へ viết y hệt nhau, như đỉnh đồi thoai thoải."
+    },
+    "examples": [
+      {
+        "word": "ヘルメット (herumetto)",
+        "meaning": "Mũ bảo hiểm (Helmet)"
+      },
+      {
+        "word": "ホテル (hoteru)",
+        "meaning": "Khách sạn (Hotel)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 55 145 L 95 90 L 175 160"
+    ]
+  },
+  {
+    "char": "ホ",
+    "romaji": "ho",
+    "strokeCount": 4,
+    "strokeRules": [
+      "1. Nét ngang",
+      "2. Nét sổ thẳng cắt qua nét ngang",
+      "3. Nét phẩy bên trái",
+      "4. Nét mác bên phải"
+    ],
+    "mnemonic": {
+      "title": "Cây thánh giá tại bệnh viện (Hospital)",
+      "story": "Chữ ホ như dấu thánh giá chữ Mộc che chở bệnh nhân."
+    },
+    "examples": [
+      {
+        "word": "ホテル (hoteru)",
+        "meaning": "Khách sạn (Hotel)"
+      },
+      {
+        "word": "スポーツ (supootsu)",
+        "meaning": "Thể thao"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 60 85 L 150 80",
+      "M 105 55 L 105 195",
+      "M 85 125 L 60 175",
+      "M 125 125 L 150 175"
+    ]
+  },
+  {
+    "char": "マ",
+    "romaji": "ma",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập chéo sang trái",
+      "2. Nét chấm ngắn bên dưới"
+    ],
+    "mnemonic": {
+      "title": "Cốc uống nước (Mug)",
+      "story": "Chữ マ giống quai chiếc cốc uống nước ấm áp."
+    },
+    "examples": [
+      {
+        "word": "マンガ (manga)",
+        "meaning": "Truyện tranh Nhật"
+      },
+      {
+        "word": "マイク (maiku)",
+        "meaning": "Microphone"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 80 L 145 80 L 75 155",
+      "M 115 135 L 145 175"
+    ]
+  },
+  {
+    "char": "ミ",
+    "romaji": "mi",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét phẩy chéo thứ nhất",
+      "2. Nét phẩy chéo thứ hai song song",
+      "3. Nét phẩy chéo thứ ba dài hơn ở đáy"
+    ],
+    "mnemonic": {
+      "title": "3 nốt nhạc Tam (Mi = 3)",
+      "story": "Chữ ミ gồm 3 vạch song song, nhớ đến số 3 (Mitsu = 3)."
+    },
+    "examples": [
+      {
+        "word": "ミルク (miruku)",
+        "meaning": "Sữa tươi (Milk)"
+      },
+      {
+        "word": "ミス (misu)",
+        "meaning": "Sai lầm (Mistake)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 L 125 95",
+      "M 70 115 L 130 135",
+      "M 65 155 L 140 175"
+    ]
+  },
+  {
+    "char": "ム",
+    "romaji": "mu",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét gập tam giác từ trên xuống",
+      "2. Nét ngang đáy"
+    ],
+    "mnemonic": {
+      "title": "Hình tam giác kim tự tháp (Museum)",
+      "story": "Chữ ム như bảo tàng hình chóp Louvre kỳ vĩ."
+    },
+    "examples": [
+      {
+        "word": "ムービー (muubii)",
+        "meaning": "Bộ phim (Movie)"
+      },
+      {
+        "word": "ゲーム (geemu)",
+        "meaning": "Trò chơi điện tử"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 105 60 L 65 145 L 135 145",
+      "M 125 115 L 150 165"
+    ]
+  },
+  {
+    "char": "メ",
+    "romaji": "me",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy dài từ trên phải xuống dưới trái",
+      "2. Nét chéo cắt qua nét 1 tạo dấu X nghiêng"
+    ],
+    "mnemonic": {
+      "title": "Thanh kiếm chéo bắt chéo (Metal swords)",
+      "story": "Chữ メ giống hai thanh đoản kiếm bắt chéo vào nhau tạo thành dấu nhân."
+    },
+    "examples": [
+      {
+        "word": "メール (meeru)",
+        "meaning": "Thư điện tử (Email)"
+      },
+      {
+        "word": "メニュー (menyuu)",
+        "meaning": "Thực đơn (Menu)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 135 65 L 65 185",
+      "M 80 85 L 145 175"
+    ]
+  },
+  {
+    "char": "モ",
+    "romaji": "mo",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên",
+      "2. Nét ngang dưới dài hơn",
+      "3. Nét sổ gập ngang đáy sang phải"
+    ],
+    "mnemonic": {
+      "title": "Màn hình vi tính (Monitor)",
+      "story": "Chữ モ góc cạnh như Hiragana も, như giá đỡ màn hình Monitor."
+    },
+    "examples": [
+      {
+        "word": "モデル (moderu)",
+        "meaning": "Người mẫu (Model)"
+      },
+      {
+        "word": "モノレール (monoreeru)",
+        "meaning": "Tàu điện một ray"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 85 L 145 80",
+      "M 55 125 L 155 120",
+      "M 105 55 L 105 165 L 155 165"
+    ]
+  },
+  {
+    "char": "ヤ",
+    "romaji": "ya",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang gập cong sang trái",
+      "2. Nét sổ chéo cắt qua thân"
+    ],
+    "mnemonic": {
+      "title": "Chiếc thuyền buồm thể thao (Yacht)",
+      "story": "Chữ ヤ y hệt Hiragana や phiên bản góc cạnh, thể thao hơn."
+    },
+    "examples": [
+      {
+        "word": "ヤクルト (yakuruto)",
+        "meaning": "Sữa chua Yakult"
+      },
+      {
+        "word": "タイヤ (taiya)",
+        "meaning": "Lốp xe (Tire)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 95 L 140 95 L 115 145",
+      "M 95 65 L 75 195"
+    ]
+  },
+  {
+    "char": "ユ",
+    "romaji": "yu",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét gập góc vuông từ trên sang phải rồi kéo xuống",
+      "2. Nét ngang đáy dài kéo xuyên qua chân nét 1"
+    ],
+    "mnemonic": {
+      "title": "Cái móc chữ U (U-turn)",
+      "story": "Chữ ユ như chiếc móc khóa hoặc biển quay đầu xe U-turn."
+    },
+    "examples": [
+      {
+        "word": "ユーモア (yuumoa)",
+        "meaning": "Sự hài hước (Humor)"
+      },
+      {
+        "word": "ユニフォーム (yunifoomu)",
+        "meaning": "Đồng phục (Uniform)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 75 75 L 135 75 L 135 145",
+      "M 55 145 L 160 145"
+    ]
+  },
+  {
+    "char": "ヨ",
+    "romaji": "yo",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên gập dọc xuống",
+      "2. Nét ngang giữa",
+      "3. Nét ngang đáy nối góc"
+    ],
+    "mnemonic": {
+      "title": "Chiếc hộp đựng đồ ăn (Yogurt)",
+      "story": "Chữ ヨ giống chữ E ngược hoặc 3 tầng ngăn tủ để hộp sữa chua."
+    },
+    "examples": [
+      {
+        "word": "ヨーグルト (yooguruto)",
+        "meaning": "Sữa chua (Yogurt)"
+      },
+      {
+        "word": "ヨーロッパ (yooroppa)",
+        "meaning": "Châu Âu (Europe)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 145 75 L 145 165",
+      "M 65 120 L 140 120",
+      "M 65 165 L 145 165"
+    ]
+  },
+  {
+    "char": "ラ",
+    "romaji": "ra",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét ngang trên",
+      "2. Nét gập móc chữ C vuông vức ở dưới"
+    ],
+    "mnemonic": {
+      "title": "Đèn bàn chiếu sáng (Lamp)",
+      "story": "Chữ ラ giống chiếc đèn bàn góc cạnh chiếu ánh sáng rõ rệt."
+    },
+    "examples": [
+      {
+        "word": "ラジオ (rajio)",
+        "meaning": "Đài Radio"
+      },
+      {
+        "word": "ライオン (raion)",
+        "meaning": "Con sư tử (Lion)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 75 L 135 75",
+      "M 95 105 L 140 105 L 120 185"
+    ]
+  },
+  {
+    "char": "リ",
+    "romaji": "ri",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ ngắn bên trái",
+      "2. Nét sổ dài cong bên phải"
+    ],
+    "mnemonic": {
+      "title": "Dải ruy băng lụa (Ribbon)",
+      "story": "Chữ リ giống hai dải ruy băng rủ xuống thanh thoát."
+    },
+    "examples": [
+      {
+        "word": "リンゴ (ringo)",
+        "meaning": "Quả táo"
+      },
+      {
+        "word": "リーダー (riidaa)",
+        "meaning": "Người lãnh đạo (Leader)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 80 75 L 80 135",
+      "M 130 65 Q 135 145 105 195"
+    ]
+  },
+  {
+    "char": "ル",
+    "romaji": "ru",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét phẩy dài bên trái",
+      "2. Nét sổ cong móc hất lên bên phải"
+    ],
+    "mnemonic": {
+      "title": "Đôi chân sải bước chạy (Run)",
+      "story": "Chữ ル như đôi chân dài miên man đang sải bước chạy nhanh (Run)."
+    },
+    "examples": [
+      {
+        "word": "ルール (ruuru)",
+        "meaning": "Quy tắc, luật chơi (Rule)"
+      },
+      {
+        "word": "ホテル (hoteru)",
+        "meaning": "Khách sạn"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 85 70 L 65 185",
+      "M 115 65 L 115 160 Q 120 190 155 185"
+    ]
+  },
+  {
+    "char": "レ",
+    "romaji": "re",
+    "strokeCount": 1,
+    "strokeRules": [
+      "1. Nét sổ thẳng từ trên xuống rồi gập hất xéo sang phải như dấu tích (Checkmark)"
+    ],
+    "mnemonic": {
+      "title": "Dấu tích chữ V hoàn thành (Ready)",
+      "story": "Chữ レ như dấu tích hoàn thành xuất sắc công việc (Ready)."
+    },
+    "examples": [
+      {
+        "word": "レストラン (resutoran)",
+        "meaning": "Nhà hàng (Restaurant)"
+      },
+      {
+        "word": "レモン (remon)",
+        "meaning": "Quả chanh (Lemon)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 80 65 L 80 185 L 155 145"
+    ]
+  },
+  {
+    "char": "ロ",
+    "romaji": "ro",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét sổ dọc bên trái",
+      "2. Nét ngang gập dọc bên phải",
+      "3. Nét ngang đóng đáy hộp"
+    ],
+    "mnemonic": {
+      "title": "Miệng hình vuông của chú Robot",
+      "story": "Chữ ロ hình vuông vức như cái miệng của chú người máy Robot."
+    },
+    "examples": [
+      {
+        "word": "ロボット (robotto)",
+        "meaning": "Người máy (Robot)"
+      },
+      {
+        "word": "ロシア (roshia)",
+        "meaning": "Nước Nga"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 65 175",
+      "M 65 75 L 145 75 L 145 175",
+      "M 65 175 L 145 175"
+    ]
+  },
+  {
+    "char": "ワ",
+    "romaji": "wa",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét sổ ngắn bên trái",
+      "2. Nét ngang gập cong sang trái"
+    ],
+    "mnemonic": {
+      "title": "Chiếc ly uống rượu vang (Wine glass)",
+      "story": "Chữ ワ như phần trên của chiếc ly thủy tinh uống rượu vang (Wine)."
+    },
+    "examples": [
+      {
+        "word": "ワイン (wain)",
+        "meaning": "Rượu vang (Wine)"
+      },
+      {
+        "word": "ワイシャツ (waishatsu)",
+        "meaning": "Áo sơ mi trắng"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 85 L 70 125",
+      "M 70 85 L 145 85 Q 125 155 75 195"
+    ]
+  },
+  {
+    "char": "ヲ",
+    "romaji": "wo",
+    "strokeCount": 3,
+    "strokeRules": [
+      "1. Nét ngang trên",
+      "2. Nét ngang dưới ngắn hơn",
+      "3. Nét sổ cong từ trên cắt qua nét 2 sang trái"
+    ],
+    "mnemonic": {
+      "title": "Cầu thủ ghi bàn tuyệt đẹp (Woah!)",
+      "story": "Chữ ヲ rất hiếm gặp trong Katakana, giống phiên bản hiện đại của trợ từ を."
+    },
+    "examples": [
+      {
+        "word": "ヲタク (wotaku)",
+        "meaning": "Người đam mê văn hóa Nhật (Otaku)"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 65 75 L 145 75",
+      "M 65 115 L 135 115",
+      "M 115 75 Q 110 150 70 195"
+    ]
+  },
+  {
+    "char": "ン",
+    "romaji": "n",
+    "strokeCount": 2,
+    "strokeRules": [
+      "1. Nét chấm phẩy bên trái",
+      "2. Nét vuốt TỪ DƯỚI LÊN TRÊN sang phải"
+    ],
+    "mnemonic": {
+      "title": "Một mắt nháy duyên dáng (Wink)",
+      "story": "Chữ ン chỉ có 1 nét chấm và vuốt từ dưới lên (phân biệt với ソ vuốt từ trên xuống)."
+    },
+    "examples": [
+      {
+        "word": "パン (pan)",
+        "meaning": "Bánh mì"
+      },
+      {
+        "word": "ペン (pen)",
+        "meaning": "Cây bút mực"
+      },
+      {
+        "word": "マンション (manshon)",
+        "meaning": "Căn hộ cao cấp"
+      }
+    ],
+    "strokeSvgPaths": [
+      "M 70 100 Q 85 115 90 125",
+      "M 65 185 Q 115 155 145 75"
+    ]
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "testId": "test_n5_set2",
+  "title": "Đề Thi Thử JLPT N5 - Đề Chuẩn Số 02 (CBT Quốc Tế)",
+  "examName": "Đề Thi Thử JLPT N5 - Đề Số 02",
+  "durationMinutes": 40,
+  "passingScore": 120,
+  "totalScore": 180,
+  "totalQuestions": 20,
+  "sections": [
+    {
+      "section": "Phần 1: Moji - Goi (Chữ Hán & Từ Vựng N5)",
+      "questions": [
+        {
+          "id": 1,
+          "question": "えき の なか に 【店】 が たくさん あります。",
+          "highlight": "店",
+          "options": ["みせ", "まち", "いえ", "へや"],
+          "answerIndex": 0,
+          "explanation": "【店】 âm Hán-Việt là ĐIẾM, nghĩa là cửa hàng (みせ)."
+        },
+        {
+          "id": 2,
+          "question": "この りょうり は 【すこし】 からい です。",
+          "highlight": "すこし",
+          "options": ["少し", "少い", "小し", "歩し"],
+          "answerIndex": 0,
+          "explanation": "すこし nghĩa là một chút / ít, chữ Hán là 【少し】(THIỂU)."
+        },
+        {
+          "id": 3,
+          "question": "あした は 【何曜日】 ですか。",
+          "highlight": "何曜日",
+          "options": ["なんようび", "なにようび", "なんにち", "なんがつ"],
+          "answerIndex": 0,
+          "explanation": "【何曜日】 đọc là なんようび (Thứ mấy)."
+        },
+        {
+          "id": 4,
+          "question": "へや が くらい ですから、でんき を ( ? ) ください。",
+          "options": ["つけて", "けして", "あけて", "しめて"],
+          "answerIndex": 0,
+          "explanation": "Phòng tối nên bật đèn: でんき を つけます (つけて)."
+        },
+        {
+          "id": 5,
+          "question": "あそこ に 【犬】 が います。",
+          "highlight": "犬",
+          "options": ["いぬ", "ねこ", "とり", "さかな"],
+          "answerIndex": 0,
+          "explanation": "【犬】 âm Hán-Việt là KHUYỂN, cách đọc là いぬ (Con chó)."
+        },
+        {
+          "id": 6,
+          "question": "この テーブル は 【ながい】 です。",
+          "highlight": "ながい",
+          "options": ["長い", "高い", "広い", "近い"],
+          "answerIndex": 0,
+          "explanation": "ながい là dài, chữ Hán là 【長い】(TRƯỜNG)."
+        },
+        {
+          "id": 7,
+          "question": "まいしゅう 【えいご】 を ならいます。",
+          "highlight": "えいご",
+          "options": ["英語", "日本語", "中国語", "韓国語"],
+          "answerIndex": 0,
+          "explanation": "えいご là tiếng Anh, chữ Hán là 【英語】(ANH NGỮ)."
+        },
+        {
+          "id": 8,
+          "question": "じかん が ありませんから、( ? ) いきましょう。",
+          "options": ["いそいで", "ゆっくり", "だんだん", "そろそろ"],
+          "answerIndex": 0,
+          "explanation": "Không có thời gian nên 'khẩn trương': いそいで (急いで)."
+        },
+        {
+          "id": 9,
+          "question": "とうきょう は 【ひと】 が おおい です。",
+          "highlight": "ひと",
+          "options": ["人", "入", "八", "大"],
+          "answerIndex": 0,
+          "explanation": "ひと là người, chữ Hán là 【人】(NHÂN)."
+        },
+        {
+          "id": 10,
+          "question": "きのう、あたらしい くつ を ( ? ) かいました。",
+          "options": ["いっそく", "いっぽん", "いちまい", "ひとつ"],
+          "answerIndex": 0,
+          "explanation": "Đếm giày dùng lượng từ [そく] (足): いっそく (1 đôi)."
+        }
+      ]
+    },
+    {
+      "section": "Phần 2: Bunpou & Dokkai (Ngữ Pháp & Đọc Hiểu N5)",
+      "questions": [
+        {
+          "id": 11,
+          "question": "わたし は えいご を はなす こと ( ? ) できます。",
+          "options": ["が", "を", "に", "で"],
+          "answerIndex": 0,
+          "explanation": "Cấu trúc khả năng: [V-る + ことが できます]."
+        },
+        {
+          "id": 12,
+          "question": "この 部屋 で たばこ を ( ? ) は いけません。",
+          "options": ["すって", "すいて", "すった", "すう"],
+          "answerIndex": 0,
+          "explanation": "Mẫu câu cấm đoán: [V-て + は いけません]."
+        },
+        {
+          "id": 13,
+          "question": "あめ が ふって います ( ? )、かさ を もっていきます。",
+          "options": ["から", "ので", "でも", "けど"],
+          "answerIndex": 0,
+          "explanation": "Vì trời đang mưa NÊN: [〜から]."
+        },
+        {
+          "id": 14,
+          "question": "いま なんじ ですか。―― ３じ ( ? ) です。",
+          "options": ["はん", "ぷん", "じかん", "まえ"],
+          "answerIndex": 0,
+          "explanation": "3 giờ rưỡi: ３じ はん (半)."
+        },
+        {
+          "id": 15,
+          "question": "この ケーキ は ( ? ) おいしい です。",
+          "options": ["あまくて", "あまい", "あまく", "あまいに"],
+          "answerIndex": 0,
+          "explanation": "Nối tính từ đuôi i: [A-くて B] ➔ あまくて おいしい."
+        },
+        {
+          "id": 16,
+          "question": "この 部屋 __ __ ★ __ はいけません。",
+          "sentenceHint": "Thứ tự: に(1) くつを(2) はいたまま(3) はいって(4)",
+          "options": ["1. に", "2. くつを", "3. はいたまま", "4. はいって"],
+          "answerIndex": 2,
+          "explanation": "Câu hoàn chỉnh: この 部屋 [に] [くつを] [★ はいたまま] [はいって] はいけません. Ngôi sao ★ là số 3!"
+        },
+        {
+          "id": 17,
+          "question": "わたし は __ __ ★ __ 好きです。",
+          "sentenceHint": "Thứ tự: にほんの(1) アニメを(3) みることが(2)",
+          "options": ["1. にほんの", "2. みることが", "3. アニメを", "4. とても"],
+          "answerIndex": 1,
+          "explanation": "Câu hoàn chỉnh: わたし は [にほんの] [アニメを] [★ みることが] 好きです. Ngôi sao ★ là số 2!"
+        },
+        {
+          "id": 18,
+          "question": "えき まで __ __ ★ __ 行きました。",
+          "sentenceHint": "Thứ tự: バスに(2) のって(4) じてんしゃで(1)",
+          "options": ["1. じてんしゃで", "2. バスに", "3. ではなく", "4. のって"],
+          "answerIndex": 3,
+          "explanation": "Câu hoàn chỉnh: えき まで [じてんしゃで] [ではなく] [★ バスに] [のって] 行きました. Ngôi sao ★ là số 4!"
+        },
+        {
+          "id": 19,
+          "question": "【ケンさんの メール】\n田中さん、こんにちは。\nあした の バーベキュー ですが、あめ が ふったら、わたしの うち で パーティー を しましょう。にく と やさい は わたし が かいますから、のみもの を もってきて ください。\n\n[Hỏi] 田中さん は あした なに を もっていきますか。",
+          "options": [
+            "のみもの",
+            "にく",
+            "やさい",
+            "バーベキュー の コンロ"
+          ],
+          "answerIndex": 0,
+          "explanation": "Trong email: 'のみもの を もってきて ください' ➔ Mang đồ uống."
+        },
+        {
+          "id": 20,
+          "question": "【アパート の ルール】\n・ゴミ は あさ 8じ まで に だしてください。\n・もえる ゴミ：火よう日 と 金よう日\n・ビン・カン：木よう日\n\n[Hỏi] カン や ビン の ゴミ は なんようび に だしますか。",
+          "options": [
+            "木よう日",
+            "火よう日",
+            "金よう日",
+            "月よう日"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bảng quy định: ビン・カン：木よう日 (Thứ Năm)."
+        }
+      ]
+    }
+  ]
+}
