@@ -4,12 +4,9 @@ import { sounds } from '../../utils/soundEffects';
 export function NavigationBar({ activePage, setActivePage }) {
   const tabs = [
     { id: 'roadmap', label: 'Bản Đồ N5', icon: 'explore', iconColor: 'text-rose-400', badge: 'S-Curve', isBadge: true },
-    { id: 'practice', label: 'Bút Thuận', icon: 'draw', iconColor: 'text-rose-400', badge: 'HOT', isBadge: true },
+    { id: 'practice', label: 'Luyện Bút Thuận', icon: 'draw', iconColor: 'text-rose-400', badge: 'HOT', isBadge: true },
     { id: 'kana', label: 'Bảng Chữ Cái', icon: 'translate', iconColor: 'text-cyan-400', badge: '92', isCount: true },
-    { id: 'kanji', label: '103 Chữ Hán', icon: 'menu_book', iconColor: 'text-indigo-400', badge: '103', isCount: true },
-    { id: 'grammar', label: 'Ngữ Pháp N5', icon: 'bolt', iconColor: 'text-teal-400', badge: '40+', isCount: true },
-    { id: 'exam', label: 'Thi Thử JLPT', icon: 'assignment_turned_in', iconColor: 'text-amber-400', badge: 'ĐỀ CHUẨN', isBadge: true },
-    { id: 'sensei', label: 'AI Sensei', icon: 'smart_toy', iconColor: 'text-emerald-400', badge: '24/7', isPing: true }
+    { id: 'kanji', label: '103 Chữ Hán', icon: 'menu_book', iconColor: 'text-indigo-400', badge: '103', isCount: true }
   ];
 
   const handleTabClick = (tabId) => {

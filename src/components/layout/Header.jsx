@@ -7,7 +7,8 @@ export function Header({
   masteredCount,
   soundMuted,
   toggleSound,
-  onOpenQuests
+  onOpenQuests,
+  onResetProgress
 }) {
   return (
     <header className="sticky top-0 z-50 bg-[#090e1d]/95 backdrop-blur-md border-b border-slate-800/80 transition-colors">
@@ -79,6 +80,22 @@ export function Header({
               {soundMuted ? 'volume_off' : 'volume_up'}
             </span>
           </button>
+
+          {/* Reset Progress to Stage 1 Button */}
+          {onResetProgress && (
+            <button
+              onClick={() => {
+                if (window.confirm('Đặt lại toàn bộ tiến độ về Chặng 1 (Học Hiragana từ đầu với 0 XP)?')) {
+                  onResetProgress();
+                }
+              }}
+              className="px-2 py-0.5 rounded-full bg-slate-800/80 hover:bg-rose-950/60 hover:text-rose-400 border border-slate-700/60 text-slate-400 text-[11px] cursor-pointer transition-all active:scale-95 flex items-center gap-1"
+              title="Đặt lại tiến độ về Chặng 1 (0 XP)"
+            >
+              <span className="material-symbols-outlined text-[13px]">restart_alt</span>
+              <span className="hidden sm:inline">Đặt lại</span>
+            </button>
+          )}
         </div>
 
       </div>

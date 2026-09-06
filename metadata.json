@@ -1,0 +1,8 @@
+{
+  "name": "NihonLearn N5",
+  "description": "Nền tảng học tiếng Nhật N5 tinh gọn: Bản đồ lộ trình chuẩn, luyện viết nét bút thuận trên ô Mễ tự, 92 thẻ nhớ 3D Kana, 103 Kanji N5 và 214 bộ thủ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

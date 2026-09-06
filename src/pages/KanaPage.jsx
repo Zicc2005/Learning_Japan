@@ -109,7 +109,7 @@ export function KanaPage({ hiraganaList, katakanaList, speak, onNavigatePractice
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-black text-white">/ {selectedItem.romaji} /</span>
-                <span className="text-[10px] px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 font-bold border border-rose-500/30">
+                <span className="text-[10px] px-2.5 py-0.5 rounded-md bg-rose-500/20 text-rose-300 font-bold border border-rose-500/30 leading-normal">
                   {selectedItem.strokeCount || 2} Nét bút
                 </span>
               </div>

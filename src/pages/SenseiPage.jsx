@@ -85,7 +85,7 @@ export function SenseiPage({ speak }) {
         <div className="lg:col-span-4 flex flex-col space-y-4">
           
           {/* Sensei Header Card */}
-          <div className="p-4 sm:p-5 rounded-3xl bg-gradient-to-br from-emerald-950/70 via-slate-900 to-teal-950/70 border border-emerald-500/40 shadow-xl flex items-center justify-between">
+          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-emerald-950/70 via-slate-900 to-teal-950/70 border border-emerald-500/40 shadow-xl flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/30">
                 🤖
@@ -96,7 +96,7 @@ export function SenseiPage({ speak }) {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 </div>
                 <div className="flex items-center gap-1.5 mt-0.5">
-                  <span className="text-[10px] text-emerald-400 font-bold bg-emerald-500/20 px-2 py-0.2 rounded-full border border-emerald-500/30">
+                  <span className="text-[10px] text-emerald-400 font-bold bg-emerald-500/20 px-2.5 py-0.5 rounded-md border border-emerald-500/30 leading-normal">
                     Online 24/7
                   </span>
                   <span className="text-[10px] text-slate-400">Gia sư sư phạm N5</span>

@@ -181,10 +181,10 @@ export function ExamPage({ mockTestSets = [], examTypesData, onCompleteExam, onN
             <div className="bg-gradient-to-b from-slate-900 to-[#0d1424] rounded-3xl p-4 sm:p-5 border border-slate-800 shadow-xl space-y-4">
               <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 font-black text-[10px] sm:text-xs border border-rose-500/30">
+                  <span className="px-2.5 py-0.5 rounded-md bg-rose-500/20 text-rose-300 font-black text-[10px] sm:text-xs border border-rose-500/30 leading-normal">
                     CÂU {currentQIndex + 1} / {questions.length}
                   </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 text-[10px] sm:text-xs">
+                  <span className="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 text-[10px] sm:text-xs leading-normal">
                     {currentQ.category}
                   </span>
                 </div>

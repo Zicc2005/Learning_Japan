@@ -30,7 +30,7 @@ import mockTestSet2 from '../data/mock_tests_n5/test_n5_set2.json';
 import mockTestSet3 from '../data/mock_tests_n5/test_n5_set3.json';
 import examTypesData from '../data/mock_tests_n5/exam_n5_types.json';
 
-const VALID_PAGES = ['roadmap', 'practice', 'kana', 'kanji', 'grammar', 'exam', 'sensei'];
+const VALID_PAGES = ['roadmap', 'practice', 'kana', 'kanji'];
 
 const getPageFromHash = () => {
   if (typeof window === 'undefined') return 'roadmap';
@@ -41,10 +41,47 @@ const getPageFromHash = () => {
 export default function App() {
   const [activePage, setActivePageState] = useState(getPageFromHash);
   const [isQuestsOpen, setIsQuestsOpen] = useState(false);
-  const [masteredArray, setMasteredArray] = useLocalStorage('nihon_mastered', ['あ', 'い', '日', '月', '火']);
-  const [xp, setXp] = useLocalStorage('nihon_xp', 300);
-  const [streak] = useLocalStorage('nihon_streak', 3);
+  const [masteredArray, setMasteredArray] = useLocalStorage('nihon_v2_mastered', []);
+  const [xp, setXp] = useLocalStorage('nihon_v2_xp', 0);
+  const [streak, setStreak] = useLocalStorage('nihon_v2_streak', 1);
   const [soundMuted, setSoundMuted] = useLocalStorage('nihon_sound_muted', false);
+
+  // Clear all old test data to prepare for clean deploy test
+  useEffect(() => {
+    if (typeof window !== 'undefined' && localStorage.getItem('nihon_deploy_cleaned_v3') !== 'true') {
+      const keysToRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && (key.startsWith('nihon') || key.startsWith('quest'))) {
+          keysToRemove.push(key);
+        }
+      }
+      keysToRemove.forEach((k) => localStorage.removeItem(k));
+      localStorage.setItem('nihon_deploy_cleaned_v3', 'true');
+      setMasteredArray([]);
+      setXp(0);
+      setStreak(1);
+    }
+  }, [setMasteredArray, setXp, setStreak]);
+
+  const handleResetProgress = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const keysToRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && (key.startsWith('nihon') || key.startsWith('quest'))) {
+          keysToRemove.push(key);
+        }
+      }
+      keysToRemove.forEach((k) => localStorage.removeItem(k));
+      localStorage.setItem('nihon_deploy_cleaned_v3', 'true');
+    }
+    setMasteredArray([]);
+    setXp(0);
+    setStreak(1);
+    sounds.playClick();
+    window.location.reload();
+  }, [setMasteredArray, setXp, setStreak]);
 
   const { speak } = useTTS();
 
@@ -146,6 +183,7 @@ export default function App() {
           soundMuted={soundMuted}
           toggleSound={toggleSound}
           onOpenQuests={() => setIsQuestsOpen(true)}
+          onResetProgress={handleResetProgress}
         />
         <NavigationBar
           activePage={activePage}
@@ -160,8 +198,11 @@ export default function App() {
               onNavigate={setActivePage}
               onOpenQuests={() => setIsQuestsOpen(true)}
               xp={xp}
+              setXp={setXp}
               streak={streak}
               masteredCount={masteredChars.size}
+              masteredChars={masteredChars}
+              setMasteredChars={setMasteredChars}
             />
           )}
 
@@ -196,32 +237,6 @@ export default function App() {
               kanjiN5List={kanjiN5List}
               speak={speak}
               onJumpToPractice={handleJumpToPractice}
-            />
-          )}
-
-          {/* Path: #/grammar - Ngữ Pháp N5 */}
-          {activePage === 'grammar' && (
-            <GrammarPage
-              grammarList={grammarList}
-              speak={speak}
-            />
-          )}
-
-          {/* Path: #/exam - Thi Thử JLPT CBT */}
-          {activePage === 'exam' && (
-            <ExamPage
-              mockTestSets={[mockTestSet1, mockTestSet2, mockTestSet3]}
-              examTypesData={examTypesData}
-              onCompleteExam={handleCompleteExam}
-              onNavigateAi={() => setActivePage('sensei')}
-              onNavigateSensei={() => setActivePage('sensei')}
-            />
-          )}
-
-          {/* Path: #/sensei - Gia Sư AI Sensei 24/7 */}
-          {activePage === 'sensei' && (
-            <SenseiPage
-              speak={speak}
             />
           )}
         </main>

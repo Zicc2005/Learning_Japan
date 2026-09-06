@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { STAGES_DATA, CONSTELLATION_BRANCHES, USER_PROFILE_DATA, KANA_DAILY_MAP, KANA_CURRICULUM_METADATA } from '../data/roadmapData';
+import { STAGES_DATA, USER_PROFILE_DATA, KANA_DAILY_MAP, KANA_CURRICULUM_METADATA } from '../data/roadmapData';
 import { sounds } from '../utils/soundEffects';
 
-export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, masteredCount = 8 }) {
+export function RoadmapPage({ onNavigate, onOpenQuests, xp = 0, setXp, streak = 1, masteredCount = 0, masteredChars, setMasteredChars }) {
   // Main view mode: 'map' (The Hero S-Curve Adventure Map) or 'curriculum' (The 14-Day Detailed Plan)
   const [viewMode, setViewMode] = useState('map');
   
@@ -12,18 +12,71 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
   // Quick detail modal for a specific day opened directly from map nodes
   const [quickDayModal, setQuickDayModal] = useState(null);
 
+  // Completed days persistence in localStorage
+  const [completedDays, setCompletedDays] = useState(() => {
+    try {
+      const saved = localStorage.getItem('nihon_v2_completed_days');
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  });
+
+  const isDayDone = (plan) => {
+    if (!plan) return false;
+    if (completedDays.includes(plan.day)) return true;
+    if (!plan.targetChars || plan.targetChars.length === 0) return false;
+    const mSet = masteredChars instanceof Set ? masteredChars : new Set(masteredChars || []);
+    const masteredInDay = plan.targetChars.filter(c => mSet.has(c)).length;
+    return masteredInDay >= plan.targetChars.length;
+  };
+
+  const toggleCompleteDay = (day) => {
+    sounds.playClick();
+    const plan = KANA_DAILY_MAP.find(p => p.day === day);
+    const isAlreadyDone = completedDays.includes(day);
+    const nextCompleted = isAlreadyDone
+      ? completedDays.filter(d => d !== day)
+      : [...completedDays, day];
+    
+    setCompletedDays(nextCompleted);
+    try {
+      localStorage.setItem('nihon_v2_completed_days', JSON.stringify(nextCompleted));
+    } catch (e) {}
+
+    // If newly completing, add all 5 target characters to masteredChars and award XP
+    if (!isAlreadyDone && plan?.targetChars) {
+      sounds.playLevelUp?.();
+      if (setMasteredChars) {
+        setMasteredChars((prevSet) => {
+          const next = new Set(prevSet);
+          plan.targetChars.forEach(c => next.add(c));
+          return next;
+        });
+      }
+      if (setXp) {
+        setXp(prev => prev + 100);
+      }
+    }
+  };
+
   const [companionTipIndex, setCompanionTipIndex] = useState(0);
   const companionTips = [
+    'Thứ tự chuẩn hóa: Học Hiragana -> Katakana -> Kanji N5. 214 Bộ Thủ là phụ bản học bổ trợ tùy chọn!',
     'Mỗi ngày học 5 chữ Kana kết hợp luyện viết 5 lần trên ô Mễ tự (米) sẽ nhớ sâu không bao giờ quên!',
     'Hãy nhớ quy tắc bút thuận: Ngang trước sổ sau, trên trước dưới sau, phẩy trước mác sau!',
     'Phân biệt bẫy Katakana: シ (Shi) nét vuốt từ dưới lên, còn ツ (Tsu) nét phẩy từ trên xuống!',
-    'Hoàn thành 14 ngày bảng chữ cái để tiến thẳng vào Ải 3: Chào hỏi & Giới thiệu bản thân nhé!'
+    'Hoàn thành Hiragana & Katakana để mở khóa 103 chữ Hán cốt lõi N5 và giao tiếp thực chiến!'
   ];
 
   const handleNextTip = () => {
     sounds.playClick();
     setCompanionTipIndex((prev) => (prev + 1) % companionTips.length);
   };
+
+  const activeStage = STAGES_DATA.find((s) => s.status === 'active') || STAGES_DATA[0];
+  const completedStagesCount = STAGES_DATA.filter((s) => s.status === 'completed').length;
+  const overallProgress = STAGES_DATA.length > 0 ? Math.round((completedStagesCount / STAGES_DATA.length) * 100) : 0;
 
   const handleStageClick = (stage) => {
     sounds.playClick();
@@ -83,7 +136,7 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
             </div>
             <p className="text-xs text-slate-400 mt-1 flex items-center gap-2">
               <span>Lộ trình phiêu lưu S-Curve từ con số 0 đến đỗ chuẩn kỳ thi JLPT N5</span>
-              <span className="text-emerald-400 font-bold">• 42% Tiến độ chặng</span>
+              <span className="text-emerald-400 font-bold">• {overallProgress}% Tiến độ chặng</span>
             </p>
           </div>
 
@@ -124,7 +177,7 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
             <main className="lg:col-span-8 flex flex-col relative w-full">
               
               {/* S-Curve Map Board Canvas */}
-              <div className="relative w-full h-[1220px] rounded-3xl bg-slate-950/50 border border-slate-800/80 overflow-visible p-3 sm:p-5 shadow-2xl">
+              <div className="relative w-full h-[980px] rounded-3xl bg-slate-950/50 border border-slate-800/80 overflow-visible p-4 sm:p-6 shadow-2xl">
                 
                 {/* SVG Connecting Paths (The Glowing S-Curve Lines) */}
                 <svg 
@@ -148,120 +201,52 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                       </feMerge>
                     </filter>
 
-                    <linearGradient id="curve-grad-1" x1="22%" y1="5%" x2="72%" y2="16%">
+                    <linearGradient id="curve-grad-1" x1="22%" y1="9%" x2="72%" y2="32%">
                       <stop offset="0%" stopColor="#10b981" />
                       <stop offset="100%" stopColor="#06b6d4" />
                     </linearGradient>
-                    <linearGradient id="curve-grad-2" x1="72%" y1="16%" x2="22%" y2="28%">
+                    <linearGradient id="curve-grad-2" x1="72%" y1="32%" x2="22%" y2="56%">
                       <stop offset="0%" stopColor="#06b6d4" />
                       <stop offset="100%" stopColor="#10b981" />
                     </linearGradient>
-                    <linearGradient id="curve-grad-3" x1="22%" y1="28%" x2="70%" y2="40%">
+                    <linearGradient id="curve-grad-3" x1="22%" y1="56%" x2="50%" y2="80%">
                       <stop offset="0%" stopColor="#10b981" />
                       <stop offset="100%" stopColor="#f43f5e" />
                     </linearGradient>
                   </defs>
 
-                  {/* Segment 1: Ải 1 (22%, 5%) -> Phụ bản 1 (72%, 16%) */}
+                  {/* Segment 1: Ải 1 (22%, 9%) -> Phụ bản 1 (72%, 32%) */}
                   <path 
-                    d="M 22 5 C 45 5, 52 16, 72 16"
+                    d="M 22 9 C 48 9, 52 32, 72 32"
                     fill="none"
                     stroke="url(#curve-grad-1)"
-                    strokeWidth="1.4"
+                    strokeWidth="1.8"
                     strokeLinecap="round"
                     filter="url(#glow-cyan-filter)"
                   />
 
-                  {/* Segment 2: Phụ bản 1 (72%, 16%) -> Ải 2 (22%, 28%) */}
+                  {/* Segment 2: Phụ bản 1 (72%, 32%) -> Ải 2 (22%, 56%) */}
                   <path 
-                    d="M 72 16 C 50 16, 45 28, 22 28"
+                    d="M 72 32 C 52 32, 48 56, 22 56"
                     fill="none"
                     stroke="url(#curve-grad-2)"
-                    strokeWidth="1.4"
+                    strokeWidth="1.8"
                     strokeLinecap="round"
                     filter="url(#glow-cyan-filter)"
                   />
 
-                  {/* Segment 3: Ải 2 (22%, 28%) -> Ải 3 (70%, 40%) */}
+                  {/* Segment 3: Ải 2 (22%, 56%) -> Ải 3 Boss Kanji (50%, 80%) */}
                   <path 
-                    d="M 22 28 C 45 28, 50 40, 70 40"
+                    d="M 22 56 C 22 72, 38 80, 50 80"
                     fill="none"
                     stroke="url(#curve-grad-3)"
-                    strokeWidth="1.5"
+                    strokeWidth="2.0"
                     strokeLinecap="round"
                     filter="url(#glow-rose-filter)"
                   />
-
-                  {/* Segment 4: Ải 3 (70%, 40%) -> Ải 4 (22%, 53%) */}
-                  <path 
-                    d="M 70 40 C 48 40, 42 53, 22 53"
-                    fill="none"
-                    stroke="#334155"
-                    strokeWidth="1.0"
-                    strokeDasharray="1.8 1.8"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Segment 5: Ải 4 (22%, 53%) -> Ải 5 (70%, 65%) */}
-                  <path 
-                    d="M 22 53 C 45 53, 50 65, 70 65"
-                    fill="none"
-                    stroke="#334155"
-                    strokeWidth="1.0"
-                    strokeDasharray="1.8 1.8"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Segment 6: Ải 5 (70%, 65%) -> Phụ bản 2 (25%, 77%) */}
-                  <path 
-                    d="M 70 65 C 50 65, 45 77, 25 77"
-                    fill="none"
-                    stroke="#334155"
-                    strokeWidth="1.0"
-                    strokeDasharray="1.8 1.8"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Segment 7: Phụ bản 2 (25%, 77%) -> Boss N5 (48%, 90%) */}
-                  <path 
-                    d="M 25 77 C 35 77, 40 90, 48 90"
-                    fill="none"
-                    stroke="#475569"
-                    strokeWidth="1.1"
-                    strokeDasharray="1.8 1.8"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Constellation Branches from Boss N5 to N4, N3, N2, N1 */}
-                  <path d="M 48 90 Q 64 88, 75 84" fill="none" stroke="#334155" strokeWidth="0.8" strokeDasharray="1.5 1.5" />
-                  <path d="M 75 84 Q 82 80, 88 76" fill="none" stroke="#334155" strokeWidth="0.8" strokeDasharray="1.5 1.5" />
-                  <path d="M 75 84 Q 82 86, 88 88" fill="none" stroke="#334155" strokeWidth="0.8" strokeDasharray="1.5 1.5" />
-                  <path d="M 75 84 Q 75 90, 76 94" fill="none" stroke="#334155" strokeWidth="0.8" strokeDasharray="1.5 1.5" />
                 </svg>
 
-                {/* Constellation Nodes (N4, N3, N2, N1 in space) */}
-                {CONSTELLATION_BRANCHES.map((branch) => (
-                  <div
-                    key={branch.id}
-                    className="absolute z-10 -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                    style={{ left: `${branch.coords.x}%`, top: `${branch.coords.y}%` }}
-                    onClick={() => {
-                      sounds.playWrongStroke?.();
-                      alert(`Chòm sao ${branch.level} (${branch.title}) đang ngủ say!\n${branch.hint}`);
-                    }}
-                  >
-                    <div className="w-11 h-11 rounded-full bg-slate-950/80 border border-dashed border-slate-700/80 flex flex-col items-center justify-center text-slate-500 group-hover:border-cyan-400 group-hover:text-cyan-300 transition-all backdrop-blur-sm">
-                      <span className="text-[11px] font-black">{branch.level}</span>
-                    </div>
-                    <div className="text-center mt-0.5">
-                      <span className="text-[9px] font-mono text-slate-600 group-hover:text-slate-400">
-                        {branch.level}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-
-                {/* 8 STAGES OF THE ADVENTURE ROADMAP (PERMANENT CARDS VISIBLE DIRECTLY ON MAP) */}
+                {/* STAGES OF THE ADVENTURE ROADMAP (PERMANENT CARDS VISIBLE DIRECTLY ON MAP) */}
                 {STAGES_DATA.map((stage) => {
                   const isCompleted = stage.status === 'completed';
                   const isActive = stage.status === 'active';
@@ -277,21 +262,21 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                       {/* Boss Node (Centered Layout) */}
                       {isBoss ? (
                         <div className="flex flex-col items-center cursor-pointer group" onClick={() => handleStageClick(stage)}>
-                          <div className="w-full max-w-md p-4 sm:p-5 rounded-3xl bg-slate-950/90 border-2 border-amber-500/80 shadow-[0_0_30px_rgba(245,158,11,0.25)] text-center relative overflow-hidden backdrop-blur-xl group-hover:border-amber-400 transition-all">
-                            <div className="flex items-center justify-center gap-1.5 text-amber-400 text-xs font-black tracking-widest uppercase mb-1">
+                          <div className="w-full max-w-md pt-5 pb-5 px-6 rounded-2xl bg-slate-950/95 border-2 border-rose-500/80 shadow-[0_0_30px_rgba(244,63,94,0.25)] text-center relative overflow-hidden backdrop-blur-xl group-hover:border-rose-400 transition-all">
+                            <div className="flex items-center justify-center gap-1.5 text-rose-400 text-xs font-black tracking-widest uppercase mb-1.5 leading-normal">
                               <span>🔥</span>
-                              <span>BOSS FINAL STAGE</span>
+                              <span>ĐÍCH ĐẾN CỐT LÕI N5</span>
                               <span>🔥</span>
                             </div>
-                            <h3 className="text-sm sm:text-base font-black text-white tracking-wide">
+                            <h3 className="text-sm sm:text-base font-black text-white tracking-wide leading-snug break-words">
                               {stage.name}
                             </h3>
-                            <p className="text-[11px] text-slate-400 mt-1 max-w-xs mx-auto leading-relaxed">
+                            <p className="text-[11px] text-slate-400 mt-1 max-w-xs mx-auto leading-relaxed break-words">
                               {stage.subtitle}
                             </p>
                             <div className="mt-3">
-                              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-black">
-                                Mở khóa khi đạt {stage.unlockXp} XP
+                              <span className="inline-block px-4 py-1.5 rounded-xl bg-rose-500/20 text-rose-300 border border-rose-500/40 text-xs font-black leading-normal">
+                                {isCompleted ? '✓ ĐÃ HOÀN THÀNH' : `Mở khóa khi đạt ${stage.unlockXp} XP`}
                               </span>
                             </div>
                           </div>
@@ -304,7 +289,7 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                           {stage.cardSide === 'left' && (
                             <div 
                               onClick={() => handleStageClick(stage)}
-                              className={`p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl border shadow-xl backdrop-blur-xl transition-all cursor-pointer w-56 sm:w-72 ${
+                              className={`p-4 sm:p-5 rounded-2xl border shadow-xl backdrop-blur-xl transition-all cursor-pointer w-60 sm:w-76 overflow-visible ${
                                 isCompleted
                                   ? 'bg-[#0a1816]/90 border-emerald-500/70 text-emerald-100 hover:scale-102'
                                   : isActive
@@ -312,27 +297,41 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                                     : 'bg-[#0a0f1b]/90 border-slate-800 text-slate-400 hover:border-slate-700'
                               }`}
                             >
-                              <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-wider mb-1">
-                                <span className={isCompleted ? 'text-emerald-400' : isActive ? 'text-rose-400' : 'text-slate-500'}>
-                                  {isActive ? '📍 ĐANG HỌC • Lượt 2/4' : isCompleted ? `${stage.stageNum} • HOÀN THÀNH` : `${stage.stageNum} • KHÓA`}
+                              <div className="flex items-center justify-between gap-2 mb-2">
+                                <span className={`inline-flex items-center px-3 py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider leading-normal ${
+                                  isCompleted 
+                                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' 
+                                    : isActive 
+                                      ? 'bg-rose-500/25 text-rose-200 border border-rose-500/50' 
+                                      : 'bg-slate-800/80 text-slate-400 border border-slate-700/60'
+                                }`}>
+                                  {isActive ? (stage.dailyCurriculumDays ? `📍 ĐANG HỌC • Ngày 1/${stage.dailyCurriculumDays.length}` : '📍 ĐANG HỌC') : isCompleted ? `${stage.stageNum} • HOÀN THÀNH` : `${stage.stageNum} • ĐANG KHÓA`}
                                 </span>
                                 {isCompleted ? (
-                                  <span className="text-amber-400 text-xs">★★★</span>
+                                  <span className="text-amber-400 text-xs font-bold">★★★</span>
                                 ) : isLocked ? (
-                                  <span className="text-slate-500 text-[10px]">Cần {stage.unlockXp} XP</span>
+                                  <span className="text-slate-500 text-[10px] font-medium whitespace-nowrap">Cần {stage.unlockXp} XP</span>
                                 ) : null}
                               </div>
 
-                              <h4 className="text-xs sm:text-sm font-black text-white">{stage.name}</h4>
-                              <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-2 leading-relaxed">{stage.subtitle}</p>
+                              <h4 className="text-xs sm:text-sm font-black text-white leading-snug break-words">{stage.name}</h4>
+                              <p className="text-[11px] text-slate-400 mt-1 line-clamp-2 leading-relaxed break-words">{stage.subtitle}</p>
 
                               {/* Active Action Button */}
                               {isActive && (
                                 <button 
-                                  onClick={(e) => { e.stopPropagation(); onNavigate && onNavigate(stage.route); }}
+                                  onClick={(e) => { 
+                                    e.stopPropagation(); 
+                                    if (stage.dailyCurriculumDays && stage.dailyCurriculumDays.length > 0) {
+                                      setSelectedCurriculumDay(stage.dailyCurriculumDays[0]);
+                                      setViewMode('curriculum');
+                                    } else if (onNavigate) {
+                                      onNavigate(stage.route);
+                                    }
+                                  }}
                                   className="mt-3 w-full py-2 px-3 rounded-xl bg-gradient-to-r from-rose-600 via-rose-500 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-rose-600/30 cursor-pointer"
                                 >
-                                  <span>VÀO HỌC NGAY ẢI 3</span>
+                                  <span>VÀO HỌC NGAY {stage.stageNum.toUpperCase()}</span>
                                   <span>→</span>
                                 </button>
                               )}
@@ -394,7 +393,7 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                           {stage.cardSide === 'right' && (
                             <div 
                               onClick={() => handleStageClick(stage)}
-                              className={`p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl border shadow-xl backdrop-blur-xl transition-all cursor-pointer w-56 sm:w-72 ${
+                              className={`p-4 sm:p-5 rounded-2xl border shadow-xl backdrop-blur-xl transition-all cursor-pointer w-60 sm:w-76 overflow-visible ${
                                 isCompleted
                                   ? 'bg-[#0a1816]/90 border-emerald-500/70 text-emerald-100 hover:scale-102'
                                   : isActive
@@ -402,19 +401,25 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                                     : 'bg-[#0a0f1b]/90 border-slate-800 text-slate-400 hover:border-slate-700'
                               }`}
                             >
-                              <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-wider mb-1">
-                                <span className={isCompleted ? 'text-emerald-400' : isActive ? 'text-rose-400' : 'text-slate-500'}>
-                                  {isCompleted ? `${stage.stageNum} • HOÀN THÀNH` : isLocked ? `${stage.stageNum} • ĐANG KHÓA` : `${stage.stageNum}`}
+                              <div className="flex items-center justify-between gap-2 mb-2">
+                                <span className={`inline-flex items-center px-3 py-1 rounded-lg text-[10px] sm:text-[11px] font-black uppercase tracking-wider leading-normal ${
+                                  isCompleted 
+                                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' 
+                                    : isActive 
+                                      ? 'bg-rose-500/25 text-rose-200 border border-rose-500/50' 
+                                      : 'bg-slate-800/80 text-slate-400 border border-slate-700/60'
+                                }`}>
+                                  {isActive ? (stage.dailyCurriculumDays ? `📍 ĐANG HỌC • Ngày 1/${stage.dailyCurriculumDays.length}` : '📍 ĐANG HỌC') : isCompleted ? `${stage.stageNum} • HOÀN THÀNH` : `${stage.stageNum} • ĐANG KHÓA`}
                                 </span>
                                 {isCompleted ? (
-                                  <span className="text-amber-400 text-xs">★★★</span>
+                                  <span className="text-amber-400 text-xs font-bold">★★★</span>
                                 ) : isLocked ? (
-                                  <span className="text-slate-500 text-[10px]">Cần {stage.unlockXp} XP</span>
+                                  <span className="text-slate-500 text-[10px] font-medium whitespace-nowrap">Cần {stage.unlockXp} XP</span>
                                 ) : null}
                               </div>
 
-                              <h4 className="text-xs sm:text-sm font-black text-white">{stage.name}</h4>
-                              <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-2 leading-relaxed">{stage.subtitle}</p>
+                              <h4 className="text-xs sm:text-sm font-black text-white leading-snug break-words">{stage.name}</h4>
+                              <p className="text-[11px] text-slate-400 mt-1 line-clamp-2 leading-relaxed break-words">{stage.subtitle}</p>
 
                               {/* Action link to view daily plan if Hiragana or Katakana */}
                               {stage.dailyCurriculumDays && stage.dailyCurriculumDays.length > 0 && (
@@ -498,22 +503,30 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-black text-rose-400 uppercase tracking-wider flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
-                    ẢI ĐANG HỌC: Ải 3 • Lượt 2/4
+                    ẢI ĐANG HỌC: {activeStage.stageNum} {activeStage.dailyCurriculumDays ? '• Ngày 1/8' : ''}
                   </span>
                 </div>
                 <div>
                   <h4 className="text-sm font-black text-white">
-                    {USER_PROFILE_DATA.activeStageTitle}
+                    {activeStage.name}
                   </h4>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                    {USER_PROFILE_DATA.activeStageDesc}
+                    {activeStage.description || USER_PROFILE_DATA.activeStageDesc}
                   </p>
                 </div>
                 <button
-                  onClick={() => { sounds.playClick(); onNavigate && onNavigate('practice'); }}
+                  onClick={() => { 
+                    sounds.playClick(); 
+                    if (activeStage.dailyCurriculumDays && activeStage.dailyCurriculumDays.length > 0) {
+                      setSelectedCurriculumDay(activeStage.dailyCurriculumDays[0]);
+                      setViewMode('curriculum');
+                    } else if (onNavigate) {
+                      onNavigate(activeStage.route); 
+                    }
+                  }}
                   className="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-black text-xs flex items-center justify-center gap-2 shadow-lg shadow-rose-600/30 cursor-pointer transition-all active:scale-95"
                 >
-                  <span>VÀO HỌC NGAY ẢI 3</span>
+                  <span>VÀO HỌC NGAY {activeStage.stageNum.toUpperCase()} ({activeStage.name})</span>
                   <span>→</span>
                 </button>
               </div>
@@ -621,12 +634,12 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                     <div className="text-[10px] text-slate-500">Âm On / Kun cốt lõi</div>
                   </button>
                   <button
-                    onClick={() => { sounds.playClick(); onNavigate && onNavigate('exam'); }}
+                    onClick={() => { sounds.playClick(); onNavigate && onNavigate('practice'); }}
                     className="p-3 rounded-2xl bg-slate-950/70 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-left transition-all cursor-pointer group"
                   >
-                    <div className="text-emerald-400 text-base mb-1">📝</div>
-                    <div className="text-xs font-bold text-white group-hover:text-emerald-300">Thi Thử CBT</div>
-                    <div className="text-[10px] text-slate-500">Phòng thi đếm ngược</div>
+                    <div className="text-indigo-400 text-base mb-1">部</div>
+                    <div className="text-xs font-bold text-white group-hover:text-indigo-300">214 Bộ Thủ</div>
+                    <div className="text-[10px] text-slate-500">Gốc rễ chữ Hán</div>
                   </button>
                 </div>
               </div>
@@ -643,20 +656,20 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
           <div className="space-y-6 animate-in fade-in duration-300">
             
             {/* Header Hero Banner for Curriculum */}
-            <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0b1b2d] via-[#10233b] to-[#0b1222] border-2 border-cyan-500/40 shadow-2xl relative overflow-hidden">
+            <div className="p-5 sm:p-7 md:p-8 rounded-2xl bg-gradient-to-r from-[#0b1b2d] via-[#10233b] to-[#0b1222] border-2 border-cyan-500/40 shadow-2xl relative overflow-hidden">
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
-                <div className="space-y-2 max-w-2xl">
-                  <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-black uppercase">
+                <div className="space-y-3 w-full max-w-3xl">
+                  <div className="flex items-center gap-2.5 flex-wrap pt-0.5">
+                    <span className="inline-flex items-center px-3.5 py-1.5 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-black uppercase tracking-wider leading-normal shadow-sm">
                       LỘ TRÌNH CHI TIẾT 14 NGÀY
                     </span>
                     <span className="text-xs text-slate-300 font-medium">• 30 - 45 phút / ngày</span>
                     <span className="text-xs text-amber-400 font-bold">• 4 bước kiểm tra chắc chắn</span>
                   </div>
-                  <h2 className="text-xl sm:text-2xl font-black text-white">
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white leading-snug break-words">
                     {KANA_CURRICULUM_METADATA.title}
                   </h2>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed break-words">
                     Kế hoạch học tập sư phạm chuẩn xác từ con số 0: Rõ từng ngày học bao nhiêu chữ, luyện nghĩa từ vựng đời sống, viết bút thuận ô Mễ tự (米) và bài kiểm tra 4 bước chống quên.
                   </p>
                 </div>
@@ -698,6 +711,7 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
               <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2">
                 {KANA_DAILY_MAP.map((plan) => {
                   const isSelected = selectedCurriculumDay === plan.day;
+                  const isDone = isDayDone(plan);
                   const isHiragana = plan.phase === 'hiragana';
                   const isBossDay = plan.day === 8 || plan.day === 14;
 
@@ -705,24 +719,35 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                     <button
                       key={plan.day}
                       onClick={() => { sounds.playClick(); setSelectedCurriculumDay(plan.day); }}
-                      className={`p-3 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between h-22 ${
+                      className={`p-3 rounded-2xl border text-left transition-all cursor-pointer flex flex-col justify-between h-24 relative ${
                         isSelected
-                          ? 'bg-gradient-to-b from-cyan-500/20 to-blue-600/30 border-2 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.35)] scale-102'
+                          ? 'bg-gradient-to-b from-cyan-500/25 to-blue-600/35 border-2 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.35)] scale-102 z-10'
+                          : isDone
+                          ? 'bg-emerald-950/40 border-2 border-emerald-500/80 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.25)] hover:bg-emerald-900/40'
                           : 'bg-[#0b1222]/80 border-slate-800 hover:border-slate-700 hover:bg-slate-900'
                       }`}
                     >
+                      {/* Floating Green Tick Checkmark if Completed */}
+                      {isDone && (
+                        <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-emerald-500 text-slate-950 font-black flex items-center justify-center text-[10px] shadow-md border-2 border-[#080d1a]">
+                          ✓
+                        </span>
+                      )}
+
                       <div className="flex items-center justify-between">
                         <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-full ${
-                          isBossDay
-                            ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
-                            : isHiragana
-                              ? 'bg-emerald-500/20 text-emerald-300'
-                              : 'bg-rose-500/20 text-rose-300'
+                          isDone
+                            ? 'bg-emerald-500 text-slate-950 font-black'
+                            : isBossDay
+                              ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
+                              : isHiragana
+                                ? 'bg-emerald-500/20 text-emerald-300'
+                                : 'bg-rose-500/20 text-rose-300'
                         }`}>
-                          N.{plan.day} {isBossDay ? '👑' : ''}
+                          {isDone ? `✓ N.${plan.day}` : `N.${plan.day}`} {isBossDay ? '👑' : ''}
                         </span>
-                        <span className="text-[10px] font-mono text-slate-400">
-                          {plan.newCharsCount ? `+${plan.newCharsCount}` : 'Ôn'}
+                        <span className={`text-[10px] font-mono font-bold ${isDone ? 'text-emerald-400' : 'text-slate-400'}`}>
+                          {isDone ? '✓ Xong' : (plan.newCharsCount ? `+${plan.newCharsCount}` : 'Ôn')}
                         </span>
                       </div>
 
@@ -730,8 +755,13 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
                         {plan.targetChars.slice(0, 5).join(' ')}
                       </div>
 
-                      <div className="text-[9px] text-slate-400 truncate">
-                        {isHiragana ? 'Hiragana' : 'Katakana'}
+                      <div className="flex items-center justify-between text-[9px]">
+                        <span className={isDone ? 'text-emerald-300 font-semibold' : 'text-slate-400'}>
+                          {isHiragana ? 'Hiragana' : 'Katakana'}
+                        </span>
+                        {isDone && (
+                          <span className="text-emerald-400 font-bold">5/5 chữ ✓</span>
+                        )}
                       </div>
                     </button>
                   );
@@ -743,35 +773,64 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
             <div className="bg-[#0b1222]/90 border-2 border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl space-y-6">
               
               {/* Day Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-800">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-black font-mono">
-                      NGÀY {currentPlan.day} / 14
-                    </span>
-                    <span className="text-xs text-slate-400">
-                      Phase: {currentPlan.phase === 'hiragana' ? '🌸 Bảng chữ mềm Hiragana' : '⚡ Bảng chữ cứng Katakana'}
-                    </span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-black text-white mt-1.5">
-                    {currentPlan.title}
-                  </h3>
-                  <p className="text-xs text-slate-300 mt-1">{currentPlan.subtitle}</p>
-                </div>
+              {(() => {
+                const isCurrentDone = isDayDone(currentPlan);
+                const mSet = masteredChars instanceof Set ? masteredChars : new Set(masteredChars || []);
+                const currentPlanMasteredCount = currentPlan.targetChars.filter(c => mSet.has(c)).length;
 
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => {
-                      sounds.playClick();
-                      if (onNavigate) onNavigate('practice');
-                    }}
-                    className="py-2.5 px-4 rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-black text-xs flex items-center gap-2 shadow-lg shadow-rose-600/30 cursor-pointer transition-all active:scale-95"
-                  >
-                    <span>✍️ Vào Luyện Viết Ngày Này</span>
-                    <span>→</span>
-                  </button>
-                </div>
-              </div>
+                return (
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-slate-800">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="px-3 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-black font-mono">
+                          NGÀY {currentPlan.day} / 14
+                        </span>
+                        <span className="text-xs text-slate-400">
+                          Phase: {currentPlan.phase === 'hiragana' ? '🌸 Bảng chữ mềm Hiragana' : '⚡ Bảng chữ cứng Katakana'}
+                        </span>
+                        {isCurrentDone && (
+                          <span className="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/60 text-xs font-black flex items-center gap-1.5 shadow-sm">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            ✓ ĐÃ HOÀN THÀNH (5/5 chữ)
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-black text-white mt-1.5 flex items-center gap-2">
+                        <span>{currentPlan.title}</span>
+                        {isCurrentDone && (
+                          <span className="text-emerald-400 text-base">✓</span>
+                        )}
+                      </h3>
+                      <p className="text-xs text-slate-300 mt-1">{currentPlan.subtitle}</p>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      <button
+                        onClick={() => toggleCompleteDay(currentPlan.day)}
+                        className={`py-2 px-3.5 rounded-xl text-xs font-black flex items-center gap-1.5 transition cursor-pointer shadow-md active:scale-95 ${
+                          isCurrentDone
+                            ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700'
+                            : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-600/30 border border-emerald-400/50'
+                        }`}
+                        title="Đánh dấu tiến độ ngày học này"
+                      >
+                        <span>{isCurrentDone ? 'Đánh dấu chưa học' : '✓ Đánh dấu đã thuộc 5 chữ (+100 XP)'}</span>
+                      </button>
+
+                      <button
+                        onClick={() => {
+                          sounds.playClick();
+                          if (onNavigate) onNavigate('practice');
+                        }}
+                        className="py-2.5 px-4 rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-black text-xs flex items-center gap-2 shadow-lg shadow-rose-600/30 cursor-pointer transition-all active:scale-95"
+                      >
+                        <span>✍️ Vào Luyện Viết Ngày Này</span>
+                        <span>→</span>
+                      </button>
+                    </div>
+                  </div>
+                );
+              })()}
 
               {/* 4 COLUMNS / SECTIONS CORRESPONDING TO USER'S EXACT INSTRUCTIONS */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -790,30 +849,50 @@ export function RoadmapPage({ onNavigate, onOpenQuests, xp = 540, streak = 3, ma
 
                   {/* Character Cards Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {currentPlan.characters.map((c, idx) => (
-                      <div key={idx} className="p-3.5 rounded-xl bg-[#0d1629] border border-slate-800 flex flex-col justify-between gap-2">
-                        <div className="flex items-center justify-between">
-                          <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-2xl font-black text-white jp-font shadow-inner">
-                            {c.char}
-                          </div>
-                          <div className="text-right">
-                            <span className="text-xs font-mono font-black text-cyan-300">/{c.romaji}/</span>
-                            <div className="text-[10px] text-slate-400">{c.strokeCount} nét bút</div>
-                          </div>
-                        </div>
+                    {currentPlan.characters.map((c, idx) => {
+                      const mSet = masteredChars instanceof Set ? masteredChars : new Set(masteredChars || []);
+                      const isCharMastered = mSet.has(c.char) || isDayDone(currentPlan);
 
-                        <div className="text-[11px] text-slate-300 leading-snug">
-                          <strong className="text-amber-300">Mẹo nhớ: </strong>
-                          {c.mnemonic}
-                        </div>
-
-                        {c.soundGuide && (
-                          <div className="text-[10px] text-slate-400 leading-snug border-t border-slate-800/80 pt-1.5">
-                            🗣️ {c.soundGuide}
+                      return (
+                        <div key={idx} className={`p-3.5 rounded-xl border flex flex-col justify-between gap-2 transition-all ${
+                          isCharMastered
+                            ? 'bg-[#0d1e26] border-emerald-500/50 shadow-sm'
+                            : 'bg-[#0d1629] border-slate-800'
+                        }`}>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2.5">
+                              <div className={`w-12 h-12 rounded-xl border flex items-center justify-center text-2xl font-black jp-font shadow-inner ${
+                                isCharMastered
+                                  ? 'bg-emerald-950/50 border-emerald-500/60 text-emerald-300'
+                                  : 'bg-slate-900 border-slate-700 text-white'
+                              }`}>
+                                {c.char}
+                              </div>
+                              {isCharMastered && (
+                                <span className="px-2.5 py-0.5 rounded-md bg-emerald-500/25 border border-emerald-500/70 text-emerald-300 text-[10px] font-black leading-normal">
+                                  ✓ Đã thuộc
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-right">
+                              <span className="text-xs font-mono font-black text-cyan-300">/{c.romaji}/</span>
+                              <div className="text-[10px] text-slate-400">{c.strokeCount} nét bút</div>
+                            </div>
                           </div>
-                        )}
-                      </div>
-                    ))}
+
+                          <div className="text-[11px] text-slate-300 leading-snug">
+                            <strong className="text-amber-300">Mẹo nhớ: </strong>
+                            {c.mnemonic}
+                          </div>
+
+                          {c.soundGuide && (
+                            <div className="text-[10px] text-slate-400 leading-snug border-t border-slate-800/80 pt-1.5">
+                              🗣️ {c.soundGuide}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
 
