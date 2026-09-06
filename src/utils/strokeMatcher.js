@@ -10,24 +10,52 @@ export function euclideanDist(p1, p2) {
 }
 
 /**
+ * Trích xuất các đỉnh (vertices) từ chuỗi SVG path
+ */
+export function extractPathVertices(svgPath) {
+  if (!svgPath || typeof svgPath !== "string") return [];
+  const matches = svgPath.match(/[MLHVCSQTAZ][^MLHVCSQTAZ]*/gi);
+  if (!matches) return [];
+
+  const vertices = [];
+  let current = { x: 0, y: 0 };
+
+  matches.forEach((cmdStr) => {
+    const type = cmdStr[0];
+    const args = cmdStr.slice(1).trim().split(/[\s,]+/).filter(Boolean).map(parseFloat);
+    if ((type.toUpperCase() === "M" || type.toUpperCase() === "L") && args.length >= 2) {
+      current = { x: args[args.length - 2], y: args[args.length - 1] };
+      vertices.push({ ...current });
+    } else if (type.toUpperCase() === "Q" && args.length >= 4) {
+      current = { x: args[2], y: args[3] };
+      vertices.push({ ...current });
+    } else if (type.toUpperCase() === "C" && args.length >= 6) {
+      current = { x: args[4], y: args[5] };
+      vertices.push({ ...current });
+    }
+  });
+
+  return vertices;
+}
+
+/**
  * Trích xuất toạ độ điểm đầu và điểm cuối từ chuỗi SVG path
  */
 export function extractStrokeEndpoints(svgPath) {
   if (!svgPath) return { start: { x: 50, y: 50 }, end: { x: 150, y: 150 } };
 
-  // Thử lấy chính xác qua sampleSvgPath nếu có thể
-  const sample = sampleSvgPath(svgPath, 2);
-  if (sample && sample.points && sample.points.length >= 2) {
+  const vertices = extractPathVertices(svgPath);
+  if (vertices.length >= 2) {
     return {
-      start: sample.points[0],
-      end: sample.points[1]
+      start: vertices[0],
+      end: vertices[vertices.length - 1]
     };
   }
 
   // Fallback regex tìm lệnh M (MoveTo)
   const moveMatch = svgPath.match(/M\s*([\d.]+)\s*([\d.]+)/i);
-  const start = moveMatch 
-    ? { x: parseFloat(moveMatch[1]), y: parseFloat(moveMatch[2]) } 
+  const start = moveMatch
+    ? { x: parseFloat(moveMatch[1]), y: parseFloat(moveMatch[2]) }
     : { x: 50, y: 50 };
 
   const allNumbers = svgPath.match(/[\d.]+/g);
@@ -43,16 +71,62 @@ export function extractStrokeEndpoints(svgPath) {
 }
 
 /**
+ * Trích xuất chỉ dẫn trực quan (Start, End, Các mũi tên hướng vẽ theo đoạn)
+ */
+export function extractStrokeDirectives(svgPath) {
+  if (!svgPath) return null;
+  const vertices = extractPathVertices(svgPath);
+  if (vertices.length < 2) {
+    const endpoints = extractStrokeEndpoints(svgPath);
+    return {
+      start: endpoints.start,
+      end: endpoints.end,
+      corners: [],
+      arrows: [{ x: (endpoints.start.x + endpoints.end.x) / 2, y: (endpoints.start.y + endpoints.end.y) / 2, icon: "south" }]
+    };
+  }
+
+  const start = vertices[0];
+  const end = vertices[vertices.length - 1];
+  const corners = vertices.slice(1, -1);
+  const arrows = [];
+
+  for (let i = 0; i < vertices.length - 1; i++) {
+    const p1 = vertices[i];
+    const p2 = vertices[i + 1];
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    const midX = (p1.x + p2.x) / 2;
+    const midY = (p1.y + p2.y) / 2;
+
+    let icon = "east";
+    if (Math.abs(dx) > Math.abs(dy) * 1.5) {
+      icon = dx > 0 ? "east" : "west";
+    } else if (Math.abs(dy) > Math.abs(dx) * 1.5) {
+      icon = dy > 0 ? "south" : "north";
+    } else {
+      if (dx > 0 && dy > 0) icon = "south_east";
+      else if (dx < 0 && dy > 0) icon = "south_west";
+      else if (dx > 0 && dy < 0) icon = "north_east";
+      else icon = "north_west";
+    }
+
+    arrows.push({ x: midX, y: midY, icon });
+  }
+
+  return { start, end, corners, arrows };
+}
+
+/**
  * Lấy N điểm cách đều theo chiều dài thực tế của SVG path
- * Sử dụng W3C SVGPathElement.getPointAtLength khi chạy trong trình duyệt
  */
 export function sampleSvgPath(svgPath, numSamples = 24) {
-  if (!svgPath || typeof svgPath !== 'string') return null;
+  if (!svgPath || typeof svgPath !== "string") return null;
 
-  if (typeof document !== 'undefined') {
+  if (typeof document !== "undefined") {
     try {
-      const pathEl = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      pathEl.setAttribute('d', svgPath);
+      const pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      pathEl.setAttribute("d", svgPath);
       const totalLength = pathEl.getTotalLength();
       if (totalLength && totalLength > 0 && !isNaN(totalLength)) {
         const points = [];
@@ -64,16 +138,13 @@ export function sampleSvgPath(svgPath, numSamples = 24) {
         return { points, totalLength };
       }
     } catch (e) {
-      // Fallback nếu DOM lỗi hoặc SSR
+      // Fallback
     }
   }
 
   return fallbackSampleSvgPath(svgPath, numSamples);
 }
 
-/**
- * Fallback phân tích chuỗi SVG Path khi không có SVG DOM
- */
 function fallbackSampleSvgPath(svgPath, numSamples = 24) {
   const matches = svgPath.match(/[MLHVCSQTAZ][^MLHVCSQTAZ]*/gi);
   if (!matches) {
@@ -89,17 +160,16 @@ function fallbackSampleSvgPath(svgPath, numSamples = 24) {
   const polyline = [];
   let current = { x: 0, y: 0 };
 
-  matches.forEach(cmdStr => {
+  matches.forEach((cmdStr) => {
     const type = cmdStr[0];
     const args = cmdStr.slice(1).trim().split(/[\s,]+/).filter(Boolean).map(parseFloat);
-    if (type.toUpperCase() === 'M' && args.length >= 2) {
+    if (type.toUpperCase() === "M" && args.length >= 2) {
       current = { x: args[0], y: args[1] };
       polyline.push({ ...current });
-    } else if (type.toUpperCase() === 'L' && args.length >= 2) {
+    } else if (type.toUpperCase() === "L" && args.length >= 2) {
       current = { x: args[0], y: args[1] };
       polyline.push({ ...current });
-    } else if (type.toUpperCase() === 'Q' && args.length >= 4) {
-      // Quadratic Bezier approx
+    } else if (type.toUpperCase() === "Q" && args.length >= 4) {
       const p0 = { ...current };
       const p1 = { x: args[0], y: args[1] };
       const p2 = { x: args[2], y: args[3] };
@@ -109,16 +179,23 @@ function fallbackSampleSvgPath(svgPath, numSamples = 24) {
         polyline.push({ x, y });
       }
       current = p2;
-    } else if (type.toUpperCase() === 'C' && args.length >= 6) {
-      // Cubic Bezier approx
+    } else if (type.toUpperCase() === "C" && args.length >= 6) {
       const p0 = { ...current };
       const p1 = { x: args[0], y: args[1] };
       const p2 = { x: args[2], y: args[3] };
       const p3 = { x: args[4], y: args[5] };
       for (let t = 0.2; t <= 1.0; t += 0.2) {
         const mt = 1 - t;
-        const x = mt * mt * mt * p0.x + 3 * mt * mt * t * p1.x + 3 * mt * t * t * p2.x + t * t * t * p3.x;
-        const y = mt * mt * mt * p0.y + 3 * mt * mt * t * p1.y + 3 * mt * t * t * p2.y + t * t * t * p3.y;
+        const x =
+          mt * mt * mt * p0.x +
+          3 * mt * mt * t * p1.x +
+          3 * mt * t * t * p2.x +
+          t * t * t * p3.x;
+        const y =
+          mt * mt * mt * p0.y +
+          3 * mt * mt * t * p1.y +
+          3 * mt * t * t * p2.y +
+          t * t * t * p3.y;
         polyline.push({ x, y });
       }
       current = p3;
@@ -130,7 +207,7 @@ function fallbackSampleSvgPath(svgPath, numSamples = 24) {
 }
 
 /**
- * Lấy mẫu lại (Resample) chuỗi điểm thành đúng N điểm cách đều nhau theo chiều dài nét vẽ (arc length)
+ * Lấy mẫu lại chuỗi điểm thành đúng N điểm cách đều nhau theo chiều dài nét vẽ
  */
 export function resamplePointsEquidistant(points, numSamples = 24) {
   if (!points || points.length === 0) return { points: [], totalLength: 0 };
@@ -141,7 +218,6 @@ export function resamplePointsEquidistant(points, numSamples = 24) {
     };
   }
 
-  // 1. Tính tổng chiều dài và độ dài tích lũy từng mốc
   const cumDists = [0];
   let totalLength = 0;
   for (let i = 1; i < points.length; i++) {
@@ -157,7 +233,6 @@ export function resamplePointsEquidistant(points, numSamples = 24) {
     };
   }
 
-  // 2. Lấy mẫu tại các mốc khoảng cách đều nhau
   const resampled = [{ x: points[0].x, y: points[0].y }];
   const step = totalLength / (numSamples - 1);
   let curSegment = 0;
@@ -196,7 +271,7 @@ export function resamplePointsEquidistant(points, numSamples = 24) {
  * Chuyển đổi toạ độ vẽ trên Canvas (kích thước thực tế WxH) về hệ toạ độ chuẩn của ký tự
  */
 export function normalizeUserPoints(points, canvasWidth, canvasHeight, svgBoxSize = 200) {
-  return points.map(p => ({
+  return points.map((p) => ({
     x: (p.x / canvasWidth) * svgBoxSize,
     y: (p.y / canvasHeight) * svgBoxSize
   }));
@@ -204,12 +279,6 @@ export function normalizeUserPoints(points, canvasWidth, canvasHeight, svgBoxSiz
 
 /**
  * Thuật toán kiểm tra nét vẽ người dùng đa điểm (Multi-point Trajectory & Shape Profile Matching)
- * @param {Array} userPoints - Mảng các toạ độ {x, y} trên Canvas
- * @param {String} expectedSvgPath - Chuỗi SVG path của nét hiện tại
- * @param {Number} canvasWidth - Chiều rộng Canvas
- * @param {Number} canvasHeight - Chiều cao Canvas
- * @param {Number} svgBoxSize - Kích thước viewBox chuẩn của ký tự (100, 200, hoặc 220)
- * @returns {Object} { isValid: boolean, accuracy: number, reason: string }
  */
 export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, canvasHeight, svgBoxSize = 200) {
   // 1. Kiểm tra dữ liệu đầu vào
@@ -217,38 +286,37 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
     return {
       isValid: false,
       accuracy: 0,
-      reason: 'Nét vẽ quá ngắn hoặc chưa chạm bút! Vui lòng viết dứt khoát.'
+      reason: "Nét vẽ quá ngắn hoặc chưa chạm bút! Vui lòng viết dứt khoát."
     };
   }
 
-  // Chuẩn hóa toạ độ người dùng về không gian toạ độ ký tự (svgBoxSize)
+  // Chuẩn hóa toạ độ người dùng về không gian toạ độ ký tự
   const normPoints = normalizeUserPoints(userPoints, canvasWidth, canvasHeight, svgBoxSize);
 
   // Tỉ lệ scale so với khung chuẩn 200px
   const scaleRatio = svgBoxSize / 200;
-  const N = 24; // Lấy mẫu 24 điểm đều nhau
+  const N = 24;
 
   // 2. Nội suy chuỗi điểm người dùng thành N = 24 điểm cách đều
   const userSample = resamplePointsEquidistant(normPoints, N);
   const userPts = userSample.points;
   const userTotalLength = userSample.totalLength;
 
-  if (userTotalLength < 8 * scaleRatio) {
+  if (userTotalLength < 6 * scaleRatio) {
     return {
       isValid: false,
       accuracy: 15,
-      reason: 'Nét vẽ quá ngắn! Hãy đưa bút liền mạch theo hình dáng nét.'
+      reason: "Nét vẽ quá ngắn! Hãy đưa bút liền mạch theo hình dáng nét."
     };
   }
 
   // 3. Lấy N = 24 điểm mẫu chuẩn từ SVG Path
   const expectedSample = sampleSvgPath(expectedSvgPath, N);
   if (!expectedSample || !expectedSample.points || expectedSample.points.length < N) {
-    // Fallback dự phòng nếu ký tự không có SVG path (bộ thủ tự do)
     return {
       isValid: true,
       accuracy: 96,
-      reason: 'Nét vẽ được chấp nhận!'
+      reason: "Nét vẽ được chấp nhận!"
     };
   }
 
@@ -260,47 +328,62 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
   const eStart = expPts[0];
   const eEnd = expPts[N - 1];
 
-  // 4. KIỂM TRA DUNG SAI ĐIỂM ĐẦU & ĐIỂM CUỐI (Nới lỏng để viết tự nhiên, không quá khó)
-  // startTolerance = 36px, endTolerance = 42px (với khung 200px)
-  const startTolerance = 36 * scaleRatio;
-  const endTolerance = 42 * scaleRatio;
+  // 4. KIỂM TRA DUNG SAI ĐIỂM ĐẦU & ĐIỂM CUỐI (Nới lỏng để phù hợp viết chạm ngón tay và bút cảm ứng)
+  const startTolerance = 46 * scaleRatio;
+  const endTolerance = 50 * scaleRatio;
 
   const distStart = euclideanDist(uStart, eStart);
   const distEnd = euclideanDist(uEnd, eEnd);
 
-  // 4a. Kiểm tra vẽ ngược chiều nét bút (chỉ bắt khi điểm đầu và cuối bị đảo chiều rất rõ)
+  // 4a. Kiểm tra vẽ ngược chiều nét bút
   const distReverseStart = euclideanDist(uStart, eEnd);
-  const distReverseEnd = euclideanDist(uEnd, eStart);
-  if (distReverseStart < 20 * scaleRatio && distStart > 32 * scaleRatio) {
+  if (distReverseStart < 22 * scaleRatio && distStart > 32 * scaleRatio) {
     return {
       isValid: false,
       accuracy: 35,
-      reason: 'Bạn đang vẽ ngược chiều nét! Hãy bắt đầu từ vị trí điểm đỏ chỉ dẫn.'
+      reason: "Bạn đang vẽ ngược chiều nét! Hãy bắt đầu từ vị trí điểm đánh số."
     };
   }
 
-  // 4b. Kiểm tra điểm đặt bút
+  // 4b. Kiểm tra điểm dừng có phải là góc gập bị ngắt quãng không? (Multi-segment corner detection)
+  const pathVertices = extractPathVertices(expectedSvgPath);
+  if (pathVertices.length > 2) {
+    // Có góc gập trung gian (như nét 2 của chữ 日, 口, 田: ngang gập xuống)
+    const corners = pathVertices.slice(1, -1);
+    for (const corner of corners) {
+      const distToCorner = euclideanDist(uEnd, corner);
+      if (distToCorner < 26 * scaleRatio) {
+        return {
+          isValid: false,
+          accuracy: 65,
+          reason: "💡 Bạn đã vẽ đúng đoạn đầu! Đây là nét gập liền mạch, hãy tiếp tục vuốt xuống dưới không nhấc bút nhé!"
+        };
+      }
+    }
+  }
+
+  // 4c. Kiểm tra điểm đặt bút
   if (distStart > startTolerance) {
     return {
       isValid: false,
       accuracy: Math.max(40, Math.round(90 - (distStart / startTolerance) * 35)),
-      reason: 'Điểm đặt bút hơi xa điểm bắt đầu. Hãy bắt đầu gần điểm đỏ chỉ dẫn nhé!'
+      reason: "Điểm đặt bút hơi xa điểm bắt đầu. Hãy bắt đầu gần vị trí số chỉ dẫn nhé!"
     };
   }
 
-  // 4c. Kiểm tra điểm nhấc bút kết thúc nét
+  // 4d. Kiểm tra điểm nhấc bút kết thúc nét
   if (distEnd > endTolerance) {
     return {
       isValid: false,
       accuracy: Math.max(45, Math.round(90 - (distEnd / endTolerance) * 30)),
-      reason: 'Điểm dừng bút hơi xa điểm kết thúc nét.'
+      reason: "Điểm dừng bút hơi xa điểm kết thúc nét. Hãy vuốt trọn vẹn nét nhé!"
     };
   }
 
-  // 5. KIỂM TRA CHIỀU DÀI NÉT VẼ (Nới lỏng: 45% - 185%)
-  if (expTotalLength > 12 * scaleRatio) {
+  // 5. KIỂM TRA CHIỀU DÀI NÉT VẼ (Nới lỏng: 40% - 200%)
+  if (expTotalLength > 10 * scaleRatio) {
     const lengthRatio = userTotalLength / expTotalLength;
-    if (lengthRatio < 0.45) {
+    if (lengthRatio < 0.40) {
       const pct = Math.round(lengthRatio * 100);
       return {
         isValid: false,
@@ -308,17 +391,17 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
         reason: `Nét vẽ còn hơi ngắn (${pct}% so với mẫu). Hãy đưa bút dài hơn chút nhé!`
       };
     }
-    if (lengthRatio > 1.85) {
+    if (lengthRatio > 2.0) {
       return {
         isValid: false,
         accuracy: 50,
-        reason: 'Nét vẽ bị kéo hơi dài so với nét mẫu. Hãy dừng bút đúng điểm.'
+        reason: "Nét vẽ bị kéo hơi dài so với nét mẫu. Hãy dừng bút đúng điểm."
       };
     }
   }
 
-  // 6. NHẬN DIỆN GÓC GẬP & ĐỘ CONG (Corner Detection - Nới rộng dung sai)
-  const midIdx = Math.floor(N / 2); // Điểm giữa nét
+  // 6. NHẬN DIỆN GÓC GẬP & ĐỘ CONG
+  const midIdx = Math.floor(N / 2);
   const eMid = expPts[midIdx];
   const uMid = userPts[midIdx];
 
@@ -331,7 +414,6 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
     const dotExp = vExp1.x * vExp2.x + vExp1.y * vExp2.y;
     const cosExp = dotExp / (magExp1 * magExp2);
 
-    // Chỉ kiểm tra khi nét mẫu có góc gập vuông rất rõ ràng (cos < 0.6)
     if (cosExp < 0.60) {
       const vUser1 = { x: uMid.x - uStart.x, y: uMid.y - uStart.y };
       const vUser2 = { x: uEnd.x - uMid.x, y: uEnd.y - uMid.y };
@@ -342,21 +424,20 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
         const dotUser = vUser1.x * vUser2.x + vUser1.y * vUser2.y;
         const cosUser = dotUser / (magUser1 * magUser2);
         const midDist = euclideanDist(uMid, eMid);
-        const maxMidAllowed = 34 * scaleRatio;
+        const maxMidAllowed = 38 * scaleRatio;
 
-        // Chỉ bắt lỗi khi người dùng hoàn toàn vẽ thẳng chéo cắt góc (cosUser > 0.95 và lệch tâm lớn)
-        if (cosUser > 0.96 && midDist > maxMidAllowed) {
+        if (cosUser > 0.97 && midDist > maxMidAllowed) {
           return {
             isValid: false,
             accuracy: 50,
-            reason: 'Nét này có gập góc, hãy uốn cong hoặc gập nét theo mẫu thay vì quẹt chéo nhé!'
+            reason: "Nét này có gập góc, hãy uốn hoặc gập nét theo mẫu thay vì quẹt chéo nhé!"
           };
         }
       }
     }
   }
 
-  // 7. ĐO ĐỘ LỆCH QUỸ ĐẠO TOÀN NÉT (Nới lỏng để dễ vẽ và mượt mà)
+  // 7. ĐO ĐỘ LỆCH QUỸ ĐẠO TOÀN NÉT
   let sumError = 0;
   let maxError = 0;
 
@@ -367,17 +448,14 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
   }
 
   const meanError = sumError / N;
-
-  // Ngưỡng sai số quỹ đạo trung bình cho phép (32px trên khung 200px, gấp đôi mức cũ)
-  const maxAllowedMeanError = 32 * scaleRatio;
-  // Ngưỡng sai số cực đại của một điểm bất kỳ (56px trên khung 200px)
-  const maxAllowedPeakError = 56 * scaleRatio;
+  const maxAllowedMeanError = 36 * scaleRatio;
+  const maxAllowedPeakError = 64 * scaleRatio;
 
   if (meanError > maxAllowedMeanError) {
     return {
       isValid: false,
       accuracy: Math.max(45, Math.round(100 - (meanError / maxAllowedMeanError) * 40)),
-      reason: 'Nét vẽ hơi chệch so với quỹ đạo nét mẫu, hãy thử lại nhé!'
+      reason: "Nét vẽ hơi chệch so với quỹ đạo nét mẫu, hãy thử lại nhé!"
     };
   }
 
@@ -385,20 +463,20 @@ export function validateStrokeDrawing(userPoints, expectedSvgPath, canvasWidth, 
     return {
       isValid: false,
       accuracy: Math.max(50, Math.round(100 - (maxError / maxAllowedPeakError) * 35)),
-      reason: 'Nét vẽ hơi lệch quỹ đạo, hãy đưa bút theo đường mẫu!'
+      reason: "Nét vẽ hơi lệch quỹ đạo, hãy đưa bút theo đường mẫu!"
     };
   }
 
-  // 8. TÍNH ĐỘ CHÍNH XÁC (ACCURACY PERCENTAGE TỪ 82% ĐẾN 100%)
+  // 8. TÍNH ĐỘ CHÍNH XÁC
   const normalizedErrorRatio = meanError / maxAllowedMeanError;
   const accuracy = Math.max(
-    82,
-    Math.min(100, Math.round(100 - normalizedErrorRatio * 18))
+    85,
+    Math.min(100, Math.round(100 - normalizedErrorRatio * 15))
   );
 
   return {
     isValid: true,
     accuracy,
-    reason: accuracy >= 94 ? 'Nét vẽ tuyệt đẹp, chuẩn xác!' : 'Nét vẽ rất tốt!'
+    reason: accuracy >= 94 ? "Nét vẽ tuyệt đẹp, chuẩn xác!" : "Nét vẽ rất tốt!"
   };
 }

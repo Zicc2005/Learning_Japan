@@ -1,115 +1,102 @@
 @import "tailwindcss";
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* Design Tokens & Theme Variables */
-:root {
-  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-jp: 'Noto Sans JP', sans-serif;
-  --font-maru: 'Zen Maru Gothic', sans-serif;
+@theme {
+  --color-primary: #983224;
+  --color-vermilion: #B84A39;
+  --color-primary-container: #b84a39;
+  --color-primary-fixed: #ffdad4;
+  --color-primary-fixed-dim: #ffb4a7;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #ffedea;
+  --color-on-primary-fixed: #400200;
+  --color-on-primary-fixed-variant: #842417;
 
-  /* Light Theme (Default - Clean, Warm Paper Aesthetic) */
-  --bg-app: #f8fafc;
-  --bg-header: rgba(255, 255, 255, 0.94);
-  --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-subtle: #f8fafc;
-  --bg-input: #ffffff;
-  --text-main: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --border-app: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
-  --shadow-hover: 0 10px 25px -3px rgba(15, 23, 42, 0.1), 0 4px 8px -2px rgba(15, 23, 42, 0.05);
+  --color-tertiary: #005f5e;
+  --color-tertiary-container: #007a79;
+  --color-tertiary-fixed: #97f2f0;
+  --color-tertiary-fixed-dim: #7ad5d4;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #00201f;
+  --color-on-tertiary-fixed-variant: #00504f;
 
-  /* Brand Accents */
-  --sakura: #e11d48;
-  --sakura-soft: #ffe4e6;
-  --torii: #f43f5e;
-  --fuji-blue: #0284c7;
-  --fuji-soft: #e0f2fe;
-  --matcha: #059669;
-  --matcha-soft: #d1fae5;
-  --amber-sun: #d97706;
-  --amber-soft: #fef3c7;
-}
+  --color-surface: #f8f9fd;
+  --color-surface-dim: #d8dade;
+  --color-surface-bright: #f8f9fd;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3f8;
+  --color-surface-container: #eceef2;
+  --color-surface-container-high: #e7e8ec;
+  --color-surface-container-highest: #e1e2e6;
+  --color-on-surface: #191c1f;
+  --color-on-surface-variant: #57423e;
 
-/* Dark Theme (Deep Elegant Slate Navy - Never Muddy Pitch Black) */
-[data-theme='dark'] {
-  --bg-app: #090e17;
-  --bg-header: rgba(15, 23, 42, 0.94);
-  --bg-card: #131d2e;
-  --bg-card-hover: #1a273e;
-  --bg-subtle: #0f172a;
-  --bg-input: #0b1120;
-  --text-main: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --border-app: #223249;
-  --border-strong: #334663;
-  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 10px 25px -3px rgba(0, 0, 0, 0.6);
+  --color-secondary: #5e5e5e;
+  --color-secondary-container: #e3e2e2;
+  --color-secondary-fixed: #e3e2e2;
+  --color-secondary-fixed-dim: #c7c6c6;
 
-  --sakura-soft: rgba(225, 29, 72, 0.18);
-  --fuji-soft: rgba(2, 132, 199, 0.18);
-  --matcha-soft: rgba(5, 150, 105, 0.18);
-  --amber-soft: rgba(217, 119, 6, 0.18);
+  --color-charcoal: #1A1D20;
+  --color-pure-white: #FFFFFF;
+  --color-slate-gray: #8C8C8C;
+  --color-outline-variant: #dec0bb;
+  --color-outline: #8a716d;
+
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-jp: "Noto Serif JP", serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.dark {
+  --color-surface: #121417;
+  --color-surface-dim: #16191d;
+  --color-surface-bright: #1c2024;
+  --color-surface-container-lowest: #1A1D20;
+  --color-surface-container-low: #202428;
+  --color-surface-container: #25282c;
+  --color-surface-container-high: #2e3134;
+  --color-surface-container-highest: #383b3f;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #c7c6c6;
+  --color-pure-white: #1A1D20;
+  --color-secondary: #a3a3a3;
+  --color-secondary-container: #2e3134;
 }
 
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-app);
-  color: var(--text-main);
-  min-height: 100vh;
-  overflow-x: hidden;
-  transition: background-color 0.25s ease, color 0.25s ease;
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-headline, .font-editorial {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .font-jp, .font-kanji {
+    font-family: 'Noto Serif JP', serif;
+  }
 }
 
-.jp-font {
-  font-family: var(--font-jp);
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+}
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top, 0px), 8px);
+}
+.card-3d-wrap {
+  perspective: 800px;
+}
+.card-3d {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+.card-3d:active {
+  transform: translateY(-2px) scale(0.98);
 }
 
-.jp-maru {
-  font-family: var(--font-maru);
-}
-
-/* Hide scrollbar for clean tab pills */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 999px;
-}
-[data-theme='dark'] ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* 3D Card Flip Essentials */
-.perspective {
+/* Custom 3D & Washi paper styling */
+.perspective-1000 {
   perspective: 1000px;
 }
 .preserve-3d {
@@ -123,187 +110,141 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Authentic Japanese Calligraphy Grids (Ô Kẻ Thư Pháp Cao Cấp) */
-.grid-tian, .grid-cross {
-  background-color: #fffef9;
-  background-image: 
-    linear-gradient(to right, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
-    linear-gradient(to bottom, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px));
-  background-size: 100% 100%, 100% 100%;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.grid-mizi {
-  background-color: #fffef9;
-  background-image: 
-    linear-gradient(45deg, transparent calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
-    linear-gradient(-45deg, transparent calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% - 0.5px), rgba(225, 29, 72, 0.12) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
-    linear-gradient(to right, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
-    linear-gradient(to bottom, transparent calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% - 0.75px), rgba(225, 29, 72, 0.25) calc(50% + 0.75px), transparent calc(50% + 0.75px));
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+/* Washi Paper texture effect */
+.washi-texture {
+  background-color: #faf8f5;
+  background-image: radial-gradient(#d3c7b8 1px, transparent 1px);
+  background-size: 16px 16px;
 }
 
-.grid-jing {
-  background-color: #fffef9;
-  background-image: 
-    linear-gradient(to right, transparent calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% + 0.5px), transparent calc(33.33% + 0.5px)),
-    linear-gradient(to right, transparent calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% + 0.5px), transparent calc(66.66% + 0.5px)),
-    linear-gradient(to bottom, transparent calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% - 0.5px), rgba(225, 29, 72, 0.18) calc(33.33% + 0.5px), transparent calc(33.33% + 0.5px)),
-    linear-gradient(to bottom, transparent calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% - 0.5px), rgba(225, 29, 72, 0.18) calc(66.66% + 0.5px), transparent calc(66.66% + 0.5px));
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+/* Dark mode washi texture */
+.dark .washi-texture {
+  background-color: #1e2125;
+  background-image: radial-gradient(#3a3f45 1px, transparent 1px);
+  background-size: 16px 16px;
 }
 
-.grid-none {
-  background-color: #fffef9;
+/* Ink brush glow animations */
+@keyframes brushPulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.02); }
 }
 
-/* Shake Animation when drawing in wrong stroke order */
-@keyframes shakeCanvas {
+.brush-pulse {
+  animation: brushPulse 2.5s ease-in-out infinite;
+}
+
+/* Canvas Error Shake & Sensory Vibration */
+@keyframes canvasShake {
   0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-8px); }
-  40%, 80% { transform: translateX(8px); }
+  15%, 55% { transform: translateX(-7px) rotate(-0.5deg); }
+  35%, 75% { transform: translateX(7px) rotate(0.5deg); }
+  90% { transform: translateX(-2px); }
 }
 
 .animate-shake {
-  animation: shakeCanvas 0.45s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-/* User Template Gamification & 3D Keyframes */
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 16px rgba(244, 63, 94, 0.4), inset 0 0 10px rgba(244, 63, 94, 0.2);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 28px rgba(244, 63, 94, 0.8), inset 0 0 18px rgba(244, 63, 94, 0.45);
-    transform: scale(1.03);
-  }
-}
-
-@keyframes floatLight {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-}
-
-@keyframes floatMascot {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(1.5deg);
-  }
-}
-
-@keyframes stardustTwinkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.85); }
-  50% { opacity: 1; transform: scale(1.15); }
-}
-
-@keyframes neonPulseCyan {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5), inset 0 0 10px rgba(16, 185, 129, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 26px rgba(52, 211, 153, 0.85), inset 0 0 16px rgba(52, 211, 153, 0.5);
-  }
-}
-
-.mascot-floating {
-  animation: floatMascot 3.2s ease-in-out infinite;
-}
-
-.stardust-star {
-  animation: stardustTwinkle 2.8s ease-in-out infinite;
-}
-
-.neon-completed-glow {
-  animation: neonPulseCyan 3s infinite ease-in-out;
-}
-
-.active-node-glow {
-  animation: pulseGlow 2.2s infinite ease-in-out;
-}
-
-.boss-fire {
-  animation: floatLight 3s infinite ease-in-out;
-  box-shadow: 0 0 28px rgba(239, 68, 68, 0.45);
-}
-
-.bg-grid-pattern {
-  background-size: 24px 24px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-}
-
-/* 3D Flip Card */
-.perspective-1000 {
-  perspective: 1000px;
-}
-.transform-style-3d {
-  transform-style: preserve-3d;
-}
-.backface-hidden {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Kanji Grid Paper Effect */
-.grid-kanji-tian {
-  background-color: #0b1120;
-  background-image: 
-    linear-gradient(to right, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
-  background-size: 50% 50%;
-  background-position: 50% 50%;
-}
-
-.s-curve-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.node-container {
-  position: relative;
-  z-index: 10;
-}
-
-/* Calligraphy Studio Styles */
-.font-kanji {
-  font-family: 'Noto Serif JP', serif, 'Noto Sans JP', sans-serif;
+  animation: canvasShake 0.38s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 .neon-glow-pink {
-  box-shadow: 0 0 16px -2px rgba(255, 45, 85, 0.45);
+  box-shadow: 0 0 16px rgba(255, 45, 85, 0.45), inset 0 0 10px rgba(255, 45, 85, 0.2);
 }
 
-.neon-glow-cyan {
-  box-shadow: 0 0 14px -2px rgba(0, 242, 254, 0.4);
+.neon-glow-emerald {
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.45), inset 0 0 10px rgba(16, 185, 129, 0.2);
 }
 
-/* Grid kẻ ô mễ & ô điền chuẩn thư pháp Nhật (Quadrant & Diagonal Grid) */
-.canvas-mizi-grid {
-  background-size: 100% 100%;
-  background-image: 
-    linear-gradient(to right, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px)),
-    linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px)),
-    linear-gradient(45deg, transparent calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
-    linear-gradient(-45deg, transparent calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% - 0.5px), rgba(148, 163, 184, 0.15) calc(50% + 0.5px), transparent calc(50% + 0.5px));
+/* Writing vertical for Japanese calligraphy */
+.writing-v {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
-.canvas-tian-grid {
-  background-size: 100% 100%;
-  background-image: 
-    linear-gradient(to right, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px)),
-    linear-gradient(to bottom, transparent calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% - 1px), rgba(255, 45, 85, 0.28) calc(50% + 1px), transparent calc(50% + 1px));
+/* Sakura Petal Falling Animation (Hiệu ứng cánh hoa anh đào rơi) */
+.sakura-petal {
+  position: absolute;
+  top: -12%;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, top, opacity;
+  animation-name: sakuraFall, sakuraSway;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
 }
 
+@keyframes sakuraFall {
+  0% {
+    top: -12%;
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 112%;
+    transform: translate3d(var(--drift-x, 120px), 0, 0) rotate(var(--rot-end, 360deg));
+    opacity: 0;
+  }
+}
+
+@keyframes sakuraSway {
+  0%, 100% {
+    transform: translateX(0) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: translateX(var(--sway-x, 35px)) rotateY(var(--flip-end, 180deg)) rotateZ(28deg);
+  }
+}
+
+/* Atmospheric Mist Layer Drift */
+.mist-layer-1 {
+  background: radial-gradient(ellipse at 40% 50%, rgba(255, 255, 255, 0.08), transparent 70%);
+  animation: mistDrift1 24s ease-in-out infinite alternate;
+}
+.mist-layer-2 {
+  background: radial-gradient(ellipse at 60% 50%, rgba(184, 74, 57, 0.10), transparent 70%);
+  animation: mistDrift2 18s ease-in-out infinite alternate;
+}
+
+@keyframes mistDrift1 {
+  0% { transform: translateX(-50px) scale(1); }
+  100% { transform: translateX(50px) scale(1.08); }
+}
+
+@keyframes mistDrift2 {
+  0% { transform: translateX(40px) scale(1.05); }
+  100% { transform: translateX(-40px) scale(1); }
+}
+
+/* Text glow for Japanese titles */
+.text-glow {
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.35), 0 0 50px rgba(184, 74, 57, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #dec0bb;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #3e444b;
+}
